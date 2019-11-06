@@ -5,19 +5,19 @@
   
 
   
-  <title>我的博客完善计划 | 墨文</title>
+  <title>博客首页文章截断 | 墨文</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
-  <meta name="description" content="1.hexo-admin插件使用，实现可视化编辑和上传文章">
+  <meta name="description" content="在文章中加入 &amp;lt;!-- more --&amp;gt; 就会自动截断文章内容，后面的文章内容不再自动显示。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的博客完善计划">
-<meta property="og:url" content="https:&#x2F;&#x2F;qlhuo.github.io&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%AE%8C%E5%96%84%E8%AE%A1%E5%88%92&#x2F;index.html">
+<meta property="og:title" content="博客首页文章截断">
+<meta property="og:url" content="https:&#x2F;&#x2F;qlhuo.github.io&#x2F;2019&#x2F;11&#x2F;06&#x2F;%E5%AE%A2%E9%A6%96%E9%A1%B5%E6%96%87%E7%AB%A0%E6%88%AA%E6%96%AD&#x2F;index.html">
 <meta property="og:site_name" content="墨文">
-<meta property="og:description" content="1.hexo-admin插件使用，实现可视化编辑和上传文章">
+<meta property="og:description" content="在文章中加入 &amp;lt;!-- more --&amp;gt; 就会自动截断文章内容，后面的文章内容不再自动显示。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-06T12:50:10.196Z">
+<meta property="og:updated_time" content="2019-11-06T13:06:15.276Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="墨文" type="application/atom+xml">
@@ -67,21 +67,21 @@
   </div>
 </header>
       <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main"><article id="post-我的博客完善计划" class="article global-container article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-客首页文章截断" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
       
   
     <h1 class="article-title" itemprop="name">
-      我的博客完善计划
+      博客首页文章截断
     </h1>
   
 
     </header>
   
   <div class="article-meta">
-    <a href="/2019/11/06/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%AE%8C%E5%96%84%E8%AE%A1%E5%88%92/" class="article-date">
-  <time datetime="2019-11-06T05:37:19.000Z" itemprop="datePublished">2019-11-06</time>
+    <a href="/2019/11/06/%E5%AE%A2%E9%A6%96%E9%A1%B5%E6%96%87%E7%AB%A0%E6%88%AA%E6%96%AD/" class="article-date">
+  <time datetime="2019-11-06T12:59:51.000Z" itemprop="datePublished">2019-11-06</time>
 </a>
     
     
@@ -96,12 +96,13 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <p>1.hexo-admin插件使用，实现可视化编辑和上传文章</p>
+        <p>在文章中加入 <code>&lt;!-- more --&gt;</code> 就会自动截断文章内容，后面的文章内容不再自动显示。</p>
 <a id="more"></a>
 
-<p>2.博文插入图片</p>
-<p>3.绑定域名</p>
-<p>4.其他的等想到再做修改</p>
+<p>也有需要配置config.yml文件的</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Automatically Excerpt. Not recommend.</span><br><span class="line"># Please use &lt;!-- more --&gt; in the post to control excerpt accurately.</span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: false</span><br><span class="line">  length: 150</span><br></pre></td></tr></table></figure></div>
+<p>将false设置为true，然后自己在文章中的合适的位置设置<code>&lt;!-- more --&gt;</code></p>
+<p>参考文章：<br><a href="https://blog.csdn.net/lewky_liu/article/details/81277337" target="_blank" rel="noopener">https://blog.csdn.net/lewky_liu/article/details/81277337</a><br><a href="https://blog.csdn.net/qq_32337109/article/details/78755729" target="_blank" rel="noopener">https://blog.csdn.net/qq_32337109/article/details/78755729</a></p>
 
       
     </div>
@@ -116,20 +117,11 @@
 <nav id="article-nav">
   <div class="article-nav-block">
     
-      <a href="/2019/11/06/hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption"></strong>
-        <div class="article-nav-title">
-          
-            hexo博客之插入图片
-          
-        </div>
-      </a>
-    
   </div>
   <div class="article-nav-block">
     
-      <a href="/2019/11/03/%E6%80%8E%E6%A0%B7%E4%BD%BF%E7%94%A8hexo-admin%E6%8F%92%E4%BB%B6/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">怎样使用hexo-admin插件</div>
+      <a href="/2019/11/06/hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">hexo博客之插入图片</div>
         <strong class="article-nav-caption"></strong>
       </a>
     
