@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>js-学习案例：栏目切换 | 墨文</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="开始记录学习的经过，今天做了一个tab栏目切换的小功能，整了很久才做出来，最后还想实现背景切换，但是没能做出来，今天先这样吧">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js-学习案例：栏目切换">
+<meta property="og:url" content="https:&#x2F;&#x2F;qlhuo.github.io&#x2F;2019&#x2F;11&#x2F;07&#x2F;js-%E5%AD%A6%E4%B9%A0%E6%A1%88%E4%BE%8B%EF%BC%9A%E6%A0%8F%E7%9B%AE%E5%88%87%E6%8D%A2&#x2F;index.html">
+<meta property="og:site_name" content="墨文">
+<meta property="og:description" content="开始记录学习的经过，今天做了一个tab栏目切换的小功能，整了很久才做出来，最后还想实现背景切换，但是没能做出来，今天先这样吧">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;qlhuo.github.io&#x2F;2019&#x2F;11&#x2F;07&#x2F;js-%E5%AD%A6%E4%B9%A0%E6%A1%88%E4%BE%8B%EF%BC%9A%E6%A0%8F%E7%9B%AE%E5%88%87%E6%8D%A2&#x2F;pasted-0.png">
+<meta property="og:updated_time" content="2019-11-07T13:26:00.470Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;qlhuo.github.io&#x2F;2019&#x2F;11&#x2F;07&#x2F;js-%E5%AD%A6%E4%B9%A0%E6%A1%88%E4%BE%8B%EF%BC%9A%E6%A0%8F%E7%9B%AE%E5%88%87%E6%8D%A2&#x2F;pasted-0.png">
+  
+    <link rel="alternate" href="/atom.xml" title="墨文" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="背景图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="/life" title
+        
+        >生活</a>
+      
+        <a class="nav-item" href="/poem" title
+        
+        >诗歌</a>
+      
+        <a class="nav-item" href="/About_vae" title
+        
+        >About_vae</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-js-学习案例：栏目切换" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      js-学习案例：栏目切换
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/11/07/js-%E5%AD%A6%E4%B9%A0%E6%A1%88%E4%BE%8B%EF%BC%9A%E6%A0%8F%E7%9B%AE%E5%88%87%E6%8D%A2/" class="article-date">
+  <time datetime="2019-11-07T13:00:27.000Z" itemprop="datePublished">2019-11-07</time>
+</a>
+    
+    
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>开始记录学习的经过，今天做了一个tab栏目切换的小功能，整了很久才做出来，最后还想实现背景切换，但是没能做出来，今天先这样吧</p>
+<a id="more"></a>
+
+<p>仿照爱词霸的搜索，用js实现切换<br><img src="/2019/11/07/js-%E5%AD%A6%E4%B9%A0%E6%A1%88%E4%BE%8B%EF%BC%9A%E6%A0%8F%E7%9B%AE%E5%88%87%E6%8D%A2/pasted-0.png" alt="结果"></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;搜索框切换功能&lt;/title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        body &#123;</span><br><span class="line">            background-image: url(&quot;banner-1x.png&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">        * &#123;</span><br><span class="line">            margin: 0;</span><br><span class="line">            padding: 0;</span><br><span class="line">            box-sizing: border-box;</span><br><span class="line">        &#125;</span><br><span class="line">        .search &#123;</span><br><span class="line">            margin: 100px auto;</span><br><span class="line">            width: 680px;</span><br><span class="line">            position: relative;</span><br><span class="line">        &#125;</span><br><span class="line">        .hd span &#123;</span><br><span class="line">            display: inline-block;</span><br><span class="line">            width: 88px;</span><br><span class="line">            height: 36px;</span><br><span class="line">            background: rgba(0,0,0,.3);</span><br><span class="line">            font-size: 16px;</span><br><span class="line">            font-weight: 700;</span><br><span class="line">            cursor: pointer;</span><br><span class="line">            text-align: center;</span><br><span class="line">            line-height: 40px;</span><br><span class="line">        &#125;</span><br><span class="line">        .hd span.current&#123;</span><br><span class="line">            background-color: #fff;</span><br><span class="line">        &#125;</span><br><span class="line">        input &#123;</span><br><span class="line">            width: 600px;</span><br><span class="line">            height: 56px;</span><br><span class="line">            outline: none;</span><br><span class="line">            padding-left: 20px;</span><br><span class="line">            color: gray;</span><br><span class="line">            border: none;</span><br><span class="line">            display: none;</span><br><span class="line">            font-size: 18px;</span><br><span class="line">        &#125;</span><br><span class="line">        input.current &#123;</span><br><span class="line">            display: block;</span><br><span class="line">        &#125;</span><br><span class="line">        .sea-click &#123;</span><br><span class="line">            width: 80px;</span><br><span class="line">            height: 56px;</span><br><span class="line">            text-align: center;</span><br><span class="line">            line-height: 56px;</span><br><span class="line">            position: absolute;</span><br><span class="line">            right: 0;</span><br><span class="line">            bottom:0;</span><br><span class="line">            background-color: #383838;</span><br><span class="line">            color: #fff;</span><br><span class="line">            cursor: pointer;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;div class=&quot;search&quot; id=&quot;search&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;hd&quot;&gt;</span><br><span class="line">        &lt;span class=&quot;current&quot;&gt;查词&lt;/span&gt;</span><br><span class="line">        &lt;span&gt;翻译&lt;/span&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=&quot;bd&quot;&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; value=&quot;请输入你要查询的单词&quot; id=&quot;search_btn&quot;  class=&quot;current&quot;/&gt;</span><br><span class="line">        &lt;input type=&quot;text&quot; value=&quot;请输入你要查询的短语或句子&quot; id=&quot;search_btn1&quot;  /&gt;</span><br><span class="line">        &lt;div class=&quot;sea-click&quot;&gt;搜索&lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    //先获取最外层的div</span><br><span class="line">    var search = document.getElementById(&quot;search&quot;);</span><br><span class="line">    //然后获取里面的第一个div</span><br><span class="line">    var hd = search.getElementsByTagName(&quot;div&quot;)[0];</span><br><span class="line">    //获取里面的第二个div</span><br><span class="line">    var bd = search.getElementsByTagName(&quot;div&quot;)[1];</span><br><span class="line">    //获取第一个div中所有的span标签</span><br><span class="line">    var spans = hd.getElementsByTagName(&quot;span&quot;);</span><br><span class="line">    //获取下方搜索框中的input标签</span><br><span class="line">    var inputs = bd.getElementsByTagName(&quot;input&quot;);</span><br><span class="line"></span><br><span class="line">    //循环遍历所有的span标签，并注册点击事件</span><br><span class="line">    for (var i = 0; i &lt; spans.length; i++) &#123;</span><br><span class="line">        //首先将span中的索引值存起来</span><br><span class="line">        spans[i].setAttribute(&quot;index&quot;,i);</span><br><span class="line">        //为每一个span注册点击事件</span><br><span class="line">        spans[i].onclick = function () &#123;</span><br><span class="line">            //清除所有的span的类样式</span><br><span class="line">            for (var j = 0; j &lt; spans.length; j++) &#123;</span><br><span class="line">                spans[j].removeAttribute(&quot;class&quot;);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            //给当前的span对象设置类样式</span><br><span class="line">            this.className=&quot;current&quot;;</span><br><span class="line">            //获取当前span对象的索引值</span><br><span class="line">            var num = this.getAttribute(&quot;index&quot;);</span><br><span class="line">            //清除所有的input的类样式</span><br><span class="line">            for (var k = 0; k &lt; inputs.length; k++) &#123;</span><br><span class="line">                inputs[k].removeAttribute(&quot;class&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            //当前span对应的input标签设置类样式</span><br><span class="line">            inputs[num].className = &quot;current&quot;;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    for (var i = 0; i &lt; inputs.length; i++) &#123;</span><br><span class="line">        //注册获取焦点的点击事件</span><br><span class="line">        inputs[i].onfocus = function () &#123;</span><br><span class="line">            //判断当前对象的value值</span><br><span class="line">            if (this.value == &quot;请输入你要查询的单词&quot; || &quot;请输入你要查询的短语或句子&quot;)&#123;</span><br><span class="line">                this.value = &quot;&quot;;</span><br><span class="line">                this.style.color=&quot;black&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        //鼠标离开后的事件</span><br><span class="line">        inputs[i].onblur = function () &#123;</span><br><span class="line">            //判断id值，设置value值</span><br><span class="line">            if (this.id == &quot;search_btn&quot;)&#123;</span><br><span class="line">                this.value = &quot;请输入你要查询的单词&quot;;</span><br><span class="line">                this.style.color=&quot;gray&quot;;</span><br><span class="line"></span><br><span class="line">            &#125;else &#123;</span><br><span class="line">                this.value = &quot;请输入你要查询的短语或句子&quot;;</span><br><span class="line">                this.style.color=&quot;gray&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></div>
+<p>哎，整了一晚上，一开始就被布局给拦住了，css很多竟然又忘了。。爱词霸中查词和翻译那块是梯形，我也找到了一些做梯形的方法，可是在设置样式的时候总是出现问题，最后也放弃了继续深究，，只用普通的矩形来替代，先这样吧，整了一晚上才怎出个这么个玩意儿。。</p>
+<p>但是不管怎么说也算是大概整明白排他功能。刚开始内容比较基础，但是觉得也可能比较重要，就先记录下来吧。</p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/11/06/%E5%AE%A2%E9%A6%96%E9%A1%B5%E6%96%87%E7%AB%A0%E6%88%AA%E6%96%AD/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">博客首页文章截断</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="头像来自网络"></img>
+    <h3 class="avatar-name">
+      
+        墨文
+      
+    </h3>
+    <p class="avatar-slogan">
+      这江湖看似热闹，其实前后二三十年间，真正的高手不过就那么十来个而已。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/07/js-%E5%AD%A6%E4%B9%A0%E6%A1%88%E4%BE%8B%EF%BC%9A%E6%A0%8F%E7%9B%AE%E5%88%87%E6%8D%A2/">js-学习案例：栏目切换</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/06/%E5%AE%A2%E9%A6%96%E9%A1%B5%E6%96%87%E7%AB%A0%E6%88%AA%E6%96%AD/">博客首页文章截断</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/06/hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/">hexo博客之插入图片</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/06/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%AE%8C%E5%96%84%E8%AE%A1%E5%88%92/">我的博客完善计划</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/03/%E6%80%8E%E6%A0%B7%E4%BD%BF%E7%94%A8hexo-admin%E6%8F%92%E4%BB%B6/">怎样使用hexo-admin插件</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://qlhuo.github.io/" title target='_blank'
+        >墨文</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 墨文 &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/life" class="mobile-nav-link">生活</a>
+  
+    <a href="/poem" class="mobile-nav-link">诗歌</a>
+  
+    <a href="/About_vae" class="mobile-nav-link">About_vae</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
