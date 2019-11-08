@@ -1,15 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="alternate" href="/atom.xml" title="墨文" type="application/atom+xml">
 
-  
-  <title>hexo博客之插入图片 | 墨文</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  
-  
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
   <meta name="description" content="怎样在博客中插入图片，这个问题我也整了好久，现在将具体的操作步骤记录如下：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo博客之插入图片">
@@ -22,82 +63,157 @@
 <meta property="og:updated_time" content="2019-11-06T12:48:32.467Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;qlhuo.github.io&#x2F;2019&#x2F;11&#x2F;06&#x2F;hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87&#x2F;pasted-0.png">
+
+<link rel="canonical" href="https://qlhuo.github.io/2019/11/06/hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>hexo博客之插入图片 | 墨文</title>
   
-    <link rel="alternate" href="/atom.xml" title="墨文" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/images/default-avatar.jpg">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/highlight.css">
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 </head>
 
-<body>
-  <div id="fullpage" class="mobile-nav-right">
-    
-      <div id="wrapper" title="背景图片来自网络">
-    
-    
-      <header id="header">
-  <div id="nav-toggle" class="nav-toggle"></div>
-  <div class="head-box global-width">
-    <nav class="nav-box nav-right">
-      
-        <a class="nav-item" href="/" title
-        
-        >首页</a>
-      
-        <a class="nav-item" href="/archives" title
-        
-        >归档</a>
-      
-        <a class="nav-item" href="/life" title
-        
-        >生活</a>
-      
-        <a class="nav-item" href="/poem" title
-        
-        >诗歌</a>
-      
-        <a class="nav-item" href="/About_vae" title
-        
-        >About_vae</a>
-      
-    </nav>
-  </div>
-</header>
-      <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main"><article id="post-hexo博客中插入图片" class="article global-container article-type-post" itemscope itemprop="blogPost">
-  
-    <header class="article-header">
-      
-  
-    <h1 class="article-title" itemprop="name">
-      hexo博客之插入图片
-    </h1>
-  
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
 
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">墨文</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
     </header>
-  
-  <div class="article-meta">
-    <a href="/2019/11/06/hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" class="article-date">
-  <time datetime="2019-11-06T11:17:00.000Z" itemprop="datePublished">2019-11-06</time>
-</a>
-    
-    
-  </div>
-  
-    <span id="busuanzi_container_page_pv">
-      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
-    </span>
-  
 
-  <div class="article-inner">
     
-    <div class="article-content article-content-cloud" itemprop="articleBody">
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://qlHuo.github.io/2019/11/06/hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="墨文">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="墨文">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          hexo博客之插入图片
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-11-06 19:17:00 / 修改时间：20:48:32" itemprop="dateCreated datePublished" datetime="2019-11-06T19:17:00+08:00">2019-11-06</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
         <p>怎样在博客中插入图片，这个问题我也整了好久，现在将具体的操作步骤记录如下：</p>
 <a id="more"></a>
@@ -120,182 +236,174 @@
 <p><img src="/2019/11/06/hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/pasted-1.png" alt="hexo-admin中插入图片"></p>
 <p>然后部署即可。</p>
 
-      
     </div>
+
     
-      <footer class="article-footer">
-        完
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/2019/11/06/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%AE%8C%E5%96%84%E8%AE%A1%E5%88%92/" rel="next" title="我的博客完善计划">
+                  <i class="fa fa-chevron-left"></i> 我的博客完善计划
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+                <a href="/2019/11/06/%E5%AE%A2%E9%A6%96%E9%A1%B5%E6%96%87%E7%AB%A0%E6%88%AA%E6%96%AD/" rel="prev" title="博客首页文章截断">
+                  博客首页文章截断 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
       </footer>
     
-  </div>
+  </article>
   
-    
-<nav id="article-nav">
-  <div class="article-nav-block">
-    
-      <a href="/2019/11/06/%E5%AE%A2%E9%A6%96%E9%A1%B5%E6%96%87%E7%AB%A0%E6%88%AA%E6%96%AD/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption"></strong>
-        <div class="article-nav-title">
+  
+  
+
+  </div>
+
+
+          </div>
           
-            博客首页文章截断
-          
+
         </div>
-      </a>
-    
-  </div>
-  <div class="article-nav-block">
-    
-      <a href="/2019/11/06/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%AE%8C%E5%96%84%E8%AE%A1%E5%88%92/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">我的博客完善计划</div>
-        <strong class="article-nav-caption"></strong>
-      </a>
-    
-  </div>
-</nav>
-
-    <link rel="stylesheet" href="/css/gitment.css"> 
-<script src="/js/gitment.js"></script>
-
-<div id="gitmentContainer"></div>
-
-<script>
-var gitment = new Gitment({
-  owner: '',
-  repo: '',
-  oauth: {
-    client_id: '',
-    client_secret: '',
-  },
-})
-gitment.render('gitmentContainer')
-</script>
-
+          
   
-  
-</article>
-</section>
-        <aside id="sidebar">
-  
-    <div class="widget-box">
-  <div class="avatar-box">
-    <img class="avatar" src="/images/default-avatar.jpg" title="头像来自网络"></img>
-    <h3 class="avatar-name">
-      
-        墨文
-      
-    </h3>
-    <p class="avatar-slogan">
-      这江湖看似热闹，其实前后二三十年间，真正的高手不过就那么十来个而已。
-    </p>
-  </div>
-</div>
-
-
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li></ul>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
-  
-    
-  <div class="widget-box">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2019/11/07/js-%E5%AD%A6%E4%B9%A0%E6%A1%88%E4%BE%8B%EF%BC%9A%E6%A0%8F%E7%9B%AE%E5%88%87%E6%8D%A2/">js-学习案例：栏目切换</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/06/%E5%AE%A2%E9%A6%96%E9%A1%B5%E6%96%87%E7%AB%A0%E6%88%AA%E6%96%AD/">博客首页文章截断</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/06/hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/">hexo博客之插入图片</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/06/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%AE%8C%E5%96%84%E8%AE%A1%E5%88%92/">我的博客完善计划</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/03/%E6%80%8E%E6%A0%B7%E4%BD%BF%E7%94%A8hexo-admin%E6%8F%92%E4%BB%B6/">怎样使用hexo-admin插件</a>
-          </li>
-        
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
       </ul>
-    </div>
-  </div>
 
-  
-      <div class="widget-box">
-    <h3 class="widget-title">友链</h3>
-    <div class="widget">
-      
-        <a style="display: block;" href="https://qlhuo.github.io/" title target='_blank'
-        >墨文</a>
-      
-    </div>
-  </div>
-
-  
-</aside>
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#修改配置文件"><span class="nav-number">1.</span> <span class="nav-text">修改配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#插件安装与配置"><span class="nav-number">2.</span> <span class="nav-text">插件安装与配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#插入图片"><span class="nav-number">3.</span> <span class="nav-text">插入图片</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#另一种方法-hexo-admin需要配置好"><span class="nav-number">4.</span> <span class="nav-text">另一种方法(hexo-admin需要配置好)</span></a></li></ol></div>
       </div>
-      <footer id="footer">
-  <div class="foot-box global-width">
-    &copy; 2019 墨文 &nbsp;&nbsp;
-    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
-    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
-    <br>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="墨文"
+    src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">墨文</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
   </div>
-</footer>
-      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
-<script>
-if (!window.jQuery) {
-var script = document.createElement('script');
-script.src = "/js/jquery-2.0.3.min.js";
-document.body.write(script);
-}
-</script>
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js"></script>
 
-
+      </div>
 
     </div>
-    <nav id="mobile-nav" class="mobile-nav-box">
-  <div class="mobile-nav-img mobile-nav-top"></div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
   
-    <a href="/" class="mobile-nav-link">首页</a>
-  
-    <a href="/archives" class="mobile-nav-link">归档</a>
-  
-    <a href="/life" class="mobile-nav-link">生活</a>
-  
-    <a href="/poem" class="mobile-nav-link">诗歌</a>
-  
-    <a href="/About_vae" class="mobile-nav-link">About_vae</a>
-  
-  <div class="mobile-nav-img  mobile-nav-bottom"></div>
-</nav>    
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">墨文</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
   </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.5.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
 </body>
 </html>
