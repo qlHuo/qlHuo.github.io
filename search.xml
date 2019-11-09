@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>点击图片放大</title>
+      <link href="/2019/11/09/%E7%82%B9%E5%87%BB%E5%9B%BE%E7%89%87%E6%94%BE%E5%A4%A7/"/>
+      <url>/2019/11/09/%E7%82%B9%E5%87%BB%E5%9B%BE%E7%89%87%E6%94%BE%E5%A4%A7/</url>
+      
+        <content type="html"><![CDATA[<h1 id="怎么添加文章点击图片放大功能"><a href="#怎么添加文章点击图片放大功能" class="headerlink" title="怎么添加文章点击图片放大功能"></a>怎么添加文章点击图片放大功能</h1><p>更改<code>next/_config.yml</code><br><code>fancybox: true</code></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客搭建 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 点击图片放大 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>更换hexo主题</title>
       <link href="/2019/11/08/%E6%9B%B4%E6%8D%A2hexo%E4%B8%BB%E9%A2%98/"/>
       <url>/2019/11/08/%E6%9B%B4%E6%8D%A2hexo%E4%B8%BB%E9%A2%98/</url>
