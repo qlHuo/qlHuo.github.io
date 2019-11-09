@@ -2,6 +2,18 @@ html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
+p {
+	color: #333;
+}
+.posts-expand .post-meta {
+    color: #363636;
+}
+.posts-expand .post-title-link {
+	color: #222;
+}
+h1,h2,h3,h4,h5,h6 {
+	color: #333;
+}
 body {
   margin: 0;
 }
@@ -1785,7 +1797,7 @@ pre .javascript .function {
 }
 .posts-expand .post-title-link {
   border-bottom: none;
-  color: #555;
+  color: #333;
   display: inline-block;
   position: relative;
   vertical-align: top;
