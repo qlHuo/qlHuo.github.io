@@ -3,7 +3,7 @@
   <entry>
     <title>点击图片放大</title>
     <url>/2019/11/09/%E7%82%B9%E5%87%BB%E5%9B%BE%E7%89%87%E6%94%BE%E5%A4%A7/</url>
-    <content><![CDATA[<h1 id="怎么添加文章点击图片放大功能"><a href="#怎么添加文章点击图片放大功能" class="headerlink" title="怎么添加文章点击图片放大功能"></a>怎么添加文章点击图片放大功能</h1><p>更改<code>next/_config.yml</code><br><code>fancybox: true</code></p>
+    <content><![CDATA[<h4 id="怎么添加文章点击图片放大功能"><a href="#怎么添加文章点击图片放大功能" class="headerlink" title="怎么添加文章点击图片放大功能"></a>怎么添加文章点击图片放大功能</h4><p>更改<code>next/_config.yml</code><br><code>fancybox: true</code></p>
 ]]></content>
       <categories>
         <category>博客搭建</category>
