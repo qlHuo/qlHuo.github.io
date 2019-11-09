@@ -2,8 +2,6 @@ html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
-
-
 body {
   margin: 0;
 }
@@ -180,7 +178,6 @@ h6 {
   line-height: 1.5;
   margin: 20px 0 15px;
   padding: 0;
-  color: #000;
 }
 h1 {
   font-size: 1.5em;
@@ -1156,7 +1153,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #8ea13d;
+  background: #ffffaf;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1788,7 +1785,7 @@ pre .javascript .function {
 }
 .posts-expand .post-title-link {
   border-bottom: none;
-  color: #333;
+  color: #555;
   display: inline-block;
   position: relative;
   vertical-align: top;
@@ -2561,13 +2558,14 @@ body {
   background: url("/images/background.jpeg");
   background-attachment: fixed;
 }
+
 .content-wrap {
   background: initial;
   box-shadow: initial;
   padding: initial;
 }
 .post-block {
-  background: rgba(255,255,255,.7);
+  background-color: rgba(255,255,255,0.7);
   border-radius: initial;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
   padding: 40px;
