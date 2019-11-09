@@ -28,11 +28,17 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 <p>部署到github上，完成主题的更换操作。</p>
 ]]></content>
+      <categories>
+        <category>hexo博客搭建</category>
+      </categories>
+      <tags>
+        <tag>主题更换</tag>
+      </tags>
   </entry>
   <entry>
     <title>js-学习案例：栏目切换</title>
     <url>/2019/11/07/js-%E5%AD%A6%E4%B9%A0%E6%A1%88%E4%BE%8B%EF%BC%9A%E6%A0%8F%E7%9B%AE%E5%88%87%E6%8D%A2/</url>
-    <content><![CDATA[<p>开始记录学习的经过，今天做了一个tab栏目切换的小功能，整了很久才做出来，最后还想实现背景切换，但是没能做出来，今天先这样吧</p>
+    <content><![CDATA[<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p>开始记录学习的经过，今天做了一个tab栏目切换的小功能，整了很久才做出来，最后还想实现背景切换，但是没能做出来，今天先这样吧</p>
 <a id="more"></a>
 
 <p>仿照爱词霸的搜索，用js实现切换<br><img src="/2019/11/07/js-%E5%AD%A6%E4%B9%A0%E6%A1%88%E4%BE%8B%EF%BC%9A%E6%A0%8F%E7%9B%AE%E5%88%87%E6%8D%A2/pasted-0.png" alt="结果"></p>
@@ -40,6 +46,12 @@
 <p>哎，整了一晚上，一开始就被布局给拦住了，css很多竟然又忘了。。爱词霸中查词和翻译那块是梯形，我也找到了一些做梯形的方法，可是在设置样式的时候总是出现问题，最后也放弃了继续深究，，只用普通的矩形来替代，先这样吧，整了一晚上才怎出个这么个玩意儿。。</p>
 <p>但是不管怎么说也算是大概整明白排他功能。刚开始内容比较基础，但是觉得也可能比较重要，就先记录下来吧。</p>
 ]]></content>
+      <categories>
+        <category>js学习</category>
+      </categories>
+      <tags>
+        <tag>js排他功能应用</tag>
+      </tags>
   </entry>
   <entry>
     <title>博客首页文章截断</title>
@@ -52,13 +64,17 @@
 <p>将false设置为true，然后自己在文章中的合适的位置设置<code>&lt;!-- more --&gt;</code></p>
 <p>参考文章：<br><a href="https://blog.csdn.net/lewky_liu/article/details/81277337" target="_blank" rel="noopener">https://blog.csdn.net/lewky_liu/article/details/81277337</a><br><a href="https://blog.csdn.net/qq_32337109/article/details/78755729" target="_blank" rel="noopener">https://blog.csdn.net/qq_32337109/article/details/78755729</a></p>
 ]]></content>
+      <categories>
+        <category>hexo博客搭建</category>
+      </categories>
+      <tags>
+        <tag>文章截断</tag>
+      </tags>
   </entry>
   <entry>
-    <title>hexo博客中插入图片</title>
+    <title>hexo博客之插入图片</title>
     <url>/2019/11/06/hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</url>
-    <content><![CDATA[<p>title: hexo博客之插入图片<br>author: Aurora<br>tags:  博客插入图片</p>
-<p>categories: hexo博客搭建</p>
-<p>在博客中插入图片是一个不可或缺的功能，下面是我搭建博客过程中实现插入图片的方法。</p>
+    <content><![CDATA[<p>在博客中插入图片是一个不可或缺的功能，下面是我搭建博客过程中实现插入图片的方法。</p>
 <a id="more"></a>
 
 <h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>首先修改根目录下的config.yml文件中的post_asset_folder将false为true。<br>如下图所示：<br><img src="/2019/11/06/hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/pasted-0.png" alt="插入图片"></p>
@@ -79,24 +95,31 @@
 <p><img src="/2019/11/06/hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/pasted-1.png" alt="hexo-admin中插入图片"></p>
 <p>然后部署即可。</p>
 ]]></content>
+      <categories>
+        <category>hexo博客搭建</category>
+      </categories>
+      <tags>
+        <tag>博客插入图片</tag>
+      </tags>
   </entry>
   <entry>
     <title>怎样使用hexo-admin插件</title>
     <url>/2019/11/03/%E6%80%8E%E6%A0%B7%E4%BD%BF%E7%94%A8hexo-admin%E6%8F%92%E4%BB%B6/</url>
-    <content><![CDATA[<p>title: 怎样使用hexo-admin插件<br>author: 墨文</p>
-<p>tags: hexo-admin插件的使用</p>
-<p>categories: hexo博客搭建</p>
-<p>date: 2019-11-03 21:02:31</p>
-<p>首先在博客根目录下输入</p>
+    <content><![CDATA[<p>首先在博客根目录下输入</p>
 <a id="more"></a>
 
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo server -d 切换到后台管理页面 localhost：4000/admin/</span><br><span class="line">就可以进行可视化编辑文章</span><br><span class="line"></span><br><span class="line">编辑完之后，仍然需要</span><br><span class="line">hexo g 重新生成文件</span><br><span class="line">hexo s 本地查看</span><br><span class="line">hexo d 部署</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>hexo博客搭建</category>
+      </categories>
+      <tags>
+        <tag>hexo-admin插件的使用</tag>
+      </tags>
   </entry>
   <entry>
-    <title>啊，我的博客-1</title>
+    <title>啊，我的博客-----</title>
     <url>/2019/11/03/%E5%95%8A%EF%BC%8C%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2-1/</url>
-    <content><![CDATA[<p>title: 啊，我的博客—–<br>author: Aurora<br>tags: 我的第一篇博客<br>categories: hexo博客搭建</p>
-<p>文笔不好，那就随便说说吧，反正也没人看到……</p>
+    <content><![CDATA[<p>文笔不好，那就随便说说吧，反正也没人看到……</p>
 <a id="more"></a>
 
 <p>昨天考完了教资，从外面的回来的路上我就一直在想，明天我就一定要开始自己动手去做一个自己的博客，不管做的是好是坏，得动手，不能一直光想而不去做。。当然这个道理，我始终明白，但就是觉得学的东西太少（确实也学的太少），虽然知道网上有各种各样的教程，但就是迟迟没有动手。</p>
@@ -114,5 +137,11 @@
 <p>原文链接：<a href="https://blog.kinpzz.com/2016/12/31/hexo-admin-backend-management/" target="_blank" rel="noopener">https://blog.kinpzz.com/2016/12/31/hexo-admin-backend-management/</a></p>
 <p>到这应该就差不多了，博客的基本框架有了，选的主题也比较美观吧！然而，还是有很多不足的地方，慢慢改吧，今天算是开一个好头吧！</p>
 ]]></content>
+      <categories>
+        <category>hexo博客搭建</category>
+      </categories>
+      <tags>
+        <tag>我的第一篇博客</tag>
+      </tags>
   </entry>
 </search>
