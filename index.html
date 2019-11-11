@@ -240,7 +240,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2019-11-11 16:10:23 / 修改时间：16:10:04" itemprop="dateCreated datePublished" datetime="2019-11-11T16:10:23+08:00">2019-11-11</time>
+              <time title="创建时间：2019-11-11 16:10:23 / 修改时间：16:44:48" itemprop="dateCreated datePublished" datetime="2019-11-11T16:10:23+08:00">2019-11-11</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -260,7 +260,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>5.3k</span>
+              <span>5.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -280,113 +280,14 @@
 
       
           <h2 id="DOM学习笔记"><a href="#DOM学习笔记" class="headerlink" title="DOM学习笔记"></a>DOM学习笔记</h2><h3 id="API的概念"><a href="#API的概念" class="headerlink" title="API的概念"></a>API的概念</h3><p>API（Application Programming Interface，应用程序编程接口）是一些预先定义好的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。</p>
-<p>例程：例程的作用类似于函数，但含义更为丰富一些。例程是某个系统对外提供的功能接口或服务的集合。比如操作系统的API、服务等就是例程；Delphi或C++Builder提供的标准函数和库函数等也是例程。我们编写一个DLL的时候，里面的输出函数就是这个DLL的例程。</p>
-<ul>
-<li>任何开发语言都有自己的API</li>
-<li>API的特征：输入和输出</li>
-</ul>
-<h3 id="Web-API的概念"><a href="#Web-API的概念" class="headerlink" title="Web API的概念"></a>Web API的概念</h3><p>浏览器提供的一套操作浏览器功能和页面元素的API(BOM和DOM)：此处的Web API特指浏览器提供的API(一组方法)</p>
-<p>掌握常见的浏览器提供的API的调用方式：    <a href="https://developer.mozilla.org/zh-CN/docs/Web/API" target="_blank" rel="noopener">MDN-Web API</a></p>
-<h3 id="JavaScript的组成"><a href="#JavaScript的组成" class="headerlink" title="JavaScript的组成"></a>JavaScript的组成</h3><p><img src="/2019/11/11/DOM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/js%E7%BB%84%E6%88%90.png" alt="js组成"></p>
-<h4 id="ECMAScript-JavaScript的核心"><a href="#ECMAScript-JavaScript的核心" class="headerlink" title="ECMAScript - JavaScript的核心"></a>ECMAScript - JavaScript的核心</h4><p>定义了javascript的语法规范</p>
-<p>JavaScript的核心，描述了语言的基本语法和数据类型，ECMAScript是一套标准，定义了一种语言的标准与具体实现无关</p>
-<h4 id="BOM-浏览器对象模型"><a href="#BOM-浏览器对象模型" class="headerlink" title="BOM - 浏览器对象模型"></a>BOM - 浏览器对象模型</h4><p>一套操作浏览器功能的API</p>
-<p>通过BOM可以操作浏览器窗口，比如：弹出框、控制浏览器跳转、获取分辨率等</p>
-<h4 id="DOM-文档对象模型"><a href="#DOM-文档对象模型" class="headerlink" title="DOM - 文档对象模型"></a>DOM - 文档对象模型</h4><p>一套操作页面元素的API</p>
-<p>DOM可以把HTML看做是文档树，通过DOM提供的API可以对树上的节点进行操作</p>
-<h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><h4 id="DOM的概念："><a href="#DOM的概念：" class="headerlink" title="DOM的概念："></a>DOM的概念：</h4><p>文档对象模型（Document Object Model,简称DOM），是W3C组织推荐 的处理可扩充标志语言的标准编程接口。在网页上，组织页面或文档的对象被组织在一个树形结构中，用来表示文档中对象的标准模型就称为DOM。</p>
-<p>DOM又称文档树结构</p>
-<p><img src="/2019/11/11/DOM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/DOM%E6%A0%91%E7%BB%93%E6%9E%84.png" alt="DOM树结构"></p>
-<ul>
-<li>文档：一个网页可以看做是一个文档</li>
-<li>节点：文档中所有的内容都是节点（标签、属性、文本）</li>
-<li>元素：网页中的标签</li>
-<li>属性：标签的属性</li>
-</ul>
-<h3 id="DOM经常进行的操作"><a href="#DOM经常进行的操作" class="headerlink" title="DOM经常进行的操作"></a>DOM经常进行的操作</h3><ol>
-<li>获取页面元素</li>
-<li>动态创建元素</li>
-<li>对元素进行操作（设置其属性或调用其方法）</li>
-<li>事件（什么时机做什么操作）</li>
-</ol>
-<h3 id="获取页面元素"><a href="#获取页面元素" class="headerlink" title="获取页面元素"></a>获取页面元素</h3><p>为什么：我们想要操作页面上的某部分，需要先获取到该部分对应的元素，然后才能进行后续操作。</p>
-<h4 id="根据id获取元素"><a href="#根据id获取元素" class="headerlink" title="根据id获取元素"></a>根据id获取元素</h4><p>var idObj = document.getElementById(“元素的id名”)；</p>
-<p>返回id值对应的元素（单个）</p>
-<h4 id="根据标签名获取元素"><a href="#根据标签名获取元素" class="headerlink" title="根据标签名获取元素"></a>根据标签名获取元素</h4><p>var spans = document.getElementsByTagName(“span”);</p>
-<p>返回一个包含所有span标签的伪数组</p>
-<h4 id="根据name属性值获取"><a href="#根据name属性值获取" class="headerlink" title="根据name属性值获取"></a>根据name属性值获取</h4><p>var inputs= document.getElementsByName(‘hobby’);</p>
-<p>返回一个name属性值为hobby的伪数组</p>
-<h4 id="根据类名获取元素"><a href="#根据类名获取元素" class="headerlink" title="根据类名获取元素"></a>根据类名获取元素</h4><p>var mains = document.getElementsByClassName(“main”);</p>
-<p>返回一个类名为main的伪数组</p>
-<h4 id="根据选择器获取元素"><a href="#根据选择器获取元素" class="headerlink" title="根据选择器获取元素"></a>根据选择器获取元素</h4><p>var text = document.querySelector(‘#text’);    这是根据id选择器获取元素</p>
-<p>返回单个元素</p>
-<p>var boxes = document.querySelectorAll(‘.box’);   这是根据类选择器获取元素</p>
-<p>返回一个伪数组</p>
-<h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><p>事件：触发-响应机制</p>
-<h4 id="事件三要素："><a href="#事件三要素：" class="headerlink" title="事件三要素："></a>事件三要素：</h4><ol>
-<li>事件源：触发事件的元素</li>
-<li>事件类型：事件触发的方式（如鼠标点击）</li>
-<li>事件处理程序：事件触发后要执行的代码（函数）</li>
-</ol>
-<h4 id="事件的基本使用"><a href="#事件的基本使用" class="headerlink" title="事件的基本使用"></a>事件的基本使用</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line">box.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'代码会在box被点击后执行'</span>);  </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h4 id="案例："><a href="#案例：" class="headerlink" title="案例："></a>案例：</h4><p>点击按钮弹出对话框</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//先有按钮，才能获取，获取之后才能注册点击事件</span></span><br><span class="line">&lt;input type=<span class="string">"button"</span> value=<span class="string">"按钮"</span> id=<span class="string">"btn"</span>&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="comment">//根据id属性的值从文档中获取这个元素</span></span><br><span class="line">    <span class="keyword">var</span> btnObj = <span class="built_in">document</span>.getElementById(<span class="string">"btn"</span>);</span><br><span class="line">    <span class="comment">//为当前这个按钮元素（对象），注册点击事件，添加事件处理函数（匿名函数）</span></span><br><span class="line">    btnObj.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">//这是响应的事情</span></span><br><span class="line">        alert(<span class="string">"哎呀，我好帅啊"</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="属性操作"><a href="#属性操作" class="headerlink" title="属性操作"></a>属性操作</h3><h4 id="基本标签属性操作"><a href="#基本标签属性操作" class="headerlink" title="基本标签属性操作"></a>基本标签属性操作</h4><p>href、title、id、src、className、width、height</p>
-<p>案例：点击图片修改图片的宽和高</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=<span class="string">"images/1.jpg"</span> alt=<span class="string">""</span> id=<span class="string">"im"</span>/&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="comment">//点击图片,修改自身的宽和高</span></span><br><span class="line">  <span class="keyword">var</span> imgObj = <span class="built_in">document</span>.getElementById(<span class="string">"im"</span>);</span><br><span class="line">  imgObj.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.width = <span class="string">"200"</span>;</span><br><span class="line">    <span class="keyword">this</span>.height = <span class="string">"300"</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>####　表单元素属性</p>
-<ul>
-<li>value 用于大部分表单元素的内容获取(option除外)</li>
-<li>type 可以获取input标签的类型(输入框或复选框等)</li>
-<li>disabled 禁用属性</li>
-<li>checked 复选框选中属性</li>
-<li>selected 下拉菜单选中属性</li>
-</ul>
-<p>案例：检测密码是否是6-10位，如果不满足要求高亮显示文本框</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=<span class="string">"text"</span> value=<span class="string">""</span> id=<span class="string">"txt"</span>/&gt;</span><br><span class="line">    </span><br><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">my$</span>(<span class="params">id</span>)</span>&#123;</span><br><span class="line">    	<span class="keyword">return</span> <span class="built_in">document</span>.getElementById(id);</span><br><span class="line">	&#125;</span><br><span class="line">  <span class="comment">//获取文本框</span></span><br><span class="line">  my$(<span class="string">"txt"</span>).onblur=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//判断密码的长度</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">this</span>.value.length&gt;=<span class="number">6</span>&amp;&amp;<span class="keyword">this</span>.value.length&lt;=<span class="number">10</span>)&#123;</span><br><span class="line">      <span class="keyword">this</span>.style.backgroundColor=<span class="string">"red"</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.style.backgroundColor=<span class="string">"green"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="自定义属性操作"><a href="#自定义属性操作" class="headerlink" title="自定义属性操作"></a>自定义属性操作</h4><ul>
-<li>getAttribute() 获取标签行内属性</li>
-<li>setAttribute() 设置标签行内属性</li>
-<li>removeAttribute() 移除标签行内属性</li>
-<li>与element.属性的区别: 上述三个方法用于获取任意的行内属性</li>
-</ul>
-<p>//list[i].score=(i+1)*10;//此方式,自定义属性在DOM对象上,不在标签中</p>
-<p>案例：自定义属性的设置和获取</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;ul id=<span class="string">"uu"</span>&gt;</span><br><span class="line">  &lt;li&gt;小明&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">  &lt;li&gt;小王&lt;/</span>li&gt;</span><br><span class="line">  &lt;li&gt;小苏&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">  &lt;li&gt;小杰&lt;/</span>li&gt;</span><br><span class="line">  &lt;li&gt;小乔&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">&lt;/u</span>l&gt;</span><br><span class="line">&lt;script src=<span class="string">"common.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;script&gt;</span><br><span class="line">   <span class="comment">//获取所有的li标签,然后为每个标签中动态的添加自定义属性和值</span></span><br><span class="line">  <span class="comment">//点击的时候获取该标签的自定义属性的值</span></span><br><span class="line"></span><br><span class="line">   <span class="comment">//根据id获取ul标签,并且或者该标签中所有的li</span></span><br><span class="line">  <span class="keyword">var</span> list=my$(<span class="string">"uu"</span>).getElementsByTagName(<span class="string">"li"</span>);</span><br><span class="line">  <span class="comment">//循环遍历</span></span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;list.length;i++)&#123;</span><br><span class="line">    <span class="comment">//先为每个li添加自定义属性</span></span><br><span class="line">    list[i].setAttribute(<span class="string">"score"</span>,(i+<span class="number">1</span>)*<span class="number">10</span>);</span><br><span class="line">    <span class="comment">//点击每个li标签,显示对应的自定义属性值</span></span><br><span class="line">    list[i].onclick=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      alert(<span class="keyword">this</span>.getAttribute(<span class="string">"score"</span>));</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>body&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="样式操作"><a href="#样式操作" class="headerlink" title="样式操作"></a>样式操作</h4><p>使用style方式设置的样式显示在标签行内</p>
-<p>注意：通过样式属性设置宽高、位置的属性类型是字符串，需要加上px</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line">box.style.width = <span class="string">'100px'</span>;</span><br><span class="line">box.style.height = <span class="string">'100px'</span>;</span><br><span class="line">box.style.backgroundColor = <span class="string">'red'</span>;</span><br></pre></td></tr></table></figure>
-
-<h4 id="类名操作"><a href="#类名操作" class="headerlink" title="类名操作"></a>类名操作</h4><p>修改标签的className属性相当于直接修改标签的类名</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line">box.className = <span class="string">'clearfix'</span>;</span><br></pre></td></tr></table></figure>
-
-<h3 id="innerText和textCount"><a href="#innerText和textCount" class="headerlink" title="innerText和textCount"></a>innerText和textCount</h3><ul>
-<li>设置标签中文本内容，使用textCount属性，谷歌、火狐支持，IE8不支持</li>
-<li>设置标签中文本内容，使用innerText属性，谷歌、火狐、IE8都支持</li>
-</ul>
-<p>如果这个属性在浏览器中不支持，那么这个属性的类型就是undefined</p>
-<p>判断这个属性的类型是不是undefined，就知道浏览器是否支持</p>
-<p>兼容代码如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">	<span class="comment">//设置任意的标签中间的任意文本内容</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">setInnerText</span>(<span class="params">element,text</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//判断浏览器是否支持这个属性</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">typeof</span> element.textContent ==<span class="string">"undefined"</span>)&#123;<span class="comment">//不支持</span></span><br><span class="line">      element.innerText=text;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;<span class="comment">//支持这个属性</span></span><br><span class="line">      element.textContent=text;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//获取任意标签中间的文本内容</span></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">getInnerText</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">typeof</span> element.textContent==<span class="string">"undefined"</span>)&#123;</span><br><span class="line">     <span class="keyword">return</span> element.innerText;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      <span class="keyword">return</span> element.textContent;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//测试</span></span><br><span class="line"></span><br><span class="line">  my$(<span class="string">"btn"</span>).onclick=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//console.log(getInnerText(my$("dv")));</span></span><br><span class="line">    setInnerText(my$(<span class="string">"dv"</span>),<span class="string">"哈哈,我又变帅了"</span>);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="innerText和innerHTML"><a href="#innerText和innerHTML" class="headerlink" title="innerText和innerHTML"></a>innerText和innerHTML</h4><p>设置：</p>
-<ul>
-<li>如果使用innerText主要是设置文本的,设置标签内容,是没有标签的效果的</li>
-<li>innerHTML可以设置文本内容，主要是用来在标签中设置新的html标签，是有标签效果的</li>
-</ul>
-<p>获取：</p>
-<ul>
-<li>innerText可以获取标签中间的文本内容，但是标签中如果还有标签，那么最里面的标签的文本内容也能获取—–获取不到标签</li>
-<li>innerHTML可以真正获取标签中的所有内容</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">&lt;input type=<span class="string">"button"</span> value=<span class="string">"显示效果"</span> id=<span class="string">"btn"</span>/&gt;</span><br><span class="line">&lt;input type=<span class="string">"button"</span> value=<span class="string">"显示效果获取"</span> id=<span class="string">"btn2"</span>/&gt;</span><br><span class="line">&lt;div id=<span class="string">"dv"</span>&gt;</span><br><span class="line">  	这是div</span><br><span class="line">	&lt;p&gt;这是一个p&lt;<span class="regexp">/p&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">my$</span>(<span class="params">id</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">document</span>.getElementById(id);</span><br><span class="line">&#125;</span><br><span class="line">    </span><br><span class="line">  my$(<span class="string">"btn"</span>).onclick=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// my$("dv").innerText="哈哈";//设置文本</span></span><br><span class="line">    <span class="comment">//  my$("dv").innerText="&lt;p&gt;这是一个p&lt;/p&gt;";//设置html标签的代码</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// my$("dv").innerHTML="哈哈";</span></span><br><span class="line">    my$(<span class="string">"dv"</span>).innerHTML=<span class="string">"&lt;p&gt;这是一个p&lt;/p&gt;"</span>;<span class="comment">//设置Html标签的</span></span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//获取</span></span><br><span class="line">  my$(<span class="string">"btn2"</span>).onclick=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//可以获取标签中的文本内容</span></span><br><span class="line">    <span class="comment">//console.log(my$("dv").innerText);</span></span><br><span class="line">    <span class="built_in">console</span>.log(my$(<span class="string">"dv"</span>).innerHTML);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>body&gt;</span><br></pre></td></tr></table></figure>
-
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/11/11/DOM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
