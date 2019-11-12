@@ -3,7 +3,7 @@
   <entry>
     <title>关于IE浏览器测试html代码的一些问题</title>
     <url>/2019/11/12/IE%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B5%8B%E8%AF%95html%E4%BB%A3%E7%A0%81/</url>
-    <content><![CDATA[<p>测试节点的兼容代码，在谷歌和火狐上面都能正常显示，然而使用IE浏览器测试的识货，IE提示说无法访问此页面，确保web地址的正确：</p>
+    <content><![CDATA[<p>测试节点的兼容代码，在谷歌和火狐上面都能正常显示，然而使用IE浏览器测试的时候，IE提示说无法访问此页面，确保web地址的正确：</p>
 <a id="more"></a>
 
 <p><img src="/2019/11/12/IE%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B5%8B%E8%AF%95html%E4%BB%A3%E7%A0%81/TIM%E5%9B%BE%E7%89%8720191112152038.png" alt="无法访问"></p>
