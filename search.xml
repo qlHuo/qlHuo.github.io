@@ -1,6 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo主题优化</title>
+    <url>/2019/11/13/hexo%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[<p>本次增加博客评论功能和页面访问量统计功能</p>
+<a id="more"></a>
+
+<h3 id="评论功能的实现"><a href="#评论功能的实现" class="headerlink" title="评论功能的实现"></a>评论功能的实现</h3><p>在刚刚搭建好博客之后就准备增加评论功能，也找了一些资料，其中有基于Leancloud系统的Valine评论系统和基于github开发的Gitment评论系统。对于前者，看到很多评论说很不错的，但是我注册的时候发现需要提交身份证号，想一想还是算了吧（即使我的身份信息很不值钱）。。后者呢，我一开始用的那个博客主题集成了这个功能，但是我在配置的时候没有配置好，印象不太好，而且好像只能关联github账号，也就放弃了。</p>
+<p>后来偶然发现了一个叫做来必力的评论系统，感觉还不错，然后就装了，真的还不错。</p>
+<p><strong>安装过程如下</strong></p>
+<ol>
+<li><p>打开<a href="https://www.livere.com/" target="_blank" rel="noopener">来必力</a>官网，注册账号（只需要邮箱验证，不需要身份证。。）</p>
+</li>
+<li><p>点击安装</p>
+<p><img src="/2019/11/13/hexo%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/TIM%E6%88%AA%E5%9B%BE20191113225944.png" alt="安装来必力"></p>
+</li>
+<li><p>选择city免费版</p>
+<p><img src="/2019/11/13/hexo%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/TIM%E6%88%AA%E5%9B%BE20191113230124.png" alt="安装city免费版"></p>
+</li>
+<li><p>复制data-uid里面的代码（双引号里面的代码），将其粘贴到主题配置文件的<code>livere_uid</code> 下面：</p>
+<p><img src="/2019/11/13/hexo%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/InkedTIM%E6%88%AA%E5%9B%BE20191113230519_LI.jpg" alt="配置代码"></p>
+</li>
+<li><p>然后测试，部署就可以了。就这么简单。。。</p>
+<p><img src="/2019/11/13/hexo%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/hexo%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%5CTIM%E6%88%AA%E5%9B%BE20191113231231.png" alt="结果"></p>
+</li>
+<li><p>这个来必力评论系统的后台管理也非常方便，能够进行评论管理，评论提醒等。</p>
+</li>
+</ol>
+<h3 id="页面访问量的统计"><a href="#页面访问量的统计" class="headerlink" title="页面访问量的统计"></a>页面访问量的统计</h3><p>这个我用的是不蒜子进行访客统计量的设置，我用的是next主题，应该是自带有不蒜子功能，所以直接在主题配置文件下找到busuanzi_count 将其下面的enable的值改成true就可以了，就能在页面底部实现访客统计以及在文章页面实现阅读量的统计。。</p>
+<p><img src="/2019/11/13/hexo%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/TIM%E6%88%AA%E5%9B%BE20191113231911.png" alt="修改配置"></p>
+<p>参考链接：</p>
+<p><a href="http://wangwlj.com/2017/12/18/blog_comment/" target="_blank" rel="noopener">http://wangwlj.com/2017/12/18/blog_comment/</a></p>
+<p><a href="https://www.jianshu.com/p/c311d31265e0" target="_blank" rel="noopener">https://www.jianshu.com/p/c311d31265e0</a></p>
+]]></content>
+      <categories>
+        <category>hexo博客搭建</category>
+      </categories>
+  </entry>
+  <entry>
     <title>页面中创建元素</title>
     <url>/2019/11/13/%E9%A1%B5%E9%9D%A2%E4%B8%AD%E5%88%9B%E5%BB%BA%E5%85%83%E7%B4%A0/</url>
     <content><![CDATA[<p>创建元素：是为了提高用户体验，具体怎样提高体验目前不是很清楚。</p>
