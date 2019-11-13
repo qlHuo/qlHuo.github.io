@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>心情</title>
-    <url>/2019/11/13/%E5%BF%83%E6%83%85/</url>
-    <content><![CDATA[<p>test</p>]]></content>
-      <categories>
-        <category>杂感</category>
-      </categories>
+    <title>test</title>
+    <url>/2019/11/13/test/</url>
+    <content><![CDATA[<p>测试，好像又不能部署到远程了</p>]]></content>
   </entry>
   <entry>
     <title>页面中创建元素</title>
