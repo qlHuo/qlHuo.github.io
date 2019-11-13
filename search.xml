@@ -1,6 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>页面中创建元素</title>
+    <url>/2019/11/13/%E9%A1%B5%E9%9D%A2%E4%B8%AD%E5%88%9B%E5%BB%BA%E5%85%83%E7%B4%A0/</url>
+    <content><![CDATA[<p>创建元素：是为了提高用户体验，具体怎样提高体验目前不是很清楚。</p>
+<a id="more"></a>
+
+<p><strong>元素创建的三种方式</strong></p>
+<ol>
+<li>document.write(“标签代码及内容”);</li>
+<li>对象.innerHTML=”标签及代码”;</li>
+<li>document.createElement(“标签及内容”);</li>
+</ol>
+<h3 id="第一种方式创建元素"><a href="#第一种方式创建元素" class="headerlink" title="第一种方式创建元素"></a>第一种方式创建元素</h3><p>document.write(“”);</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//document.write("标签代码及内容");</span></span><br><span class="line"> <span class="built_in">document</span>.getElementById(<span class="string">"btn"</span>).onclick=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="built_in">document</span>.write(<span class="string">"&lt;p&gt;这是一个p&lt;/p&gt;"</span>);</span><br><span class="line"> &#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>缺陷</strong></p>
+<p>如果是在页面加载完毕之后使用这种方式创建元素，那么页面上已经存在的元素会被覆盖掉</p>
+<h3 id="第二种方式创建元素"><a href="#第二种方式创建元素" class="headerlink" title="第二种方式创建元素"></a>第二种方式创建元素</h3><p>对象.innerHTML = “标签代码及内容”;</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="comment">//点击按钮,在div中创建一个p标签</span></span><br><span class="line">  <span class="comment">//第二种方式创建元素: 对象.innerHTML="标签代码及内容";</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">document</span>.getElementById(<span class="string">"btn"</span>).onclick=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"btn"</span>).innerHTML=<span class="string">"&lt;p&gt;窗前明月光,疑是地上霜,举头望明月,低头思故乡&lt;/p&gt;"</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="第三种放肆创建元素"><a href="#第三种放肆创建元素" class="headerlink" title="第三种放肆创建元素"></a>第三种放肆创建元素</h3><p>1.创建元素—document.createElment(“标签代码及内容”);</p>
+<p>2.把元素追加到父级元素中，父级标签.appendChild(创建的元素);</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//创建元素</span></span><br><span class="line"> <span class="comment">//document.createElement("标签名字");对象</span></span><br><span class="line"> <span class="comment">//把元素追加到父级元素中</span></span><br><span class="line"> <span class="comment">//点击按钮,在div中创建一个p</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">document</span>.getElementById(<span class="string">"btn"</span>).onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="comment">//创建元素的</span></span><br><span class="line">   <span class="keyword">var</span> pObj = <span class="built_in">document</span>.createElement(<span class="string">"p"</span>);</span><br><span class="line">   pObj.innerText = <span class="string">"这是一个p"</span>;</span><br><span class="line">   <span class="comment">//把创建后的子元素追加到父级元素中</span></span><br><span class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"dv"</span>).appendChild(pObj);</span><br><span class="line"> &#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="只创建一个元素"><a href="#只创建一个元素" class="headerlink" title="只创建一个元素"></a>只创建一个元素</h3><p>有则删除，无则创建</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//先判断有没有,有就删除,然后再创建</span></span><br><span class="line">  my$(<span class="string">"btn"</span>).onclick=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//判断,div中有没有这个按钮,有就删除</span></span><br><span class="line">    <span class="comment">//判断这个按钮的子元素是否存在</span></span><br><span class="line">   <span class="keyword">if</span>(my$(<span class="string">"btn2"</span>))&#123;<span class="comment">//如果为true就有</span></span><br><span class="line">     my$(<span class="string">"dv"</span>).removeChild(my$(<span class="string">"btn2"</span>));</span><br><span class="line">   &#125;</span><br><span class="line">    <span class="keyword">var</span> obj=<span class="built_in">document</span>.createElement(<span class="string">"input"</span>);</span><br><span class="line">    obj.type=<span class="string">"button"</span>;</span><br><span class="line">    obj.value=<span class="string">"按钮"</span>;</span><br><span class="line">   	obj.id=<span class="string">"btn2"</span>;</span><br><span class="line">   	my$(<span class="string">"dv"</span>).appendChild(obj);</span><br><span class="line"> &#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  my$(<span class="string">"btn"</span>).onclick=<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//判断,div中有没有这个按钮,有就删除</span></span><br><span class="line">    <span class="comment">//判断这个按钮的子元素是否存在</span></span><br><span class="line">    <span class="keyword">if</span>(!my$(<span class="string">"btn2"</span>))&#123;</span><br><span class="line">      <span class="keyword">var</span> obj=<span class="built_in">document</span>.createElement(<span class="string">"input"</span>);</span><br><span class="line">      obj.type=<span class="string">"button"</span>;</span><br><span class="line">      obj.value=<span class="string">"按钮"</span>;</span><br><span class="line">      obj.id=<span class="string">"btn2"</span>;</span><br><span class="line">      my$(<span class="string">"dv"</span>).appendChild(obj);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  &#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="为元素绑定事件的兼容代码"><a href="#为元素绑定事件的兼容代码" class="headerlink" title="为元素绑定事件的兼容代码"></a>为元素绑定事件的兼容代码</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//为任意元素.绑定任意的事件, 任意的元素,事件的类型,事件处理函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addEventListener</span>(<span class="params">element,type,fn</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//判断浏览器是否支持这个方法</span></span><br><span class="line">  <span class="keyword">if</span>(element.addEventListener)&#123;</span><br><span class="line">    element.addEventListener(type,fn,<span class="literal">false</span>);</span><br><span class="line">  &#125;<span class="keyword">else</span> <span class="keyword">if</span>(element.attachEvent)&#123;</span><br><span class="line">    element.attachEvent(<span class="string">"on"</span>+type,fn);</span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    element[<span class="string">"on"</span>+type]=fn;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>js学习</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>节点的相关知识</title>
+    <url>/2019/11/13/%E8%8A%82%E7%82%B9%E7%9A%84%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/</url>
+    <content><![CDATA[<p>文档：document</p>
+<p>元素（element）：页面中所有的标签，元素（element）= 标签 = 对象</p>
+<p>节点（node）：页面中所有的内容，包括标签，属性，文本（文字、换行、空格）</p>
+<p>根元素：html标签</p>
+<a id="more"></a>
+
+<p>节点：能够获取任意一个标签中的元素</p>
+<h3 id="节点的相关属性"><a href="#节点的相关属性" class="headerlink" title="节点的相关属性"></a>节点的相关属性</h3><p>节点的属性:可以用标签—-元素.出来，属性节点.出来，文本节点.点出来</p>
+<ol>
+<li>nodeType: 节点的类型：1—标签；2—-属性；3—-文本</li>
+<li>nodeName：节点的名字：标签节点—大写的标签名字；属性节点—小写的标签名字；文本节点—#text</li>
+<li>nodeValue:节点的值：标签节点—null，属性节点—属性值，文本节点—文本内容</li>
+</ol>
+<h3 id="12行代码–获取元素和节点"><a href="#12行代码–获取元素和节点" class="headerlink" title="12行代码–获取元素和节点"></a>12行代码–获取元素和节点</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> ulObj=<span class="built_in">document</span>.getElementById(<span class="string">"uu"</span>);</span><br><span class="line">  <span class="comment">//父级节点</span></span><br><span class="line">  <span class="built_in">console</span>.log(ulObj.parentNode);</span><br><span class="line">  <span class="comment">//父级元素</span></span><br><span class="line">  <span class="built_in">console</span>.log(ulObj.parentElement);</span><br><span class="line">  <span class="comment">//子节点</span></span><br><span class="line">  <span class="built_in">console</span>.log(ulObj.childNodes);</span><br><span class="line">  <span class="comment">//子元素</span></span><br><span class="line">  <span class="built_in">console</span>.log(ulObj.children);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"=============================================="</span>);</span><br><span class="line">  <span class="comment">//第一个子节点</span></span><br><span class="line">  <span class="built_in">console</span>.log(ulObj.firstChild);<span class="comment">//IE8中是第一个子元素</span></span><br><span class="line">  <span class="comment">//第一个子元素</span></span><br><span class="line">  <span class="built_in">console</span>.log(ulObj.firstElementChild);<span class="comment">//IE8中不支持</span></span><br><span class="line">  <span class="comment">//最后一个子节点</span></span><br><span class="line">  <span class="built_in">console</span>.log(ulObj.lastChild);<span class="comment">//IE8中是第一个子元素</span></span><br><span class="line">  <span class="comment">//最后一个子元素</span></span><br><span class="line">  <span class="built_in">console</span>.log(ulObj.lastElementChild);<span class="comment">//IE8中不支持</span></span><br><span class="line">  <span class="comment">//某个元素的前一个兄弟节点</span></span><br><span class="line">  <span class="built_in">console</span>.log(my$(<span class="string">"three"</span>).previousSibling);<span class="comment">//IE8中是第一个子元素</span></span><br><span class="line">  <span class="comment">//某个元素的前一个兄弟元素</span></span><br><span class="line">  <span class="built_in">console</span>.log(my$(<span class="string">"three"</span>).previousElementSibling);<span class="comment">//IE8中不支持</span></span><br><span class="line">  <span class="comment">//某个元素的后一个兄弟节点</span></span><br><span class="line">  <span class="built_in">console</span>.log(my$(<span class="string">"three"</span>).nextSibling);<span class="comment">//IE8中是第一个子元素</span></span><br><span class="line">  <span class="comment">//某个元素的后一个兄弟元素</span></span><br><span class="line">  <span class="built_in">console</span>.log(my$(<span class="string">"three"</span>).nextElementSibling);<span class="comment">//IE8中不支持</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>总结：</strong></p>
+<ul>
+<li>凡是获取节点的代码在谷歌和火狐得到的都是—-相关的节点</li>
+<li>凡是获取元素的代码在谷歌和火狐得到的都是—-相关的元素</li>
+<li>除了父级节点和子级节点之外，凡是获取节点的代码在IE8中都是获取元素，不支持其他浏览器中获取元素的代码（结果是undefined）。</li>
+</ul>
+<p><strong>节点的兼容代码</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//获取任意一个父级元素的第一个子级元素</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFirstElementChild</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(element.firstElementChild)&#123;<span class="comment">//true---&gt;支持</span></span><br><span class="line">    <span class="keyword">return</span> element.firstElementChild;</span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> node=element.firstChild;<span class="comment">//第一个节点</span></span><br><span class="line">    <span class="comment">//节点存在且不是标签，执行循环体，如果是标签就跳出循环</span></span><br><span class="line">    <span class="keyword">while</span> (node&amp;&amp;node.nodeType!=<span class="number">1</span>)&#123;</span><br><span class="line">      node=node.nextSibling;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> node;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//获取任意一个父级元素的最后一个子级元素</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getLastElementChild</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(element.lastElementChild)&#123;<span class="comment">//true---&gt;支持</span></span><br><span class="line">    <span class="keyword">return</span> element.lastElementChild;</span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> node=element.lastChild;<span class="comment">//第一个节点</span></span><br><span class="line">    <span class="keyword">while</span> (node&amp;&amp;node.nodeType!=<span class="number">1</span>)&#123;</span><br><span class="line">      node=node.previousSibling;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> node;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <categories>
+        <category>js学习</category>
+      </categories>
+  </entry>
+  <entry>
     <title>关于IE浏览器测试html代码的一些问题</title>
     <url>/2019/11/12/IE%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B5%8B%E8%AF%95html%E4%BB%A3%E7%A0%81/</url>
     <content><![CDATA[<p>测试节点的兼容代码，在谷歌和火狐上面都能正常显示，然而使用IE浏览器测试的时候，IE提示说无法访问此页面，确保web地址的正确：</p>
