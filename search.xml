@@ -1,6 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>正则表达式</title>
+    <url>/2019/12/22/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    <content><![CDATA[<h3 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h3><p>今天简单学习了正则表达式，现在把基础知识点做一些记录。</p>
+<a id="more"></a>
+
+<h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><p>正则表达式是对字符串操作的一种逻辑公式，就是用事先定义好的一些特定字符、及这些特定字符的组合，组成一个“规则字符串”，这个“规则字符串”用来表达对字符串的一种过滤逻辑。</p>
+<h4 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h4><ol>
+<li>判断给定的字符串是否符合正则表达式的过滤逻辑（匹配）</li>
+<li>可以通过正则表达式，从字符串中获取我们想要的特定部分（提取）</li>
+<li>强大的字符串替换能力（替换）</li>
+</ol>
+<p>总而言之，正则表达式的主要作用是：匹配字符串，然后进行操作</p>
+<h4 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h4><ol>
+<li>灵活性、逻辑性和功能性强</li>
+<li>可以迅速地用非常简单的方式达到对字符串地复杂控制</li>
+</ol>
+<h4 id="元字符和限定符"><a href="#元字符和限定符" class="headerlink" title="元字符和限定符"></a>元字符和限定符</h4><p>正则表达式的组成：是由元字符或者限定字符组成的一个式子</p>
+<p><strong>常用元字符</strong></p>
+<table>
+<thead>
+<tr>
+<th>元字符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>\d</td>
+<td>匹配数字</td>
+</tr>
+<tr>
+<td>\D</td>
+<td>匹配任意非数字的字符</td>
+</tr>
+<tr>
+<td>\w</td>
+<td>匹配字母或数字或下划线</td>
+</tr>
+<tr>
+<td>\W</td>
+<td>匹配任意不是字母、数字、下划线</td>
+</tr>
+<tr>
+<td>\s</td>
+<td>匹配任意的空白符</td>
+</tr>
+<tr>
+<td>\S</td>
+<td>匹配任意不是空白符的字符</td>
+</tr>
+<tr>
+<td>.</td>
+<td>匹配除换行符以外的任意单个字符</td>
+</tr>
+<tr>
+<td>^</td>
+<td>表示匹配行首的文本（以谁开始）</td>
+</tr>
+<tr>
+<td>$</td>
+<td>表示匹配行尾的文本（以谁结束）</td>
+</tr>
+</tbody></table>
+<p><strong>限定符</strong></p>
+<table>
+<thead>
+<tr>
+<th>限定符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>*</td>
+<td>出现0次或多次</td>
+</tr>
+<tr>
+<td>+</td>
+<td>出现1次或多次</td>
+</tr>
+<tr>
+<td>？</td>
+<td>出现0次或1次</td>
+</tr>
+<tr>
+<td>{n}</td>
+<td>出现n次</td>
+</tr>
+<tr>
+<td>{n,m}</td>
+<td>出现n次到m次</td>
+</tr>
+<tr>
+<td>{n,}</td>
+<td>出现n次或多次</td>
+</tr>
+</tbody></table>
+<p><strong>其他</strong></p>
+<ol>
+<li><input disabled type="checkbox"> 字符串用中括号括起来，表示匹配其中任意一个字符，相当于或的意思</li>
+<li>[^] 匹配除中括号以内的内容</li>
+<li>\  转义符</li>
+<li>| 或者，选择两者中的一个。注意|将左右两边分为两部分，而不管左右两边有多长多乱</li>
+<li>()  分组，提升优先级</li>
+<li>[\u4e00-\u9fa5]  匹配汉字</li>
+</ol>
+<h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><p>验证手机号：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">^\d&#123;11&#125;$</span><br></pre></td></tr></table></figure>
+
+<p>验证邮编：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">^\d&#123;<span class="number">6</span>&#125;$</span><br></pre></td></tr></table></figure>
+
+<p>验证邮箱：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">^\w+@\w+\.\w+$</span><br><span class="line"></span><br><span class="line">[<span class="number">0</span><span class="number">-9</span>a-zA-Z_.-]+[@][<span class="number">0</span><span class="number">-9</span>a-zA-Z_.-]+([.][a-zA-Z]+)&#123;<span class="number">1</span>,<span class="number">2</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<p>验证IP地址127.0.0.1</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">^\d&#123;<span class="number">1</span>,<span class="number">3</span>&#125;\(.\d&#123;<span class="number">1</span>,<span class="number">3</span>&#125;)&#123;<span class="number">3</span>&#125;$</span><br></pre></td></tr></table></figure>
+
+<h4 id="JavaScript创建正则表达式"><a href="#JavaScript创建正则表达式" class="headerlink" title="JavaScript创建正则表达式"></a>JavaScript创建正则表达式</h4><p>方式1：通过调用构造函数的方式创建</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="regexp">/\d&#123;5&#125;/</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg = <span class="keyword">new</span> Regex(<span class="string">'\d'</span>, <span class="string">'gi'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>方式2：通过字面量的方式创建</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/\d/i</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/\d&#123;1,5&#125;/</span>;</span><br></pre></td></tr></table></figure>
+
+<p>参数</p>
+<table>
+<thead>
+<tr>
+<th>标志</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>i</td>
+<td>忽略大小写</td>
+</tr>
+<tr>
+<td>g</td>
+<td>全局匹配</td>
+</tr>
+<tr>
+<td>gi</td>
+<td>全局匹配+忽略大小写</td>
+</tr>
+</tbody></table>
+<h4 id="匹配正则表达式"><a href="#匹配正则表达式" class="headerlink" title="匹配正则表达式"></a>匹配正则表达式</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="regexp">/./</span>.test(<span class="string">"除了回车换行以为的任意字符"</span>));<span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="regexp">/.*/</span>.test(<span class="string">"0个到多个"</span>));<span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="regexp">/.+/</span>.test(<span class="string">"1个到多个"</span>));<span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="regexp">/.?/</span>.test(<span class="string">"哈哈"</span>));<span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="regexp">/[0-9]/</span>.test(<span class="string">"9527"</span>));<span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="regexp">/[a-z]/</span>.test(<span class="string">"what"</span>));<span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="regexp">/[A-Z]/</span>.test(<span class="string">"Are"</span>));<span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="regexp">/[a-zA-Z]/</span>.test(<span class="string">"干啥子"</span>));<span class="comment">//false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="regexp">/[0-9a-zA-Z]/</span>.test(<span class="string">"9ebg"</span>));<span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="regexp">/b|(ara)/</span>.test(<span class="string">"abra"</span>));<span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="regexp">/[a-z]&#123;2,3&#125;/</span>.test(<span class="string">"arfsf"</span>));<span class="comment">//</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="regexp">/\d/</span>.test(<span class="string">"998"</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="regexp">/\d*/</span>.test(<span class="string">"998"</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="regexp">/\d+/</span>.test(<span class="string">"998"</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="regexp">/\d&#123;0,&#125;/</span>.test(<span class="string">"998"</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="regexp">/\d&#123;2,3&#125;/</span>.test(<span class="string">"998"</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="regexp">/\D/</span>.test(<span class="string">"eat"</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="regexp">/\s/</span>.test(<span class="string">"  "</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="regexp">/\S/</span>.test(<span class="string">"嘎嘎 "</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="regexp">/\w/</span>.test(<span class="string">"_"</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="regexp">/\W/</span>.test(<span class="string">"_"</span>));</span><br></pre></td></tr></table></figure>
+
+<h4 id="案例-1"><a href="#案例-1" class="headerlink" title="案例"></a>案例</h4><p><strong>验证密码的强度</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;style type=<span class="string">"text/css"</span>&gt;</span><br><span class="line">    #dv&#123;</span><br><span class="line">        width: <span class="number">300</span>px;</span><br><span class="line">        height:<span class="number">200</span>px;</span><br><span class="line">        position: absolute;</span><br><span class="line">        left:<span class="number">300</span>px;</span><br><span class="line">        top:<span class="number">100</span>px;</span><br><span class="line">    &#125;</span><br><span class="line">    .strengthLv0 &#123;</span><br><span class="line">        height: <span class="number">6</span>px;</span><br><span class="line">        width: <span class="number">120</span>px;</span><br><span class="line">        border: 1px solid #ccc;</span><br><span class="line">        padding: <span class="number">2</span>px;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .strengthLv1 &#123;</span><br><span class="line">        background: red;</span><br><span class="line">        height: <span class="number">6</span>px;</span><br><span class="line">        width: <span class="number">40</span>px;</span><br><span class="line">        border: 1px solid #ccc;</span><br><span class="line">        padding: <span class="number">2</span>px;</span><br><span class="line">    &#125;</span><br><span class="line">    .strengthLv2 &#123;</span><br><span class="line">        background: orange;</span><br><span class="line">        height: <span class="number">6</span>px;</span><br><span class="line">        width: <span class="number">80</span>px;</span><br><span class="line">        border: 1px solid #ccc;</span><br><span class="line">        padding: <span class="number">2</span>px;</span><br><span class="line">    &#125;</span><br><span class="line">    .strengthLv3 &#123;</span><br><span class="line">        background: green;</span><br><span class="line">        height: <span class="number">6</span>px;</span><br><span class="line">        width: <span class="number">120</span>px;</span><br><span class="line">        border: 1px solid #ccc;</span><br><span class="line">        padding: <span class="number">2</span>px;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;div id="dv"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;label for="pwd"&gt;密码&lt;/</span>label&gt;</span><br><span class="line">    &lt;input type=<span class="string">"text"</span> id=<span class="string">"pwd"</span> maxlength=<span class="string">"16"</span>&gt;<span class="xml"><span class="comment">&lt;!--课外话题--&gt;</span></span></span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;em&gt;密码强度：&lt;/em&gt;</span><br><span class="line">        &lt;em id="strength"&gt;&lt;/em&gt;</span><br><span class="line">        &lt;div id="strengthLevel" class="strengthLv0"&gt;&lt;/div&gt;</span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">     <span class="function"><span class="keyword">function</span> <span class="title">my$</span>(<span class="params">id</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">document</span>.getElementById(<span class="string">"id"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="comment">//获取文本框注册键盘抬起事件</span></span><br><span class="line">    my$(<span class="string">"pwd"</span>).onkeyup = <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">//每次键盘抬起的时候都要获取文本框中的内容，验证文本框中有什么东西，得到一个级别，然后下面的div显示对应的颜色</span></span><br><span class="line">        <span class="comment">//如果密码的长度小于6，没必要判断</span></span><br><span class="line">        <span class="comment">// if(this.value.length &gt;= 6)&#123;</span></span><br><span class="line">        <span class="comment">//     var lvl = getLvl(this.value);</span></span><br><span class="line">        <span class="comment">//     my$("strengthLevel").className="strengthLv"+lvl;</span></span><br><span class="line">        <span class="comment">// &#125;else&#123;</span></span><br><span class="line">        <span class="comment">//     my$("strengthLevel").className="strengthLv0";</span></span><br><span class="line">        <span class="comment">// &#125;   </span></span><br><span class="line">        my$(<span class="string">"strengthLevel"</span>).className=<span class="string">"strengthLv"</span>+(<span class="keyword">this</span>.value.length&gt;=<span class="number">6</span>?getLvl(<span class="keyword">this</span>.value):<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="comment">//输入密码，返回对应的级别</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getLvl</span>(<span class="params">pwd</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> lvl = <span class="number">0</span>;<span class="comment">//默认是0级</span></span><br><span class="line">        <span class="comment">//密码中是否有数字，或者字母，或是特殊符号</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="regexp">/[0-9]/</span>.test(pwd))&#123;</span><br><span class="line">            lvl++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//判断密码中是不是有字母</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="regexp">/[a-zA-Z]/</span>.test(pwd))&#123;</span><br><span class="line">            lvl++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//判断密码中有没有特殊符号</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="regexp">/[^0-9a-zA-Z]/</span>.test(pwd))&#123;</span><br><span class="line">            lvl++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> lvl;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>表单验证</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">  &lt;style type=<span class="string">"text/css"</span>&gt;</span><br><span class="line">    body &#123;</span><br><span class="line">      background: #ccc;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    label &#123;</span><br><span class="line">      width: <span class="number">40</span>px;</span><br><span class="line">      display: inline-block;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    span &#123;</span><br><span class="line">      color: red;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .container &#123;</span><br><span class="line">      margin: <span class="number">100</span>px auto;</span><br><span class="line">      width: <span class="number">400</span>px;</span><br><span class="line">      padding: <span class="number">50</span>px;</span><br><span class="line">      line-height: <span class="number">40</span>px;</span><br><span class="line">      border: 1px solid #999;</span><br><span class="line">      background: #efefef;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    span &#123;</span><br><span class="line">      margin-left: <span class="number">30</span>px;</span><br><span class="line">      font-size: <span class="number">12</span>px;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .wrong &#123;</span><br><span class="line">      color: red</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .right &#123;</span><br><span class="line">      color: green;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .defau &#123;</span><br><span class="line">      width: <span class="number">200</span>px;</span><br><span class="line">      height: <span class="number">20</span>px;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .de1 &#123;</span><br><span class="line">      background-position: <span class="number">0</span> <span class="number">-20</span>px;</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;div class="container" id="dv"&gt;</span></span><br><span class="line"><span class="regexp">  &lt;label for="qq"&gt;Q Q&lt;/</span>label&gt;<span class="xml"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"qq"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span></span><br><span class="line">  &lt;label&gt;手机&lt;/label&gt;&lt;input type="text" id="phone"&gt;&lt;span&gt;&lt;/span&gt;&lt;br/&gt;</span><br><span class="line">  &lt;label&gt;邮箱&lt;/label&gt;&lt;input type="text" id="e-mail"&gt;&lt;span&gt;&lt;/span&gt;&lt;br/&gt;</span><br><span class="line">  &lt;label&gt;座机&lt;/label&gt;&lt;input type="text" id="telephone"&gt;&lt;span&gt;&lt;/span&gt;&lt;br/&gt;</span><br><span class="line">  &lt;label&gt;姓名&lt;/label&gt;&lt;input type="text" id="fullName"&gt;&lt;span&gt;&lt;/span&gt;&lt;br/&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"> function my$(id)&#123;</span><br><span class="line">            return document.getElementById("id");</span><br><span class="line">        &#125;</span><br><span class="line">  //qq的</span><br><span class="line">  checkInput(my$("qq"),/^\d&#123;5,11&#125;$/);</span><br><span class="line">  //手机</span><br><span class="line">  checkInput(my$("phone"),/^\d&#123;11&#125;$/);</span><br><span class="line">  //邮箱</span><br><span class="line">  checkInput(my$("e-mail"),/^[0-9a-zA-Z_.-]+[@][0-9a-zA-Z_.-]+([.][a-zA-Z]+)&#123;1,2&#125;$/);</span><br><span class="line">  //座机号码</span><br><span class="line">  checkInput(my$("telephone"),/^\d&#123;3,4&#125;[-]\d&#123;7,8&#125;$/);</span><br><span class="line">  //中文名字</span><br><span class="line">  checkInput(my$("fullName"),/^[\u4e00-\u9fa5]&#123;2,6&#125;$/);</span><br><span class="line">  //给我文本框,给我这个文本框相应的正则表达式,我把结果显示出来</span><br><span class="line">  //通过正则表达式验证当前的文本框是否匹配并显示结果</span><br><span class="line">  function checkInput(input,reg) &#123;</span><br><span class="line">    //文本框注册失去焦点的事件</span><br><span class="line">    input.onblur=function () &#123;</span><br><span class="line">      if(reg.test(this.value))&#123;</span><br><span class="line">        this.nextElementSibling.innerText="正确了";</span><br><span class="line">        this.nextElementSibling.style.color="green";</span><br><span class="line">      &#125;else&#123;</span><br><span class="line">        this.nextElementSibling.innerText="让你得瑟,错了吧";</span><br><span class="line">        this.nextElementSibling.style.color="red";</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="附录4"><a href="#附录4" class="headerlink" title="附录4"></a>附录4</h4><p><a href="https://c.runoob.com/front-end/854" target="_blank" rel="noopener">正则表达式在线测试工具</a></p>
+<p>电子文档制作工具: <a href="https://github.com/egoist/docute" target="_blank" rel="noopener">docute</a></p>
+<p>流程图工具：<a href="http://logicnet.dk/DiagramDesigner/" target="_blank" rel="noopener">DiagramDesigner</a></p>
+]]></content>
+      <categories>
+        <category>正则表达式</category>
+      </categories>
+  </entry>
+  <entry>
     <title>动画函数的封装</title>
     <url>/2019/11/29/%E5%8A%A8%E7%94%BB%E5%87%BD%E6%95%B0%E7%9A%84%E5%B0%81%E8%A3%85/</url>
     <content><![CDATA[<h3 id="匀速动画函数"><a href="#匀速动画函数" class="headerlink" title="匀速动画函数"></a>匀速动画函数</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//任意一个元素到达指定的位置</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">animate</span>(<span class="params">element,target</span>)</span>&#123;</span><br><span class="line">        <span class="comment">//保证每次点击只有一个定时器生效，首先要清理定时器</span></span><br><span class="line">        clearInterval(element.timeId);</span><br><span class="line">        <span class="comment">//设置定时器</span></span><br><span class="line">        element.timeId = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="comment">//获取当前元素所在的位置</span></span><br><span class="line">            <span class="keyword">var</span> current = element.offsetLeft;</span><br><span class="line">            <span class="comment">//设置每次移动的距离</span></span><br><span class="line">            <span class="keyword">var</span> step = <span class="number">10</span>;</span><br><span class="line">            <span class="comment">//判断走正数还是走负数</span></span><br><span class="line">            step = current&lt;target?step:-step;</span><br><span class="line">            current +=step;</span><br><span class="line">            <span class="keyword">if</span>(<span class="built_in">Math</span>.abs(current-target) &gt; <span class="built_in">Math</span>.abs(step))&#123;</span><br><span class="line">                element.style.left = current+<span class="string">"px"</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                clearInterval(element.timeId);</span><br><span class="line">                element.style.left = target+<span class="string">"px"</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;,<span class="number">20</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure><a id="more"></a>
