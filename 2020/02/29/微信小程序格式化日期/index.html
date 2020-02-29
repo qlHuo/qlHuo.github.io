@@ -52,22 +52,17 @@
   };
 </script>
 
-  <meta name="description" content="测试节点的兼容代码，在谷歌和火狐上面都能正常显示，然而使用IE浏览器测试的时候，IE提示说无法访问此页面，确保web地址的正确：">
-<meta name="keywords" content="IE测试的问题">
+  <meta name="description" content="wxml里的格式化日期新建一个filter.wxs 文件，放到utils文件夹下。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于IE浏览器测试html代码的一些问题">
-<meta property="og:url" content="https:&#x2F;&#x2F;qlhuo.github.io&#x2F;2019&#x2F;11&#x2F;12&#x2F;IE%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B5%8B%E8%AF%95html%E4%BB%A3%E7%A0%81&#x2F;index.html">
+<meta property="og:title" content="微信小程序格式化日期">
+<meta property="og:url" content="https:&#x2F;&#x2F;qlhuo.github.io&#x2F;2020&#x2F;02&#x2F;29&#x2F;%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%A5%E6%9C%9F&#x2F;index.html">
 <meta property="og:site_name" content="Aurora&#39;s blogs">
-<meta property="og:description" content="测试节点的兼容代码，在谷歌和火狐上面都能正常显示，然而使用IE浏览器测试的时候，IE提示说无法访问此页面，确保web地址的正确：">
+<meta property="og:description" content="wxml里的格式化日期新建一个filter.wxs 文件，放到utils文件夹下。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https:&#x2F;&#x2F;qlhuo.github.io&#x2F;2019&#x2F;11&#x2F;12&#x2F;IE%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B5%8B%E8%AF%95html%E4%BB%A3%E7%A0%81&#x2F;TIM%E5%9B%BE%E7%89%8720191112152038.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;qlhuo.github.io&#x2F;2019&#x2F;11&#x2F;12&#x2F;IE%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B5%8B%E8%AF%95html%E4%BB%A3%E7%A0%81&#x2F;TIM%E6%88%AA%E5%9B%BE20191112153259.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;qlhuo.github.io&#x2F;2019&#x2F;11&#x2F;12&#x2F;IE%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B5%8B%E8%AF%95html%E4%BB%A3%E7%A0%81&#x2F;TIM%E6%88%AA%E5%9B%BE20191112153913.png">
-<meta property="og:updated_time" content="2019-11-15T06:53:25.581Z">
+<meta property="og:updated_time" content="2020-02-29T14:46:57.870Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;qlhuo.github.io&#x2F;2019&#x2F;11&#x2F;12&#x2F;IE%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B5%8B%E8%AF%95html%E4%BB%A3%E7%A0%81&#x2F;TIM%E5%9B%BE%E7%89%8720191112152038.png">
 
-<link rel="canonical" href="https://qlhuo.github.io/2019/11/12/IE%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B5%8B%E8%AF%95html%E4%BB%A3%E7%A0%81/">
+<link rel="canonical" href="https://qlhuo.github.io/2020/02/29/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%A5%E6%9C%9F/">
 
 
 <script id="page-configurations">
@@ -81,7 +76,7 @@
   };
 </script>
 
-  <title>关于IE浏览器测试html代码的一些问题 | Aurora's blogs</title>
+  <title>微信小程序格式化日期 | Aurora's blogs</title>
   
 
 
@@ -227,7 +222,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://qlHuo.github.io/2019/11/12/IE%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B5%8B%E8%AF%95html%E4%BB%A3%E7%A0%81/">
+    <link itemprop="mainEntityOfPage" href="https://qlHuo.github.io/2020/02/29/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%A5%E6%9C%9F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -240,7 +235,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          关于IE浏览器测试html代码的一些问题
+          微信小程序格式化日期
         </h2>
 
         <div class="post-meta">
@@ -249,24 +244,18 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2019-11-12 13:03:01" itemprop="dateCreated datePublished" datetime="2019-11-12T13:03:01+08:00">2019-11-12</time>
+              <time title="创建时间：2020-02-29 22:46:01 / 修改时间：22:46:57" itemprop="dateCreated datePublished" datetime="2020-02-29T22:46:01+08:00">2020-02-29</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-15 14:53:25" itemprop="dateModified" datetime="2019-11-15T14:53:25+08:00">2019-11-15</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/JavaScript%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaScript学习</span>
+                  <a href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" itemprop="url" rel="index">
+                    <span itemprop="name">小程序</span>
                   </a>
                 </span>
             </span>
@@ -284,14 +273,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>693</span>
+              <span>2.8k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>5 分钟</span>
             </span>
 
         </div>
@@ -303,29 +292,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>测试节点的兼容代码，在谷歌和火狐上面都能正常显示，然而使用IE浏览器测试的时候，IE提示说无法访问此页面，确保web地址的正确：</p>
-<a id="more"></a>
+        <h3 id="wxml里的格式化日期"><a href="#wxml里的格式化日期" class="headerlink" title="wxml里的格式化日期"></a>wxml里的格式化日期</h3><p>新建一个filter.wxs 文件，放到utils文件夹下。<a id="more"></a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">	//日期格式化-------------------------------------------------------------</span><br><span class="line">var formatTime = function (strDate, format = &quot;yyyy-MM-dd hh:mm:ss&quot;) &#123;</span><br><span class="line">  // 解决ios出现NaN问题</span><br><span class="line">  var realDate = strDate ? getDate(strDate.replace(getRegExp(&apos;-&apos;, &apos;g&apos;), &apos;/&apos;)) : getDate();</span><br><span class="line">  var regYear = getRegExp(&quot;(y+)&quot;, &quot;i&quot;);</span><br><span class="line">  var date = [</span><br><span class="line">    [&quot;M+&quot;, realDate.getMonth() + 1],</span><br><span class="line">    [&quot;d+&quot;, realDate.getDate()],</span><br><span class="line">    [&quot;h+&quot;, realDate.getHours()],</span><br><span class="line">    [&quot;m+&quot;, realDate.getMinutes()],</span><br><span class="line">    [&quot;s+&quot;, realDate.getSeconds()],</span><br><span class="line">    [&quot;q+&quot;, Math.floor((realDate.getMonth() + 3) / 3)],</span><br><span class="line">    [&quot;S+&quot;, realDate.getMilliseconds()],</span><br><span class="line">  ];</span><br><span class="line">  var reg1 = regYear.exec(format);</span><br><span class="line">  if (reg1) &#123;</span><br><span class="line">    format = format.replace(reg1[1], (realDate.getFullYear() + &apos;&apos;).substring(4 - reg1[1].length));</span><br><span class="line">  &#125;</span><br><span class="line">  for (var i = 0; i &lt; date.length; i++) &#123;</span><br><span class="line">    var reg2 = getRegExp(&quot;(&quot; + date[i][0] + &quot;)&quot;).exec(format);</span><br><span class="line">    if (reg2) &#123;</span><br><span class="line">      format = format.replace(reg2[1], reg2[1].length == 1 ? v : (&quot;00&quot; + date[i][1]).substring((&quot;&quot; + date[i][1]).length));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return format;</span><br><span class="line">&#125;</span><br><span class="line">module.exports = &#123;</span><br><span class="line">  formatTime: formatTime,//日期格式化</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>wxml 里面这么使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">	引入：&lt;wxs module=&quot;filter&quot; src=&quot;/utils/filter.wxs&quot;&gt;&lt;/wxs&gt;</span><br><span class="line">使用：&lt;text class=&apos;valid-text&apos;&gt;有效期：&#123;&#123;filter.formatTime(data.startTime, &apos;yyyy-MM-dd&apos;)&#125;&#125;&lt;/text&gt;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2019/11/12/IE%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B5%8B%E8%AF%95html%E4%BB%A3%E7%A0%81/TIM%E5%9B%BE%E7%89%8720191112152038.png" alt="无法访问"></p>
-<p>上网查了一下，才知道可能是因为挂了代理导致本地的服务器无法启动，需要在IE浏览器中找到设置选项—-Internet选项—-局域网设置–在对于本地地址不使用代理服务器前面勾选，点击确定即可。</p>
-<p><img src="/2019/11/12/IE%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B5%8B%E8%AF%95html%E4%BB%A3%E7%A0%81/TIM%E6%88%AA%E5%9B%BE20191112153259.png" alt="代理服务器设置"></p>
-<p>但是，设置完成之后好像还是不行，提示未找到文件。</p>
-<p><img src="/2019/11/12/IE%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B5%8B%E8%AF%95html%E4%BB%A3%E7%A0%81/TIM%E6%88%AA%E5%9B%BE20191112153913.png" alt="未找到文件"></p>
-<p>这就很挠头了，同样的代码在谷歌和火狐里面运行的好好的，在ie里面就是各种问题，然后找了各种方案。一开始以为是webStrom的原因，网上也有通过配置webstrom内置服务器和端口的方式解决问题，但是搁我这就不行。</p>
-<p>后来发现，将文件名设置成英文可以正常在IE中打开。。。但中文就是乱码，提示找不到文件。</p>
-<p>最后我把在谷歌上面能正常访问的地址复制到IE上面，能够正常显示。这就应该是IE浏览器的问题了，真是很想吐槽IE。。</p>
-<p><strong>IE浏览器测试的解决办法：</strong></p>
-<ul>
-<li>手动输入要打开的文件地址</li>
-<li>把文件名换成英文，不要用中文</li>
-<li>找到源文件选择打开方式—IE浏览器</li>
-<li>将谷歌或火狐的地址复制到IE上面</li>
-</ul>
-<p>在测试IE的时候总是会有“是否阻止脚本运行的弹窗”，在head标签中插入下面的代码即可：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- saved from url=(0014)about:internet --&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="js的格式化日期代码"><a href="#js的格式化日期代码" class="headerlink" title="js的格式化日期代码"></a>js的格式化日期代码</h3><p>在小程序自己提供的utils工具中，有一个日期格式化的函数。<br>先在js文件中导入var util = require(‘../../utils/util.js’)，然后使用util.formatTime(new Date)格式化日期。<br><strong>utils.js</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">	<span class="keyword">const</span> formatTime = <span class="function"><span class="params">date</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> year = date.getFullYear()</span><br><span class="line">  <span class="keyword">const</span> month = date.getMonth() + <span class="number">1</span></span><br><span class="line">  <span class="keyword">const</span> day = date.getDate()</span><br><span class="line">  <span class="keyword">const</span> hour = date.getHours()</span><br><span class="line">  <span class="keyword">const</span> minute = date.getMinutes()</span><br><span class="line">  <span class="keyword">const</span> second = date.getSeconds()</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> [year, month, day].map(formatNumber).join(<span class="string">'/'</span>) + <span class="string">' '</span> + [hour, minute, second].map(formatNumber).join(<span class="string">':'</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> formatNumber = <span class="function"><span class="params">n</span> =&gt;</span> &#123;</span><br><span class="line">  n = n.toString()</span><br><span class="line">  <span class="keyword">return</span> n[<span class="number">1</span>] ? n : <span class="string">'0'</span> + n</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  formatTime: formatTime</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>需要格式化日期的js</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 在需要使用的js文件中，导入js  </span></span><br><span class="line"><span class="keyword">var</span> util = <span class="built_in">require</span>(<span class="string">'../../utils/util.js'</span>);  </span><br><span class="line">Page(&#123;  </span><br><span class="line">  data: &#123;  </span><br><span class="line">  time:util.formatTime(<span class="keyword">new</span> <span class="built_in">Date</span>())</span><br><span class="line">  &#125;,  </span><br><span class="line">  onLoad: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;  </span><br><span class="line">    <span class="comment">// 调用函数时，传入new Date()参数，返回值是日期和时间  </span></span><br><span class="line">    <span class="keyword">var</span> time = util.formatTime(<span class="keyword">new</span> <span class="built_in">Date</span>());  </span><br><span class="line">    <span class="comment">// 再通过setData更改Page()里面的data，动态更新页面的数据  </span></span><br><span class="line">    <span class="keyword">this</span>.setData(&#123;  </span><br><span class="line">      time: time  </span><br><span class="line">    &#125;);  </span><br><span class="line">  &#125;    </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="小程序自定义格式化时间戳函数"><a href="#小程序自定义格式化时间戳函数" class="headerlink" title="小程序自定义格式化时间戳函数"></a>小程序自定义格式化时间戳函数</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">	formatTime (time) &#123;</span><br><span class="line">	<span class="keyword">const</span> formatNumber = <span class="function"><span class="params">n</span> =&gt;</span> &#123;</span><br><span class="line">	n = n.toString()</span><br><span class="line">	<span class="keyword">return</span> n[<span class="number">1</span>] ? n : <span class="string">'0'</span> + n</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">let</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>(time);</span><br><span class="line">	<span class="keyword">const</span> year = date.getFullYear()</span><br><span class="line">	<span class="keyword">const</span> month = date.getMonth() + <span class="number">1</span></span><br><span class="line">	<span class="keyword">const</span> day = date.getDate()</span><br><span class="line">	<span class="keyword">return</span> [year, month, day].map(formatNumber).join(<span class="string">'.'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>下面是一篇关于URL编码的文章，虽然没看太明白先放这里吧：</p>
-<p><a href="http://www.ruanyifeng.com/blog/2010/02/url_encoding.htmlhttp://www.ruanyifeng.com/blog/2010/02/url_encoding.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2010/02/url_encoding.htmlhttp://www.ruanyifeng.com/blog/2010/02/url_encoding.html</a></p>
+<p>参考文章：<a href="https://blog.csdn.net/weixin_40292626/article/details/79668543" target="_blank" rel="noopener">https://blog.csdn.net/weixin_40292626/article/details/79668543</a><br><a href="https://blog.csdn.net/ZHFDBK/article/details/98882526" target="_blank" rel="noopener">https://blog.csdn.net/ZHFDBK/article/details/98882526</a><br><a href="https://blog.csdn.net/liukai6/article/details/80844171" target="_blank" rel="noopener">https://blog.csdn.net/liukai6/article/details/80844171</a></p>
 
     </div>
 
@@ -334,25 +312,19 @@
     
 
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/IE%E6%B5%8B%E8%AF%95%E7%9A%84%E9%97%AE%E9%A2%98/" rel="tag"># IE测试的问题</a>
-          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-                <a href="/2019/11/11/DOM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="next" title="DOM学习笔记">
-                  <i class="fa fa-chevron-left"></i> DOM学习笔记
+                <a href="/2020/02/06/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="next" title="移动端基础知识">
+                  <i class="fa fa-chevron-left"></i> 移动端基础知识
                 </a>
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-                <a href="/2019/11/13/hexo%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/" rel="prev" title="hexo主题优化">
-                  hexo主题优化 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
       </footer>
@@ -396,6 +368,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#wxml里的格式化日期"><span class="nav-number">1.</span> <span class="nav-text">wxml里的格式化日期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js的格式化日期代码"><span class="nav-number">2.</span> <span class="nav-text">js的格式化日期代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小程序自定义格式化时间戳函数"><span class="nav-number">3.</span> <span class="nav-text">小程序自定义格式化时间戳函数</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
