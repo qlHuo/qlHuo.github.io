@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="alternate" href="/atom.xml" title="Aurora's blogs" type="application/atom+xml">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.5.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="本文记录前端相关的知识点，复习使用和面试准备。">
+<meta name="keywords" content="知识点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端相关知识点的思考">
+<meta property="og:url" content="https:&#x2F;&#x2F;qlhuo.github.io&#x2F;2020&#x2F;03&#x2F;06&#x2F;%E5%89%8D%E7%AB%AF%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E6%80%9D%E8%80%83&#x2F;index.html">
+<meta property="og:site_name" content="Aurora&#39;s blogs">
+<meta property="og:description" content="本文记录前端相关的知识点，复习使用和面试准备。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-03-08T15:19:51.691Z">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://qlhuo.github.io/2020/03/06/%E5%89%8D%E7%AB%AF%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E6%80%9D%E8%80%83/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>前端相关知识点的思考 | Aurora's blogs</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Aurora's blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <h1 class="site-subtitle" itemprop="description">多多关照</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/%E5%88%86%E7%B1%BB/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/%E6%A0%87%E7%AD%BE/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-足迹">
+
+    <a href="/track/" rel="section"><i class="fa fa-fw fa-tags"></i>足迹</a>
+
+  </li>
+        <li class="menu-item menu-item-随笔">
+
+    <a href="/categories/%E6%9D%82%E6%84%9F" rel="section"><i class="fa fa-fw fa-bookmark"></i>随笔</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://qlHuo.github.io/2020/03/06/%E5%89%8D%E7%AB%AF%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9%E7%9A%84%E6%80%9D%E8%80%83/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Aurora">
+      <meta itemprop="description" content="这江湖看似热闹，其实前后二三十年间真正的高手不过就那十来个而已。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Aurora's blogs">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          前端相关知识点的思考
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-03-06 20:56:28" itemprop="dateCreated datePublished" datetime="2020-03-06T20:56:28+08:00">2020-03-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-08 23:19:51" itemprop="dateModified" datetime="2020-03-08T23:19:51+08:00">2020-03-08</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>本文记录前端相关的知识点，复习使用和面试准备。<a id="more"></a></p>
+<h3 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h3><h4 id="为什么是子绝父相？"><a href="#为什么是子绝父相？" class="headerlink" title="为什么是子绝父相？"></a>为什么是子绝父相？</h4><ol>
+<li>relative 相对定位 <strong>会</strong>在标准流中占据位置</li>
+<li>absolute 绝对定位 <strong>不会</strong> 在标准流中占据位置</li>
+<li>绝对定位 是相对于距离它最近的父元素进行定位</li>
+</ol>
+<p>为什么子元素要绝对定位？</p>
+<p>​    一些小图标，如轮播图里的小圆点或者是小三角，需要放在其他子元素的上面，虽然float 以及除了static之外的定位属性都可以利用z-index让盒子由于其他元素显示，但是absolute完全脱标且不占位置，更加方便进行显示效果。</p>
+<p>为什么父元素要相对定位？</p>
+<p>​    不管是relative/absolute/fixed，都可以让子元素找到定位点，但如果是absolute，在文档流中不占位置，下面的元素会跑上去；fixed会使元素相对于页面定位，也不可取。relative占位，下面的元素就不会移动到上面。</p>
+<p>总之：把脱离文档流的元素放到不脱离文档流（需要占位）的元素之上，就用“子绝父相”</p>
+<h3 id="外边距塌陷（折叠）"><a href="#外边距塌陷（折叠）" class="headerlink" title="外边距塌陷（折叠）"></a>外边距塌陷（折叠）</h3><h4 id="为什么会产生外边距塌陷（折叠）？"><a href="#为什么会产生外边距塌陷（折叠）？" class="headerlink" title="为什么会产生外边距塌陷（折叠）？"></a>为什么会产生外边距塌陷（折叠）？</h4><p>根据MDN：</p>
+<p>当块级元素（block）的<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin-top" target="_blank" rel="noopener">上外边距(margin-top)</a>和<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin-bottom" target="_blank" rel="noopener">下外边距(margin-bottom)</a>同时都有设定时只会只会保留最大边距，这种行为称为<strong>边界折叠</strong>（margin collapsing），有时也翻译为<strong>外边距重叠</strong>。</p>
+<h4 id="外边距折叠产生的情况与解决方法"><a href="#外边距折叠产生的情况与解决方法" class="headerlink" title="外边距折叠产生的情况与解决方法"></a>外边距折叠产生的情况与解决方法</h4><h5 id="块级父元素与其第一个-最后一个子元素"><a href="#块级父元素与其第一个-最后一个子元素" class="headerlink" title="块级父元素与其第一个/最后一个子元素"></a>块级父元素与其第一个/最后一个子元素</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span>        </span><br><span class="line">     *&#123;            </span><br><span class="line">        padding: 0;            </span><br><span class="line">        margin: 0;        </span><br><span class="line">    &#125;        </span><br><span class="line"><span class="css">    <span class="selector-id">#sec</span>&#123; </span></span><br><span class="line">    	height: 120px;           </span><br><span class="line"><span class="css">        <span class="selector-tag">background</span>: <span class="selector-id">#f00</span>;</span></span><br><span class="line"><span class="css">       	<span class="comment">/*border: 1px solid #ccc;            */</span></span></span><br><span class="line"><span class="css">         <span class="comment">/*overflow: hidden;  //创建了一个BFC，块级格式化上下文   */</span></span></span><br><span class="line">    &#125;        </span><br><span class="line"><span class="css">    <span class="selector-class">.child</span>&#123;            </span></span><br><span class="line">        height: 100px;            </span><br><span class="line">        margin-top: 10px;            </span><br><span class="line">        background: yellow;  </span><br><span class="line"><span class="css">        <span class="comment">/* border: 1px solid blue; */</span>      </span></span><br><span class="line">    &#125;    </span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">section</span> <span class="attr">id</span>=<span class="string">"sec"</span>&gt;</span>        </span><br><span class="line">    <span class="tag">&lt;<span class="name">article</span> <span class="attr">class</span>=<span class="string">"child"</span>&gt;</span><span class="tag">&lt;/<span class="name">article</span>&gt;</span>    </span><br><span class="line"><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这种情况是：子元素设置margin-top 为10px，父盒子和子元素的上边框合并到一起</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">h1 &#123;</span><br><span class="line">  margin: 0;</span><br><span class="line">  background: #cff;</span><br><span class="line">&#125;</span><br><span class="line">#div1&#123;</span><br><span class="line">	margin: 40px 0 25px 0;</span><br><span class="line">  	background: #999;</span><br><span class="line">&#125;</span><br><span class="line">#div2&#123;</span><br><span class="line">	margin: 20px 0 10px 0;</span><br><span class="line">	background: #cff;</span><br><span class="line">&#125;</span><br><span class="line">&lt;h1&gt;这是一个标题&lt;/h1&gt;</span><br><span class="line">&lt;div id=&quot;div1&quot;&gt;</span><br><span class="line">	&lt;div id=&quot;div2&quot; &gt;这是第一个块级盒子&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>测试的结果是: h1与div2之间的margin值是40px而不是想象中的60px。</p>
+<p>根据MDN：</p>
+<p>如果块级父元素中，不存在上边框（border-top）、上内补（padding-top）、inline content、 清除浮动这四条属性(对于上边框和上内补，也可以说，当上边距及上内补宽度为0时),那么这个块级元素和其第一个子元素的上边距就会发生折叠。这个折叠之后的值在这里取的就是两者之间的最大值。</p>
+<p>对于父子级块状元素解决外边距折叠的方法一般分为三大类</p>
+<ul>
+<li><p>给父级块级元素设置border-top，可以设置为：border-top:1px solid transparent</p>
+</li>
+<li><p>给父级块级元素设置一个padding-top,这个值就根据自己的布局来定吧。</p>
+</li>
+<li><p>最后一种方法，是给父级块级元素触发一个BFC(Block formatting contexts-块级格式上下文)。参考：<a href="https://juejin.im/post/5e60c2c7f265da574e22a1f5" target="_blank" rel="noopener">全面分析BFC</a></p>
+<p>具体怎么触发BFC呢？一般触发BFC的条件包括：</p>
+<ul>
+<li>浮动元素：float除了none之外</li>
+<li>用position绝对定位的元素，以及fixed固定定位的元素</li>
+<li>display: inline-block等</li>
+<li>overflow：除了visiable</li>
+</ul>
+</li>
+</ul>
+<h5 id="相邻的兄弟块级元素"><a href="#相邻的兄弟块级元素" class="headerlink" title="相邻的兄弟块级元素"></a>相邻的兄弟块级元素</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">div &#123;</span><br><span class="line">	width:100px;</span><br><span class="line">	height:100px;</span><br><span class="line">	margin:40px;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"div1"</span> &gt;</span>这是第一个块级盒子<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"div2"</span> &gt;</span>这是第二个块级盒子<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>测试的结果是两个div之间的边距是40px而不是80px。</p>
+<p>对于兄弟级块状元素，解决的方法一般有两种：</p>
+<ul>
+<li>直接只写一边的margin例如都是margin-top或者都是margin-bottom，我觉得这是我用过最简单的方法了，直接就避免了塌陷。</li>
+<li>给两个块状元素形成两个不同的BFC</li>
+</ul>
+<h5 id="空块元素"><a href="#空块元素" class="headerlink" title="空块元素"></a>空块元素</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#div1,#div2 &#123;</span><br><span class="line">	margin:0px;</span><br><span class="line">&#125;</span><br><span class="line">#voidDiv &#123;</span><br><span class="line">	margin-top:40px;</span><br><span class="line">	margin-bottom:40px;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"div1"</span> &gt;</span>这是第一个块级盒子<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"voidDiv"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"div2"</span> &gt;</span>这是第二个块级盒子<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>测试的结果是div1与div2之间的边距是40px而不是80px。</p>
+<p>根据MDN，产生的原因就在于</p>
+<blockquote>
+<p>如果存在一个空的块级元素，其 border、padding、inline content、height、min-height都不存在，那么此时上下边距就会发生折叠</p>
+</blockquote>
+<p>对于空的块状元素，解决的方法列举以下几种：</p>
+<ul>
+<li>设置border</li>
+<li>设置padding</li>
+<li>设置inline-block等等方法都可</li>
+</ul>
+<p>参考：</p>
+<p><a href="https://zhuanlan.zhihu.com/p/25876599" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/25876599</a></p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/" rel="tag"># 知识点</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/2020/03/01/2020%E5%AF%92%E5%81%87%E6%80%BB%E7%BB%93/" rel="next" title="2020寒假总结">
+                  <i class="fa fa-chevron-left"></i> 2020寒假总结
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    
+  <div class="comments" id="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80NzUzMS8yNDAzMQ=="></div>
+  </div>
+  
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#定位"><span class="nav-number">1.</span> <span class="nav-text">定位</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么是子绝父相？"><span class="nav-number">1.1.</span> <span class="nav-text">为什么是子绝父相？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#外边距塌陷（折叠）"><span class="nav-number">2.</span> <span class="nav-text">外边距塌陷（折叠）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么会产生外边距塌陷（折叠）？"><span class="nav-number">2.1.</span> <span class="nav-text">为什么会产生外边距塌陷（折叠）？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#外边距折叠产生的情况与解决方法"><span class="nav-number">2.2.</span> <span class="nav-text">外边距折叠产生的情况与解决方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#块级父元素与其第一个-最后一个子元素"><span class="nav-number">2.2.1.</span> <span class="nav-text">块级父元素与其第一个/最后一个子元素</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#相邻的兄弟块级元素"><span class="nav-number">2.2.2.</span> <span class="nav-text">相邻的兄弟块级元素</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#空块元素"><span class="nav-number">2.2.3.</span> <span class="nav-text">空块元素</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="Aurora"
+    src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">Aurora</p>
+  <div class="site-description" itemprop="description">这江湖看似热闹，其实前后二三十年间真正的高手不过就那十来个而已。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/%E5%88%86%E7%B1%BB/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/%E6%A0%87%E7%AD%BE/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yourname" title="GitHub &amp;rarr; https:&#x2F;&#x2F;github.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:1322346367@qq.com" title="E-Mail &amp;rarr; mailto:1322346367@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Aurora</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">64k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:56</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.5.0
+  </div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+
+<script type="text/javascript" src="/js/love.js"></script>
+</body>
+</html>
