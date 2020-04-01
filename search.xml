@@ -187,19 +187,8 @@
 <p>相关文章：<a href="https://blog.csdn.net/qmm0219/article/details/78261210" target="_blank" rel="noopener">https://blog.csdn.net/qmm0219/article/details/78261210</a></p>
 ]]></content>
       <categories>
-        <category>前端相关知识点</category>
+        <category>前端相关知识</category>
       </categories>
-  </entry>
-  <entry>
-    <title>demo</title>
-    <url>/2020/03/26/demo/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>更换hexo主题</title>
-    <url>/2020/03/24/huan-hexo-zhu-ti/</url>
-    <content><![CDATA[<p>测试</p>
-]]></content>
   </entry>
   <entry>
     <title>gulp学习</title>
@@ -329,7 +318,7 @@ gulp<span class="token punctuation">.</span><span class="token function">task</s
 <p><a href="https://github.com/qlHuo/studyDemo/tree/master/gulpTest" target="_blank" rel="noopener">https://github.com/qlHuo/studyDemo/tree/master/gulpTest</a></p>
 ]]></content>
       <categories>
-        <category>工具</category>
+        <category>前端相关知识</category>
       </categories>
       <tags>
         <tag>gulp</tag>
@@ -445,9 +434,9 @@ gulp<span class="token punctuation">.</span><span class="token function">task</s
 <p><a href="https://zhuanlan.zhihu.com/p/25876599" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/25876599</a></p>
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing</a></p>
 ]]></content>
-      <tags>
-        <tag>知识点</tag>
-      </tags>
+      <categories>
+        <category>知识点</category>
+      </categories>
   </entry>
   <entry>
     <title>2020寒假总结</title>
@@ -464,7 +453,7 @@ gulp<span class="token punctuation">.</span><span class="token function">task</s
 <p>最后希望疫情能尽快结束，早日返校！</p>
 ]]></content>
       <categories>
-        <category>杂感</category>
+        <category>生活随笔</category>
       </categories>
   </entry>
   <entry>
@@ -627,7 +616,7 @@ user-scale：用户是否可以缩放，yes或no(1或0)</code></pre>
     <span class="token selector">img,a </span><span class="token punctuation">{</span> <span class="token property">-webkit-touch-callout</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> <span class="token punctuation">}</span></code></pre>
 ]]></content>
       <categories>
-        <category>移动web开发</category>
+        <category>移动web</category>
       </categories>
   </entry>
   <entry>
@@ -1202,7 +1191,7 @@ user-scale：用户是否可以缩放，yes或no(1或0)</code></pre>
 <p>参考文章：<a href="https://www.cnblogs.com/yanayana/p/7066948.html" target="_blank" rel="noopener">https://www.cnblogs.com/yanayana/p/7066948.html</a></p>
 ]]></content>
       <categories>
-        <category>移动web开发</category>
+        <category>移动web</category>
       </categories>
   </entry>
   <entry>
@@ -1224,7 +1213,7 @@ user-scale：用户是否可以缩放，yes或no(1或0)</code></pre>
 <p>接下来的2020年，算是人生的十字路口了，最重要的是还是要沿着既定的方向认真努力，踏踏实实的学习，愉快的生活，未来嘛，可期。</p>
 ]]></content>
       <categories>
-        <category>杂感</category>
+        <category>生活随笔</category>
       </categories>
   </entry>
   <entry>
@@ -1569,7 +1558,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>流程图工具：<a href="http://logicnet.dk/DiagramDesigner/" target="_blank" rel="noopener">DiagramDesigner</a></p>
 ]]></content>
       <categories>
-        <category>正则表达式</category>
+        <category>前端相关知识</category>
       </categories>
   </entry>
   <entry>
@@ -1683,7 +1672,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 ]]></content>
       <categories>
-        <category>JavaScript学习</category>
+        <category>JavaScript</category>
       </categories>
   </entry>
   <entry>
@@ -1795,7 +1784,7 @@ document<span class="token punctuation">.</span>documentElement<span class="toke
     <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
 ]]></content>
       <categories>
-        <category>JavaScript学习</category>
+        <category>JavaScript</category>
       </categories>
   </entry>
   <entry>
@@ -1815,7 +1804,7 @@ document<span class="token punctuation">.</span>documentElement<span class="toke
 <p>然而，酒就是酒，不是水，少喝为上，达到微醺的效果最好。其实每次只要喝一点我就会有点晕乎乎的感觉，我渐渐的喜欢上了这种感觉。不愿当个酒鬼，也不会当个酒鬼，当经历什么事情之后自然会醉。</p>
 ]]></content>
       <categories>
-        <category>杂感</category>
+        <category>生活随笔</category>
       </categories>
   </entry>
   <entry>
@@ -2081,7 +2070,7 @@ document<span class="token punctuation">.</span>documentElement<span class="toke
 </code></pre>
 ]]></content>
       <categories>
-        <category>js学习案例</category>
+        <category>JavaScript</category>
       </categories>
   </entry>
   <entry>
@@ -2118,40 +2107,8 @@ document<span class="token punctuation">.</span>documentElement<span class="toke
 <p><a href="https://www.jianshu.com/p/c311d31265e0" target="_blank" rel="noopener">https://www.jianshu.com/p/c311d31265e0</a></p>
 ]]></content>
       <categories>
-        <category>hexo博客搭建</category>
+        <category>hexo</category>
       </categories>
-  </entry>
-  <entry>
-    <title>关于IE浏览器测试html代码的一些问题</title>
-    <url>/2019/11/12/ie-liu-lan-qi-ce-shi-html-dai-ma/</url>
-    <content><![CDATA[<p>测试节点的兼容代码，在谷歌和火狐上面都能正常显示，然而使用IE浏览器测试的时候，IE提示说无法访问此页面，确保web地址的正确：</p>
-<a id="more"></a>
-
-<p><img src="/2019/11/12/ie-liu-lan-qi-ce-shi-html-dai-ma/TIM%E5%9B%BE%E7%89%8720191112152038.png" alt="无法访问"></p>
-<p>上网查了一下，才知道可能是因为挂了代理导致本地的服务器无法启动，需要在IE浏览器中找到设置选项—-Internet选项—-局域网设置–在对于本地地址不使用代理服务器前面勾选，点击确定即可。</p>
-<p><img src="/2019/11/12/ie-liu-lan-qi-ce-shi-html-dai-ma/TIM%E6%88%AA%E5%9B%BE20191112153259.png" alt="代理服务器设置"></p>
-<p>但是，设置完成之后好像还是不行，提示未找到文件。</p>
-<p><img src="/2019/11/12/ie-liu-lan-qi-ce-shi-html-dai-ma/TIM%E6%88%AA%E5%9B%BE20191112153913.png" alt="未找到文件"></p>
-<p>这就很挠头了，同样的代码在谷歌和火狐里面运行的好好的，在ie里面就是各种问题，然后找了各种方案。一开始以为是webStrom的原因，网上也有通过配置webstrom内置服务器和端口的方式解决问题，但是搁我这就不行。</p>
-<p>后来发现，将文件名设置成英文可以正常在IE中打开。。。但中文就是乱码，提示找不到文件。</p>
-<p>最后我把在谷歌上面能正常访问的地址复制到IE上面，能够正常显示。这就应该是IE浏览器的问题了，真是很想吐槽IE。。</p>
-<p><strong>IE浏览器测试的解决办法：</strong></p>
-<ul>
-<li>手动输入要打开的文件地址</li>
-<li>把文件名换成英文，不要用中文</li>
-<li>找到源文件选择打开方式—IE浏览器</li>
-<li>将谷歌或火狐的地址复制到IE上面</li>
-</ul>
-<p>在测试IE的时候总是会有“是否阻止脚本运行的弹窗”，在head标签中插入下面的代码即可：</p>
-<pre><code> &lt;!-- saved from url=(0014)about:internet --&gt;</code></pre><p>下面是一篇关于URL编码的文章，虽然没看太明白先放这里吧：</p>
-<p><a href="http://www.ruanyifeng.com/blog/2010/02/url_encoding.htmlhttp://www.ruanyifeng.com/blog/2010/02/url_encoding.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2010/02/url_encoding.htmlhttp://www.ruanyifeng.com/blog/2010/02/url_encoding.html</a></p>
-]]></content>
-      <categories>
-        <category>JavaScript学习</category>
-      </categories>
-      <tags>
-        <tag>IE测试的问题</tag>
-      </tags>
   </entry>
   <entry>
     <title>DOM学习笔记</title>
@@ -2706,20 +2663,8 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <pre class=" language-javascript"><code class="language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>windodw<span class="token punctuation">.</span>navigator<span class="token punctuation">.</span>platform<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 ]]></content>
       <categories>
-        <category>JavaScript学习</category>
+        <category>JavaScript</category>
       </categories>
-  </entry>
-  <entry>
-    <title>点击图片放大</title>
-    <url>/2019/11/09/dian-ji-tu-pian-fang-da/</url>
-    <content><![CDATA[<h4 id="怎么添加文章点击图片放大功能"><a href="#怎么添加文章点击图片放大功能" class="headerlink" title="怎么添加文章点击图片放大功能"></a>怎么添加文章点击图片放大功能</h4><p>更改<code>next/_config.yml</code><br><code>fancybox: true</code></p>
-]]></content>
-      <categories>
-        <category>博客搭建</category>
-      </categories>
-      <tags>
-        <tag>点击图片放大</tag>
-      </tags>
   </entry>
   <entry>
     <title>js-学习案例：栏目切换</title>
@@ -2871,11 +2816,8 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>但是不管怎么说也算是大概整明白排他功能。刚开始内容比较基础，但是觉得也可能比较重要，就先记录下来吧。</p>
 ]]></content>
       <categories>
-        <category>js学习案例</category>
+        <category>JavaScript</category>
       </categories>
-      <tags>
-        <tag>js排他功能应用</tag>
-      </tags>
   </entry>
   <entry>
     <title>博客首页文章截断</title>
@@ -2892,11 +2834,8 @@ auto_excerpt:
 <p>参考文章：<br><a href="https://blog.csdn.net/lewky_liu/article/details/81277337" target="_blank" rel="noopener">https://blog.csdn.net/lewky_liu/article/details/81277337</a><br><a href="https://blog.csdn.net/qq_32337109/article/details/78755729" target="_blank" rel="noopener">https://blog.csdn.net/qq_32337109/article/details/78755729</a></p>
 ]]></content>
       <categories>
-        <category>hexo博客搭建</category>
+        <category>hexo</category>
       </categories>
-      <tags>
-        <tag>文章截断</tag>
-      </tags>
   </entry>
   <entry>
     <title>hexo博客之插入图片</title>
@@ -2981,62 +2920,10 @@ hexo.extend.filter.register(&#39;after_post_render&#39;, function(data){
 <p>然后部署即可。</p>
 ]]></content>
       <categories>
-        <category>hexo博客搭建</category>
+        <category>hexo</category>
       </categories>
       <tags>
         <tag>博客插入图片</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>怎样使用hexo-admin插件</title>
-    <url>/2019/11/03/zen-yang-shi-yong-hexo-admin-cha-jian/</url>
-    <content><![CDATA[<p>首先在博客根目录下输入</p>
-<a id="more"></a>
-
-<pre><code>hexo server -d 切换到后台管理页面 localhost：4000/admin/
-就可以进行可视化编辑文章
-
-编辑完之后，仍然需要
-hexo g 重新生成文件
-hexo s 本地查看
-hexo d 部署</code></pre>]]></content>
-      <categories>
-        <category>hexo博客搭建</category>
-      </categories>
-      <tags>
-        <tag>hexo-admin插件的使用</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>啊，我的博客-----</title>
-    <url>/2019/11/03/a-wo-de-bo-ke-1/</url>
-    <content><![CDATA[<p>文笔不好，那就随便说说吧，反正也没人看到……</p>
-<a id="more"></a>
-
-<p>昨天考完了教资，从外面的回来的路上我就一直在想，明天我就一定要开始自己动手去做一个自己的博客，不管做的是好是坏，得动手，不能一直光想而不去做。。当然这个道理，我始终明白，但就是觉得学的东西太少（确实也学的太少），虽然知道网上有各种各样的教程，但就是迟迟没有动手。</p>
-<p>在前两年的大学生活中，学了一些编程语言，如c#，Java，PHP等，当然都没有很明白，然后时间也就白白浪费了。现在大三上已经过去一半，大四就要去找实习岗位，可是啥都不会，学编程学了一年多，一直在门口徘徊。。。有时候一想到这都大三了就觉得急躁。。。。</p>
-<p>前面说，大学前两年也接触了一些编程语言，甚至也决定了要去学习Java还整了一套网课，可是刚把Java基础语法看完，就发现头发少了不少。。。。加上本来就对抽象的东西不甚理解，逐渐的放弃了学后端的想法，觉得前端东西–所见即所得，而且确实比较容易入门，就逐渐想做前端了（虽然现在发现做啥要想做好都不容易…… 就这么滴吧）</p>
-<p>然后，因为学习前端，在网上也看到了许多漂亮的网站，查资料的时候，也看到了许多很好的博客，就渐渐想去做一个自己的博客，虽然当时很菜基本是做不出来的，但是想就比较容易了，于是就一直在想……直到今天，才开始动手。。。</p>
-<p>其实，在上学期结束的时候，就有以为朋友带着我用phpstudy+wordpress在本地搭建了一个博客，但是那个太简约了，而且当时对他的操作很迷，就听他讲也是云里雾里，而且最后做出来的就是一个搭建，没有期待的那种效果（太简约了，而且他教了几次我也不是很会写点东西和上传……），本来想着暑假在家自己在试试，上网上找点教程啥的，但是很不幸，回家一个月基本啥也没干，就把那三部大秦帝国看完了，，，，</p>
-<p>前面墨迹着这么多，主要是为了练习打字……</p>
-<p>现在说一说这个博客咋做的吧，，，好吧具体的步骤记得不清楚了，，，但是基本的步骤还是有印象的：首先，这个博客是基于hexo和node.js在github上搭建的。所以，得有个github账号吧，然后为了能将本地库上传到github上还需要下载一个git（就分布式版本控制系统，，目前还不是很理解），然后下载安装node.js，然后在本地的合适的位置新建要创建的博客目录，然后可以用DOS命令也可以用git bash安装hexo，可以上官网 <a href="http://hexo.io/" target="_blank" rel="noopener">http://hexo.io/</a>   ,那里有详细的安装过程，当然我是在B站找的视频，一步一步跟着做的。到这一步就本地博客就搭建好了，然后需要初始化，更换主题啥的。哦，对了，本地库要和远程的github建立关联（具体怎么关联，每次都是百度，这次是之前有关联过，就直接跳过了），然后可以把本地的库部署到github上，那么部署之前呢，需要在github上新建一个这样  <code>yourgithubname.github.io</code> 格式的仓库，我的是 <code>qllhuo.github.io</code> 然后每次上传文章基本上三行命令，如下：</p>
-<pre><code>    cd 到你的本地blog根目录
-    hexo g 重新生成文件 （generate）
-   hexo s 在本地服务器查看（server）localhost:4000
-   hexo d 文件生成后立即部署到远程服务器 -deploy qlhuo.github.io
-</code></pre><p>哦，忘了说怎样写文章和上传文章了，有若干种方法，在此之前我是直接在本地相应的目录下写md文件，然后根据上面的三行代码直接上传文件。比较麻烦。然后刚刚找到了一个后台管理插件 hexo-admin，如下：</p>
-<pre><code>  cd yourblog
-  npm install --save hexo-admin
-  hexo server -d
-  open http://localhost:4000/admin/
-</code></pre><p>原文链接：<a href="https://blog.kinpzz.com/2016/12/31/hexo-admin-backend-management/" target="_blank" rel="noopener">https://blog.kinpzz.com/2016/12/31/hexo-admin-backend-management/</a></p>
-<p>到这应该就差不多了，博客的基本框架有了，选的主题也比较美观吧！然而，还是有很多不足的地方，慢慢改吧，今天算是开一个好头吧！</p>
-]]></content>
-      <categories>
-        <category>hexo博客搭建</category>
-      </categories>
-      <tags>
-        <tag>我的第一篇博客</tag>
       </tags>
   </entry>
 </search>

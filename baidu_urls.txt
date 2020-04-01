@@ -1,6 +1,4 @@
 http://www.aurorablog.top/2020/04/01/zi-ti-tu-biao-de-shi-yong/
-http://www.aurorablog.top/2020/03/26/demo/
-http://www.aurorablog.top/2020/03/24/huan-hexo-zhu-ti/
 http://www.aurorablog.top/2020/03/21/gulp-xue-xi/
 http://www.aurorablog.top/2020/03/06/qian-duan-xiang-guan-zhi-shi-dian-de-si-kao/
 http://www.aurorablog.top/2020/03/01/2020-han-jia-zong-jie/
@@ -14,11 +12,7 @@ http://www.aurorablog.top/2019/11/28/javascript-san-da-xi-lie/
 http://www.aurorablog.top/2019/11/20/jiu/
 http://www.aurorablog.top/2019/11/18/js-lun-bo-tu/
 http://www.aurorablog.top/2019/11/13/hexo-zhu-ti-you-hua/
-http://www.aurorablog.top/2019/11/12/ie-liu-lan-qi-ce-shi-html-dai-ma/
 http://www.aurorablog.top/2019/11/11/dom-xue-xi-bi-ji/
-http://www.aurorablog.top/2019/11/09/dian-ji-tu-pian-fang-da/
 http://www.aurorablog.top/2019/11/07/js-xue-xi-an-li-lan-mu-qie-huan/
 http://www.aurorablog.top/2019/11/06/ke-shou-ye-wen-zhang-jie-duan/
 http://www.aurorablog.top/2019/11/06/hexo-bo-ke-zhong-cha-ru-tu-pian/
-http://www.aurorablog.top/2019/11/03/zen-yang-shi-yong-hexo-admin-cha-jian/
-http://www.aurorablog.top/2019/11/03/a-wo-de-bo-ke-1/
