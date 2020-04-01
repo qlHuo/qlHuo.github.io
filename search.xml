@@ -1,6 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>字体图标的使用</title>
+    <url>/2020/04/01/zi-ti-tu-biao-de-shi-yong/</url>
+    <content><![CDATA[<h3 id="阿里图标库的使用"><a href="#阿里图标库的使用" class="headerlink" title="阿里图标库的使用"></a>阿里图标库的使用</h3><ol>
+<li><p>进入阿里图标库官网 <a href="https://www.iconfont.cn/" target="_blank" rel="noopener">https://www.iconfont.cn/</a></p>
+</li>
+<li><p>搜索所需要的图标并添加至项目</p>
+</li>
+<li><p>在图标管理中查看我的项目</p>
+<img src>
+
+</li>
+</ol>
+<p>前端开发的三种引用方式（可进入使用帮助查看）：</p>
+<h4 id="unicode引用"><a href="#unicode引用" class="headerlink" title="unicode引用"></a>unicode引用</h4><p>unicode是字体在网页端最原始的应用方式，特点是：</p>
+<ul>
+<li>兼容性最好，支持ie6+，及所有现代浏览器。</li>
+<li>支持按字体的方式去动态调整图标大小，颜色等等。</li>
+<li>但是因为是字体，所以不支持多色。只能使用平台里单色的图标，就算项目里有多色图标也会自动去色。</li>
+</ul>
+<blockquote>
+<p>注意：新版iconfont支持多色图标，这些多色图标在unicode模式下将不能使用，如果有需求建议使用symbol的引用方式</p>
+</blockquote>
+<p>第一步：拷贝项目下面生成的font-face</p>
+<blockquote>
+<p>注意：在具体引用的时候要加上https:</p>
+</blockquote>
+<pre class=" language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@font-face</span></span> <span class="token punctuation">{</span><span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'iconfont'</span><span class="token punctuation">;</span>
+    <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url('iconfont.eot')</span><span class="token punctuation">;</span>
+    <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url('iconfont.eot?#iefix')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'embedded-opentype'</span><span class="token punctuation">)</span>,
+    <span class="token url">url('iconfont.woff')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'woff'</span><span class="token punctuation">)</span>,
+    <span class="token url">url('iconfont.ttf')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'truetype'</span><span class="token punctuation">)</span>,
+    <span class="token url">url('iconfont.svg#iconfont')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'svg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>第二步：定义iconfont的样式</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.iconfont</span></span><span class="token punctuation">{</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span><span class="token string">"iconfont"</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span><span class="token number">16</span>px<span class="token punctuation">;</span><span class="token property">font-style</span><span class="token punctuation">:</span>normal<span class="token punctuation">;</span>
+    <span class="token property">-webkit-font-smoothing</span><span class="token punctuation">:</span> antialiased<span class="token punctuation">;</span>
+    <span class="token property">-webkit-text-stroke-width</span><span class="token punctuation">:</span> <span class="token number">0.2</span>px<span class="token punctuation">;</span>
+    <span class="token property">-moz-osx-font-smoothing</span><span class="token punctuation">:</span> grayscale<span class="token punctuation">;</span><span class="token punctuation">}</span></code></pre>
+<p>第三步：挑选相应图标并获取字体编码，应用于页面</p>
+<pre class=" language-css"><code class="language-css">&lt;i class=<span class="token string">"iconfont"</span>>&amp;#x<span class="token number">33</span><span class="token punctuation">;</span>&lt;/i></code></pre>
+<p>demo:</p>
+<pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>字体图标使用<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style language-css">
+        <span class="token comment" spellcheck="true">/*
+             第一步：
+               在样式里面申明字体
+             * */</span>
+
+        <span class="token atrule"><span class="token rule">@font-face</span></span> <span class="token punctuation">{</span>
+            <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'iconfont'</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">/* project id 1721642 */</span>
+            <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url('https://at.alicdn.com/t/font_1721642_nv7hpyrxz0i.eot')</span><span class="token punctuation">;</span>
+            <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url('https://at.alicdn.com/t/font_1721642_nv7hpyrxz0i.eot?#iefix')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'embedded-opentype'</span><span class="token punctuation">)</span>, <span class="token url">url('https://at.alicdn.com/t/font_1721642_nv7hpyrxz0i.woff2')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'woff2'</span><span class="token punctuation">)</span>, <span class="token url">url('https://at.alicdn.com/t/font_1721642_nv7hpyrxz0i.woff')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'woff'</span><span class="token punctuation">)</span>, <span class="token url">url('https://at.alicdn.com/t/font_1721642_nv7hpyrxz0i.ttf')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'truetype'</span><span class="token punctuation">)</span>, <span class="token url">url('https://at.alicdn.com/t/font_1721642_nv7hpyrxz0i.svg#iconfont')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'svg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token selector"><span class="token class">.iconfont</span> </span><span class="token punctuation">{</span>
+            <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"iconfont"</span> <span class="token important">!important</span><span class="token punctuation">;</span>
+            <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">16</span>px<span class="token punctuation">;</span>
+            <span class="token property">font-style</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span>
+            <span class="token property">-webkit-font-smoothing</span><span class="token punctuation">:</span> antialiased<span class="token punctuation">;</span>
+            <span class="token property">-webkit-text-stroke-width</span><span class="token punctuation">:</span> <span class="token number">0.2</span>px<span class="token punctuation">;</span>
+            <span class="token property">-moz-osx-font-smoothing</span><span class="token punctuation">:</span> grayscale<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>iconfont<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token entity" title="&#xe660;">&amp;#xe660;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<h4 id="font-class引用"><a href="#font-class引用" class="headerlink" title="font-class引用"></a>font-class引用</h4><p>font-class是unicode使用方式的一种变种，主要是解决unicode书写不直观，语意不明确的问题。</p>
+<p>与unicode使用方式相比，具有如下特点：</p>
+<ul>
+<li>兼容性良好，支持ie8+，及所有现代浏览器。</li>
+<li>相比于unicode语意明确，书写更直观。可以很容易分辨这个icon是什么。</li>
+<li>因为使用class来定义图标，所以当要替换图标时，只需要修改class里面的unicode引用。</li>
+<li>不过因为本质上还是使用的字体，所以多色图标还是不支持的。</li>
+</ul>
+<p>使用步骤：</p>
+<p>第一步：拷贝项目下面生成的fontclass代码</p>
+<blockquote>
+<p>在html使用link标签进行引用</p>
+<p>要加上https: 否则不会引用成功</p>
+<link rel="stylesheet" href="https://at.alicdn.com/t/font_1721904_eahcfxotuf8.css">
+</blockquote>
+<pre><code>//at.alicdn.com/t/font_8d5l8fzk5b87iudi.css</code></pre><p>第二步：挑选相应图标并获取类名，应用于页面：</p>
+<blockquote>
+<p>注意：class有两个类名，缺一不可</p>
+</blockquote>
+<pre class=" language-css"><code class="language-css">&lt;i class=<span class="token string">"iconfont icon-xxx"</span>>&lt;/i></code></pre>
+<h4 id="symbol引用"><a href="#symbol引用" class="headerlink" title="symbol引用"></a>symbol引用</h4><p>这是一种全新的使用方式，应该说这才是未来的主流，也是平台目前推荐的用法。相关介绍可以参考这篇<a href="https://www.iconfont.cn/help/detail?spm=a313x.7781069.1998910419.d8cf4382a&helptype=code" target="_blank" rel="noopener">文章</a> 这种用法其实是做了一个svg的集合，与上面两种相比具有如下特点：</p>
+<ul>
+<li>支持多色图标了，不再受单色限制。</li>
+<li>通过一些技巧，支持像字体那样，通过<code>font-size</code>,<code>color</code>来调整样式。</li>
+<li>兼容性较差，支持 ie9+,及现代浏览器。</li>
+<li>浏览器渲染svg的性能一般，还不如png。</li>
+</ul>
+<p>使用步骤如下：</p>
+<p>第一步：拷贝项目下面生成的symbol代码：</p>
+<blockquote>
+<p>使用script标签进行引用，前面要加上https: 才有效</p>
+</blockquote>
+<pre><code>//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js</code></pre><p>第二步：加入通用css代码（引入一次就行）：</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector">&lt;style type="text/css">
+    <span class="token class">.icon</span> </span><span class="token punctuation">{</span>
+       <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">1</span>em<span class="token punctuation">;</span> <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">1</span>em<span class="token punctuation">;</span>
+       <span class="token property">vertical-align</span><span class="token punctuation">:</span> -<span class="token number">0.15</span>em<span class="token punctuation">;</span>
+       <span class="token property">fill</span><span class="token punctuation">:</span> currentColor<span class="token punctuation">;</span>
+       <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+&lt;/style></code></pre>
+<p>第三步：挑选相应图标并获取类名，应用于页面：</p>
+<blockquote>
+<p>注意#不可省去</p>
+</blockquote>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>svg</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>icon<span class="token punctuation">"</span></span> <span class="token attr-name">aria-hidden</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>use</span> <span class="token attr-name"><span class="token namespace">xlink:</span>href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#icon-xxx<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>use</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>svg</span><span class="token punctuation">></span></span></code></pre>
+<p>demo:</p>
+<pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, initial-scale<span class="token punctuation">=</span>1.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Document<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://at.alicdn.com/t/font_1721904_eahcfxotuf8.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style language-css">
+        <span class="token selector"><span class="token class">.icon</span> </span><span class="token punctuation">{</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">1</span>em<span class="token punctuation">;</span>
+            <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">1</span>em<span class="token punctuation">;</span>
+            <span class="token property">vertical-align</span><span class="token punctuation">:</span> -<span class="token number">0.15</span>em<span class="token punctuation">;</span>
+            <span class="token property">fill</span><span class="token punctuation">:</span> currentColor<span class="token punctuation">;</span>
+            <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>svg</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>icon<span class="token punctuation">"</span></span> <span class="token attr-name">aria-hidden</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>use</span> <span class="token attr-name"><span class="token namespace">xlink:</span>href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#icon-shouji<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>use</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>svg</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<h3 id="icomoon的使用"><a href="#icomoon的使用" class="headerlink" title="icomoon的使用"></a>icomoon的使用</h3><p>1.进入网站：<a href="https://icomoon.io/app/#/select" target="_blank" rel="noopener">https://icomoon.io/app/#/select</a></p>
+<p>2.选择所需要的图标,点击generate font，下载到本地</p>
+<p>3.解压压缩包将fonts文件放到项目中，在css中进行一下引用(<strong>注意路径问题</strong>)</p>
+<pre class=" language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@font-face</span></span> <span class="token punctuation">{</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'icomoon'</span><span class="token punctuation">;</span>
+    <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url('../fonts/icomoon.eot?q0tv6r')</span><span class="token punctuation">;</span>
+    <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url('../fonts/icomoon.eot?q0tv6r#iefix')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'embedded-opentype'</span><span class="token punctuation">)</span>, <span class="token url">url('../fonts/icomoon.ttf?q0tv6r')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'truetype'</span><span class="token punctuation">)</span>, <span class="token url">url('../fonts/icomoon.woff?q0tv6r')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'woff'</span><span class="token punctuation">)</span>, <span class="token url">url('../fonts/icomoon.svg?q0tv6r#icomoon')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'svg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">font-weight</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span>
+    <span class="token property">font-style</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>4.打开压缩包中的html文件，选字体图标下面的 □ 赋值粘贴到html的标签中，然后在css中设置font-family为“icomoon”。</p>
+<p>如下所示，就完成了引用</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style language-css">
+    <span class="token atrule"><span class="token rule">@font-face</span></span> <span class="token punctuation">{</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'icomoon'</span><span class="token punctuation">;</span>
+    <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url('../fonts/icomoon.eot?q0tv6r')</span><span class="token punctuation">;</span>
+    <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url">url('../fonts/icomoon.eot?q0tv6r#iefix')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'embedded-opentype'</span><span class="token punctuation">)</span>, <span class="token url">url('../fonts/icomoon.ttf?q0tv6r')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'truetype'</span><span class="token punctuation">)</span>, <span class="token url">url('../fonts/icomoon.woff?q0tv6r')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'woff'</span><span class="token punctuation">)</span>, <span class="token url">url('../fonts/icomoon.svg?q0tv6r#icomoon')</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'svg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">font-weight</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span>
+    <span class="token property">font-style</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+    <span class="token selector"><span class="token class">.icon</span> </span><span class="token punctuation">{</span>
+        <span class="token property">font-family</span><span class="token punctuation">:</span><span class="token string">"icomoon"</span><span class="token punctuation">;</span>
+        <span class="token number">.......</span>
+    <span class="token punctuation">}</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>icon<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span></code></pre>
+<p>其他的注意事项：</p>
+<p>压缩包要保留好，如果后期需要其他的字体图标，可以进入官网进行字体图标的追加。</p>
+<p>具体的操作步骤是：</p>
+<p>1.进入官网，点击左上角的import icons 选择所要追加的字体图标的selection.json文件，就可以追加字体图标了</p>
+<p>2.下载新的压缩文件，然后将里面的fonts文件夹覆盖原来项目中的fonts文件，就可以引用刚刚追加的图标了。</p>
+<p>最开始使用的是icomoon的字体图标，确实相对来说麻烦，现在基本使用阿里字体库，更加方便一些。</p>
+<p>相关文章：<a href="https://blog.csdn.net/qmm0219/article/details/78261210" target="_blank" rel="noopener">https://blog.csdn.net/qmm0219/article/details/78261210</a></p>
+]]></content>
+      <categories>
+        <category>前端相关知识点</category>
+      </categories>
+  </entry>
+  <entry>
     <title>demo</title>
     <url>/2020/03/26/demo/</url>
     <content><![CDATA[]]></content>
