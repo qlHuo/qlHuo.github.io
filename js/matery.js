@@ -9,7 +9,7 @@ $(function () {
         }, function () {
             $(this).removeClass(animateClass);
         });
-    };
+    };$('.bg-cover')
     articleCardHover();
 
     /*菜单切换*/
