@@ -31,9 +31,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
     
-<link rel="alternate" href="/atom.xml" title="AuroraBlog" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"><link rel="alternate" href="/atom.xml" title="AuroraBlog" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -115,6 +115,17 @@
       <i class="fas fa-comments" style="zoom: 0.6;"></i>
       
       <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/navigator" class="waves-effect waves-light">
+      
+      <i class="fas fa-location-arrow" style="zoom: 0.6;"></i>
+      
+      <span>快捷导航</span>
     </a>
     
   </li>
@@ -206,6 +217,17 @@
 			    <i class="fa-fw fas fa-comments"></i>
 			
 			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/navigator" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-location-arrow"></i>
+			
+			Navigator
 		</a>
           
         </li>
@@ -559,7 +581,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"生活随笔","value":3},{"name":"JavaScript","value":6},{"name":"前端相关知识","value":3},{"name":"hexo","value":3},{"name":"小程序","value":1},{"name":"知识点","value":1},{"name":"移动web","value":2}],
+                data: [{"name":"生活随笔","value":3},{"name":"前端相关知识","value":3},{"name":"JavaScript","value":6},{"name":"hexo","value":3},{"name":"知识点","value":1},{"name":"移动web","value":2},{"name":"小程序","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -583,7 +605,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["IE测试的问题","gulp","博客插入图片"]
+                data: ["gulp","博客插入图片","IE测试的问题"]
             }
         ],
         yAxis: [
