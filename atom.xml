@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-04-02T03:17:08.878Z</updated>
+  <updated>2020-04-05T04:01:42.601Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hexo主题更换（matery）</title>
+    <link href="https://aurorablog.top/archives/9fe51d8f.html"/>
+    <id>https://aurorablog.top/archives/9fe51d8f.html</id>
+    <published>2020-04-05T02:15:34.000Z</published>
+    <updated>2020-04-05T04:01:42.601Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;博客搭建有一段时间了，之前也选择了好几个主题进行测试，最后选定了&lt;code&gt;next&lt;/code&gt; 但总觉得不那么好看（主要还是因为自己不会修改吧…）。最近偶然看到了 &lt;a href=&quot;https://blinkfox.github.io/&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="https://aurorablog.top/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="https://aurorablog.top/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>字体图标的使用</title>
     <link href="https://aurorablog.top/archives/9e385e6b.html"/>
     <id>https://aurorablog.top/archives/9e385e6b.html</id>
     <published>2020-04-01T03:59:22.000Z</published>
-    <updated>2020-04-02T03:17:08.878Z</updated>
+    <updated>2020-04-05T02:14:03.005Z</updated>
     
     <summary type="html">
     
@@ -144,7 +171,7 @@
     <link href="https://aurorablog.top/archives/fc8d666d.html"/>
     <id>https://aurorablog.top/archives/fc8d666d.html</id>
     <published>2020-02-05T08:17:53.000Z</published>
-    <updated>2020-04-04T14:19:37.061Z</updated>
+    <updated>2020-04-05T02:12:11.188Z</updated>
     
     <summary type="html">
     

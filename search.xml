@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo主题更换（matery）</title>
+    <url>/archives/9fe51d8f.html</url>
+    <content><![CDATA[<p>博客搭建有一段时间了，之前也选择了好几个主题进行测试，最后选定了<code>next</code> 但总觉得不那么好看（主要还是因为自己不会修改吧…）。最近偶然看到了 <a href="https://blinkfox.github.io/" target="_blank" rel="noopener">闪烁之狐</a> 的博客，心动了，就下载更换了博客 <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="noopener">主题</a>，根据博客提供的教程和 <a href="https://sunhwee.com/posts/6e8839eb.html" target="_blank" rel="noopener">这篇文章</a> 修改了主题样式，挺满意的。教程很详细，但是有一些小问题，然后找了其他的一些文章进行参考，记录在下面。</p>
+<h3 id="记录过程"><a href="#记录过程" class="headerlink" title="记录过程"></a>记录过程</h3><p>1.博客双部署及绑定域名</p>
+<p><a href="https://blog.csdn.net/qq_42567023/article/details/102999624" target="_blank" rel="noopener">https://blog.csdn.net/qq_42567023/article/details/102999624</a></p>
+<p><a href="https://www.renke666.top/2020/01/27/hexo部署到coding并开启https/" target="_blank" rel="noopener">https://www.renke666.top/2020/01/27/hexo%E9%83%A8%E7%BD%B2%E5%88%B0coding%E5%B9%B6%E5%BC%80%E5%90%AFhttps/</a></p>
+<p>2.网站SEO优化</p>
+<p><a href="https://luanzhuxian.github.io/post/82d92ad4.html" target="_blank" rel="noopener">https://luanzhuxian.github.io/post/82d92ad4.html</a></p>
+<p>3.备份hexo博客源文件</p>
+<p>手动备份</p>
+<p><a href="https://wugenqiang.gitee.io/articles/manual_backup_blog_source_files.html" target="_blank" rel="noopener">https://wugenqiang.gitee.io/articles/manual_backup_blog_source_files.html</a></p>
+<p>自动备份</p>
+<p><a href="https://wugenqiang.gitee.io/articles/auto_backup_blog_source_files.html" target="_blank" rel="noopener">https://wugenqiang.gitee.io/articles/auto_backup_blog_source_files.html</a></p>
+<p>4.博客静态资源压缩</p>
+<p>基本都推荐使用gulp，但网上的方法总是出错，没有使用。还有一款hexo-neat插件，也能实现压缩。</p>
+<p><a href="https://hasaik.com/posts/495d0b23.html" target="_blank" rel="noopener">https://hasaik.com/posts/495d0b23.html</a></p>
+<p>5.PicGo+gitee图床实现</p>
+<p><a href="https://blog.csdn.net/disILLL/article/details/103962241" target="_blank" rel="noopener">https://blog.csdn.net/disILLL/article/details/103962241</a></p>
+<p>6.如何写好技术文章</p>
+<p><a href="https://fedoryx.github.io/如何写好技术博客/" target="_blank" rel="noopener">https://fedoryx.github.io/%E5%A6%82%E4%BD%95%E5%86%99%E5%A5%BD%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>字体图标的使用</title>
     <url>/archives/9e385e6b.html</url>
     <content><![CDATA[<h3 id="阿里图标库的使用"><a href="#阿里图标库的使用" class="headerlink" title="阿里图标库的使用"></a>阿里图标库的使用</h3><ol>

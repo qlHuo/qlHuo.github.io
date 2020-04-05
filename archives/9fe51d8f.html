@@ -6,7 +6,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="前端相关知识点的思考, html css javascript web前端">
+    <meta name="keywords" content="hexo主题更换（matery）, html css javascript web前端">
     <meta name="description" content="web前端,个人博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>前端相关知识点的思考 | AuroraBlog</title>
+    <title>hexo主题更换（matery） | AuroraBlog</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -323,12 +323,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">前端相关知识点的思考</h1>
+                    <h1 class="description center-align post-title">hexo主题更换（matery）</h1>
                 </div>
             </div>
         </div>
@@ -443,9 +443,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/hexo/">
+                                <span class="chip bg-color">hexo</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -453,8 +457,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/" class="post-category">
-                                知识点
+                            <a href="/categories/hexo/" class="post-category">
+                                hexo
                             </a>
                         
                     </div>
@@ -466,28 +470,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-06
+                    2020-04-05
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-01
+                    2020-04-05
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    334
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    1 分
                 </div>
                 
 
@@ -503,112 +507,24 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>本文记录前端相关的知识点，复习使用和面试准备。<a id="more"></a></p>
-<h3 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h3><h4 id="为什么是子绝父相？"><a href="#为什么是子绝父相？" class="headerlink" title="为什么是子绝父相？"></a>为什么是子绝父相？</h4><ol>
-<li>relative 相对定位 <strong>会</strong>在标准流中占据位置</li>
-<li>absolute 绝对定位 <strong>不会</strong> 在标准流中占据位置</li>
-<li>绝对定位 是相对于距离它最近的父元素进行定位</li>
-</ol>
-<p>为什么子元素要绝对定位？</p>
-<p>​    一些小图标，如轮播图里的小圆点或者是小三角，需要放在其他子元素的上面，虽然float 以及除了static之外的定位属性都可以利用z-index让盒子由于其他元素显示，但是absolute完全脱标且不占位置，更加方便进行显示效果。</p>
-<p>为什么父元素要相对定位？</p>
-<p>​    不管是relative/absolute/fixed，都可以让子元素找到定位点，但如果是absolute，在文档流中不占位置，下面的元素会跑上去；fixed会使元素相对于页面定位，也不可取。relative占位，下面的元素就不会移动到上面。</p>
-<p>总之：把脱离文档流的元素放到不脱离文档流（需要占位）的元素之上，就用“子绝父相”</p>
-<h3 id="外边距塌陷（折叠）"><a href="#外边距塌陷（折叠）" class="headerlink" title="外边距塌陷（折叠）"></a>外边距塌陷（折叠）</h3><h4 id="为什么会产生外边距塌陷（折叠）？"><a href="#为什么会产生外边距塌陷（折叠）？" class="headerlink" title="为什么会产生外边距塌陷（折叠）？"></a>为什么会产生外边距塌陷（折叠）？</h4><p>根据MDN：</p>
-<p>当块级元素（block）的<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin-top" target="_blank" rel="noopener">上外边距(margin-top)</a>和<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/margin-bottom" target="_blank" rel="noopener">下外边距(margin-bottom)</a>同时都有设定时只会只会保留最大边距，这种行为称为<strong>边界折叠</strong>（margin collapsing），有时也翻译为<strong>外边距重叠</strong>。</p>
-<h4 id="外边距折叠产生的情况与解决方法"><a href="#外边距折叠产生的情况与解决方法" class="headerlink" title="外边距折叠产生的情况与解决方法"></a>外边距折叠产生的情况与解决方法</h4><h5 id="块级父元素与其第一个-最后一个子元素"><a href="#块级父元素与其第一个-最后一个子元素" class="headerlink" title="块级父元素与其第一个/最后一个子元素"></a>块级父元素与其第一个/最后一个子元素</h5><pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style language-css">        
-     <span class="token selector">*</span><span class="token punctuation">{</span>            
-        <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>            
-        <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>        
-    <span class="token punctuation">}</span>        
-    <span class="token selector"><span class="token id">#sec</span></span><span class="token punctuation">{</span> 
-        <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">120</span>px<span class="token punctuation">;</span>           
-        <span class="token property">background</span><span class="token punctuation">:</span> <span class="token hexcode">#f00</span><span class="token punctuation">;</span>
-           <span class="token comment" spellcheck="true">/*border: 1px solid #ccc;            */</span>
-         <span class="token comment" spellcheck="true">/*overflow: hidden;  //创建了一个BFC，块级格式化上下文   */</span>
-    <span class="token punctuation">}</span>        
-    <span class="token selector"><span class="token class">.child</span></span><span class="token punctuation">{</span>            
-        <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>            
-        <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>            
-        <span class="token property">background</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span>  
-        <span class="token comment" spellcheck="true">/* border: 1px solid blue; */</span>      
-    <span class="token punctuation">}</span>    
-</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>sec<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>        
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>article</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>child<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>article</span><span class="token punctuation">></span></span>    
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>这种情况是：子元素设置margin-top 为10px，父盒子和子元素的上边框合并到一起</p>
-<pre><code>h1 {
-  margin: 0;
-  background: #cff;
-}
-#div1{
-    margin: 40px 0 25px 0;
-      background: #999;
-}
-#div2{
-    margin: 20px 0 10px 0;
-    background: #cff;
-}
-&lt;h1&gt;这是一个标题&lt;/h1&gt;
-&lt;div id=&quot;div1&quot;&gt;
-    &lt;div id=&quot;div2&quot; &gt;这是第一个块级盒子&lt;/div&gt;
-&lt;/div&gt;</code></pre><p>测试的结果是: h1与div2之间的margin值是40px而不是想象中的60px。</p>
-<p>根据MDN：</p>
-<p>如果块级父元素中，不存在上边框（border-top）、上内补（padding-top）、inline content、 清除浮动这四条属性(对于上边框和上内补，也可以说，当上边距及上内补宽度为0时),那么这个块级元素和其第一个子元素的上边距就会发生折叠。这个折叠之后的值在这里取的就是两者之间的最大值。</p>
-<p>对于父子级块状元素解决外边距折叠的方法一般分为三大类</p>
-<ul>
-<li><p>给父级块级元素设置border-top，可以设置为：border-top:1px solid transparent</p>
-</li>
-<li><p>给父级块级元素设置一个padding-top,这个值就根据自己的布局来定吧。</p>
-</li>
-<li><p>最后一种方法，是给父级块级元素触发一个BFC(Block formatting contexts-块级格式上下文)。参考：<a href="https://juejin.im/post/5e60c2c7f265da574e22a1f5" target="_blank" rel="noopener">全面分析BFC</a></p>
-<p>具体怎么触发BFC呢？一般触发BFC的条件包括：</p>
-<ul>
-<li>浮动元素：float除了none之外</li>
-<li>用position绝对定位的元素，以及fixed固定定位的元素</li>
-<li>display: inline-block等</li>
-<li>overflow：除了visiable</li>
-</ul>
-</li>
-</ul>
-<h5 id="相邻的兄弟块级元素"><a href="#相邻的兄弟块级元素" class="headerlink" title="相邻的兄弟块级元素"></a>相邻的兄弟块级元素</h5><pre class="line-numbers language-html"><code class="language-html">div {
-    width:100px;
-    height:100px;
-    margin:40px;
-}
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>div1<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span>这是第一个块级盒子<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>div2<span class="token punctuation">"</span></span> <span class="token punctuation">></span></span>这是第二个块级盒子<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>测试的结果是两个div之间的边距是40px而不是80px。</p>
-<p>对于兄弟级块状元素，解决的方法一般有两种：</p>
-<ul>
-<li>直接只写一边的margin例如都是margin-top或者都是margin-bottom，我觉得这是我用过最简单的方法了，直接就避免了塌陷。</li>
-<li>给两个块状元素形成两个不同的BFC</li>
-</ul>
-<h5 id="空块元素"><a href="#空块元素" class="headerlink" title="空块元素"></a>空块元素</h5><pre class="line-numbers language-HTML"><code class="language-HTML">#div1,#div2 {
-    margin:0px;
-}
-#voidDiv {
-    margin-top:40px;
-    margin-bottom:40px;
-}
-<div id="div1" >这是第一个块级盒子</div>
-<div id="voidDiv"></div>
-<div id="div2" >这是第二个块级盒子</div><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>测试的结果是div1与div2之间的边距是40px而不是80px。</p>
-<p>根据MDN，产生的原因就在于</p>
-<blockquote>
-<p>如果存在一个空的块级元素，其 border、padding、inline content、height、min-height都不存在，那么此时上下边距就会发生折叠</p>
-</blockquote>
-<p>对于空的块状元素，解决的方法列举以下几种：</p>
-<ul>
-<li>设置border</li>
-<li>设置padding</li>
-<li>设置inline-block等等方法都可</li>
-</ul>
-<p>参考：</p>
-<p><a href="https://zhuanlan.zhihu.com/p/25876599" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/25876599</a></p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing" target="_blank" rel="noopener">https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing</a></p>
+                <p>博客搭建有一段时间了，之前也选择了好几个主题进行测试，最后选定了<code>next</code> 但总觉得不那么好看（主要还是因为自己不会修改吧…）。最近偶然看到了 <a href="https://blinkfox.github.io/" target="_blank" rel="noopener">闪烁之狐</a> 的博客，心动了，就下载更换了博客 <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank" rel="noopener">主题</a>，根据博客提供的教程和 <a href="https://sunhwee.com/posts/6e8839eb.html" target="_blank" rel="noopener">这篇文章</a> 修改了主题样式，挺满意的。教程很详细，但是有一些小问题，然后找了其他的一些文章进行参考，记录在下面。</p>
+<h3 id="记录过程"><a href="#记录过程" class="headerlink" title="记录过程"></a>记录过程</h3><p>1.博客双部署及绑定域名</p>
+<p><a href="https://blog.csdn.net/qq_42567023/article/details/102999624" target="_blank" rel="noopener">https://blog.csdn.net/qq_42567023/article/details/102999624</a></p>
+<p><a href="https://www.renke666.top/2020/01/27/hexo部署到coding并开启https/" target="_blank" rel="noopener">https://www.renke666.top/2020/01/27/hexo%E9%83%A8%E7%BD%B2%E5%88%B0coding%E5%B9%B6%E5%BC%80%E5%90%AFhttps/</a></p>
+<p>2.网站SEO优化</p>
+<p><a href="https://luanzhuxian.github.io/post/82d92ad4.html" target="_blank" rel="noopener">https://luanzhuxian.github.io/post/82d92ad4.html</a></p>
+<p>3.备份hexo博客源文件</p>
+<p>手动备份</p>
+<p><a href="https://wugenqiang.gitee.io/articles/manual_backup_blog_source_files.html" target="_blank" rel="noopener">https://wugenqiang.gitee.io/articles/manual_backup_blog_source_files.html</a></p>
+<p>自动备份</p>
+<p><a href="https://wugenqiang.gitee.io/articles/auto_backup_blog_source_files.html" target="_blank" rel="noopener">https://wugenqiang.gitee.io/articles/auto_backup_blog_source_files.html</a></p>
+<p>4.博客静态资源压缩</p>
+<p>基本都推荐使用gulp，但网上的方法总是出错，没有使用。还有一款hexo-neat插件，也能实现压缩。</p>
+<p><a href="https://hasaik.com/posts/495d0b23.html" target="_blank" rel="noopener">https://hasaik.com/posts/495d0b23.html</a></p>
+<p>5.PicGo+gitee图床实现</p>
+<p><a href="https://blog.csdn.net/disILLL/article/details/103962241" target="_blank" rel="noopener">https://blog.csdn.net/disILLL/article/details/103962241</a></p>
+<p>6.如何写好技术文章</p>
+<p><a href="https://fedoryx.github.io/如何写好技术博客/" target="_blank" rel="noopener">https://fedoryx.github.io/%E5%A6%82%E4%BD%95%E5%86%99%E5%A5%BD%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2/</a></p>
 
             </div>
             <hr/>
@@ -624,7 +540,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://aurorablog.top" rel="external nofollow noreferrer">Aurora</a>
+                    <a href="https://aurorablog.top" rel="external nofollow noreferrer">aurora</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -634,7 +550,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://aurorablog.top/archives/bfb26056.html">https://aurorablog.top/archives/bfb26056.html</a>
+                    <a href="https://aurorablog.top/archives/9fe51d8f.html">https://aurorablog.top/archives/9fe51d8f.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -647,7 +563,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="https://aurorablog.top" target="_blank">Aurora</a>
+                    <a href="https://aurorablog.top" target="_blank">aurora</a>
                     !
                 </span>
             </div>
@@ -671,7 +587,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/hexo/">
+                                    <span class="chip bg-color">hexo</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -732,46 +652,47 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/archives/eaadcd90.html">
+                <a href="/archives/9fe51d8f.html">
                     <div class="card-image">
                         
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="hexo主题更换（matery）">
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="gulp学习">
-                        
-                        <span class="card-title">gulp学习</span>
+                        <span class="card-title">hexo主题更换（matery）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            gulp概述gulp是基于node平台开发的前端构建工具，它能够将机械化操作编写成任务，想要执行机械化操作时执行一个命令行任务就能自动执行了。gulp能够轻松实现HTML、css、JS文件的压缩合并，语法的转换（es6，less…）公共文件
+                            更换hexo主题的一些记录
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%89%8D%E7%AB%AF%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/" class="post-category">
-                                    前端相关知识
+                            <a href="/categories/hexo/" class="post-category">
+                                    hexo
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/gulp/">
-                        <span class="chip bg-color">gulp</span>
+                    <a href="/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
                     </a>
                     
                 </div>
@@ -785,32 +706,30 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/archives/b71be232.html">
+                <a href="/archives/9e385e6b.html">
                     <div class="card-image">
                         
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="字体图标的使用">
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="2020寒假总结">
-                        
-                        <span class="card-title">2020寒假总结</span>
+                        <span class="card-title">字体图标的使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            今天是这个假期的最后一天，疫情还在继续，明天就要开始上网课了。简单的回顾一下这个假期吧。
-北京放假之后的几天路过北京，顺带转了转。北京是一直想去的一个城市吧，这次算是遂了心愿。第一天下了火车已经是10点多了，在我住的青年旅社的胡同口遇到一阿
+                            本文主要记录icomoon和阿里图标库的使用
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-01
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/" class="post-category">
-                                    生活随笔
+                            <a href="/categories/%E5%89%8D%E7%AB%AF%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/" class="post-category">
+                                    前端相关知识
                                 </a>
                             
                             
