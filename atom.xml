@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-04-07T02:05:17.757Z</updated>
+  <updated>2020-04-07T02:08:22.251Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://aurorablog.top/archives/4ab1a8de.html"/>
     <id>https://aurorablog.top/archives/4ab1a8de.html</id>
     <published>2020-04-07T01:32:01.000Z</published>
-    <updated>2020-04-07T02:05:17.757Z</updated>
+    <updated>2020-04-07T02:08:22.251Z</updated>
     
     <summary type="html">
     
@@ -30,8 +30,12 @@
         
         
           &lt;ol&gt;
-&lt;li&gt;显示所有数据库  &lt;code&gt;show databases;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;显示数据库中的数据表： &lt;code&gt;use 数据库名;&lt;/code&gt;  &lt;code&gt;show
+&lt;li&gt;&lt;p&gt;显示所有数据库 &lt;/p&gt;
+&lt;p&gt; &lt;code&gt;show databases;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;显示数据库中的数据表&lt;/p&gt;
+&lt;p&gt; &lt;code&gt;use 数据库名;&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt; &lt;code&gt;show
         
       
     
