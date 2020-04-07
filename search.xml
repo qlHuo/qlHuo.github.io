@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>mysql常用命令</title>
+      <link href="/archives/4ab1a8de.html"/>
+      <url>/archives/4ab1a8de.html</url>
+      
+        <content type="html"><![CDATA[<ol><li>显示所有数据库  <code>show databases;</code></li><li>显示数据库中的数据表： <code>use 数据库名;</code>  <code>show tables;</code></li><li>显示数据表的结构：<code>describe 表名;</code></li><li>新建数据库：<code>create database 数据库名;</code></li><li>新建表格：<code>use 数据库名;</code> <code>create table 表名(字段1 数据类型 字段属性,字段2 数据类型 字段属性,...);</code></li><li>删除数据库  <code>drop database 数据库名;</code></li><li>删除表格： <code>drop table 表名;</code></li><li>将表中记录清空： <code>delete from 表名;</code> </li><li>显示表中的数据： <code>select * from 表名；</code></li></ol><p>转载于：<a href="https://www.cnblogs.com/shuaiwl/p/5534187.html" target="_blank" rel="noopener">https://www.cnblogs.com/shuaiwl/p/5534187.html</a></p><p>详解数据库文章：<a href="https://blog.csdn.net/qq_42992643/article/details/82959720" target="_blank" rel="noopener">https://blog.csdn.net/qq_42992643/article/details/82959720</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据库 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo主题更换（matery）</title>
       <link href="/archives/9fe51d8f.html"/>
       <url>/archives/9fe51d8f.html</url>

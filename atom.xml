@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-04-05T04:02:02.728Z</updated>
+  <updated>2020-04-07T02:05:17.757Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mysql常用命令</title>
+    <link href="https://aurorablog.top/archives/4ab1a8de.html"/>
+    <id>https://aurorablog.top/archives/4ab1a8de.html</id>
+    <published>2020-04-07T01:32:01.000Z</published>
+    <updated>2020-04-07T02:05:17.757Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;显示所有数据库  &lt;code&gt;show databases;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;显示数据库中的数据表： &lt;code&gt;use 数据库名;&lt;/code&gt;  &lt;code&gt;show
+        
+      
+    
+    </summary>
+    
+    
+      <category term="数据库" scheme="https://aurorablog.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+      <category term="mysql" scheme="https://aurorablog.top/tags/mysql/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo主题更换（matery）</title>
@@ -405,27 +434,6 @@
     
       <category term="hexo" scheme="https://aurorablog.top/categories/hexo/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>hexo博客之插入图片</title>
-    <link href="https://aurorablog.top/archives/b07c3b86.html"/>
-    <id>https://aurorablog.top/archives/b07c3b86.html</id>
-    <published>2019-11-06T12:47:38.386Z</published>
-    <updated>2020-04-02T02:38:35.655Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在博客中插入图片是一个不可或缺的功能，下面是我搭建博客过程中实现插入图片的方法。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="https://aurorablog.top/categories/hexo/"/>
-    
-    
-      <category term="博客插入图片" scheme="https://aurorablog.top/tags/%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/"/>
     
   </entry>
   
