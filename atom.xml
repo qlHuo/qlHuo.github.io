@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-04-07T07:22:33.690Z</updated>
+  <updated>2020-04-11T13:26:45.498Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>js基础语法</title>
+    <link href="https://aurorablog.top/archives/6e47d1b5.html"/>
+    <id>https://aurorablog.top/archives/6e47d1b5.html</id>
+    <published>2020-04-11T12:32:20.000Z</published>
+    <updated>2020-04-11T13:26:45.498Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;js数据类型&quot;&gt;&lt;a href=&quot;#js数据类型&quot; class=&quot;headerlink&quot; title=&quot;js数据类型&quot;&gt;&lt;/a&gt;js数据类型&lt;/h3&gt;&lt;pre class=&quot;line-numbers language-javascript&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://aurorablog.top/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="https://aurorablog.top/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>mysql常用命令</title>
     <link href="https://aurorablog.top/archives/4ab1a8de.html"/>
     <id>https://aurorablog.top/archives/4ab1a8de.html</id>
     <published>2020-04-07T01:32:01.000Z</published>
-    <updated>2020-04-07T07:22:33.690Z</updated>
+    <updated>2020-04-07T08:52:30.571Z</updated>
     
     <summary type="html">
     
@@ -418,25 +445,6 @@
     
     
       <category term="JavaScript" scheme="https://aurorablog.top/categories/JavaScript/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>博客首页文章截断</title>
-    <link href="https://aurorablog.top/archives/66d1dd7.html"/>
-    <id>https://aurorablog.top/archives/66d1dd7.html</id>
-    <published>2019-11-06T12:59:51.000Z</published>
-    <updated>2020-04-01T08:07:56.909Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在文章中加入 &lt;code&gt;&amp;lt;!-- more --&amp;gt;&lt;/code&gt; 就会自动截断文章内容，后面的文章内容不再自动显示。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="https://aurorablog.top/categories/hexo/"/>
     
     
   </entry>
