@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-04-12T08:13:04.874Z</updated>
+  <updated>2020-04-13T03:45:56.041Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>作用域和预解析</title>
+    <link href="https://aurorablog.top/archives/c7272050.html"/>
+    <id>https://aurorablog.top/archives/c7272050.html</id>
+    <published>2020-04-13T03:00:52.000Z</published>
+    <updated>2020-04-13T03:45:56.041Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;作用域&quot;&gt;&lt;a href=&quot;#作用域&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="https://aurorablog.top/categories/JavaScript/"/>
+    
+    
+      <category term="作用域" scheme="https://aurorablog.top/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
+    
+      <category term="预解析" scheme="https://aurorablog.top/tags/%E9%A2%84%E8%A7%A3%E6%9E%90/"/>
+    
+  </entry>
   
   <entry>
     <title>数组、函数和对象</title>
@@ -439,25 +468,6 @@
     
     
       <category term="IE测试的问题" scheme="https://aurorablog.top/tags/IE%E6%B5%8B%E8%AF%95%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>DOM学习笔记</title>
-    <link href="https://aurorablog.top/archives/d2914a2.html"/>
-    <id>https://aurorablog.top/archives/d2914a2.html</id>
-    <published>2019-11-11T03:59:22.000Z</published>
-    <updated>2020-04-04T14:18:04.792Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;DOM学习笔记&quot;&gt;&lt;a href=&quot;#DOM学习笔记&quot; class=&quot;headerlink&quot; title=&quot;DOM学习笔记&quot;&gt;&lt;/a&gt;DOM学习笔记&lt;/h2&gt;&lt;h3 id=&quot;API的概念&quot;&gt;&lt;a href=&quot;#API的概念&quot; class=&quot;headerlink&quot; title=&quot;API的概念&quot;&gt;&lt;/a&gt;API的概念&lt;/h3&gt;&lt;p&gt;API（Application Programming Interface，应用程序编程接口）是一些预先定义好的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部工作机制的细节。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://aurorablog.top/categories/JavaScript/"/>
-    
     
   </entry>
   

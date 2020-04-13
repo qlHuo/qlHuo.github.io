@@ -6,7 +6,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="js-学习案例：栏目切换, html css javascript web前端">
+    <meta name="keywords" content="作用域和预解析, html css javascript web前端">
     <meta name="description" content="web前端,个人博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -18,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>js-学习案例：栏目切换 | AuroraBlog</title>
+    <title>作用域和预解析 | AuroraBlog</title>
     <link rel="icon" type="image/jpeg" href="/favicon.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -323,12 +323,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">js-学习案例：栏目切换</h1>
+                    <h1 class="description center-align post-title">作用域和预解析</h1>
                 </div>
             </div>
         </div>
@@ -443,9 +443,17 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F/">
+                                <span class="chip bg-color">作用域</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%A2%84%E8%A7%A3%E6%9E%90/">
+                                <span class="chip bg-color">预解析</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -466,28 +474,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-11-07
+                    2020-04-13
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-04-02
+                    2020-04-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    908
+                    597
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    2 分
                 </div>
                 
 
@@ -503,151 +511,71 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p>开始记录学习的经过，今天做了一个tab栏目切换的小功能，整了很久才做出来，最后还想实现背景切换，但是没能做出来，今天先这样吧</p>
-<a id="more"></a>
-
-<p>仿照爱词霸的搜索，用js实现切换<br><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/tab1.png" alt></p>
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;title&gt;搜索框切换功能&lt;/title&gt;
-    &lt;style&gt;
-        body {
-            background-image: url(&quot;banner-1x.png&quot;);
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .search {
-            margin: 100px auto;
-            width: 680px;
-            position: relative;
-        }
-        .hd span {
-            display: inline-block;
-            width: 88px;
-            height: 36px;
-            background: rgba(0,0,0,.3);
-            font-size: 16px;
-            font-weight: 700;
-            cursor: pointer;
-            text-align: center;
-            line-height: 40px;
-        }
-        .hd span.current{
-            background-color: #fff;
-        }
-        input {
-            width: 600px;
-            height: 56px;
-            outline: none;
-            padding-left: 20px;
-            color: gray;
-            border: none;
-            display: none;
-            font-size: 18px;
-        }
-        input.current {
-            display: block;
-        }
-        .sea-click {
-            width: 80px;
-            height: 56px;
-            text-align: center;
-            line-height: 56px;
-            position: absolute;
-            right: 0;
-            bottom:0;
-            background-color: #383838;
-            color: #fff;
-            cursor: pointer;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div class=&quot;search&quot; id=&quot;search&quot;&gt;
-    &lt;div class=&quot;hd&quot;&gt;
-        &lt;span class=&quot;current&quot;&gt;查词&lt;/span&gt;
-        &lt;span&gt;翻译&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;bd&quot;&gt;
-        &lt;input type=&quot;text&quot; value=&quot;请输入你要查询的单词&quot; id=&quot;search_btn&quot;  class=&quot;current&quot;/&gt;
-        &lt;input type=&quot;text&quot; value=&quot;请输入你要查询的短语或句子&quot; id=&quot;search_btn1&quot;  /&gt;
-        &lt;div class=&quot;sea-click&quot;&gt;搜索&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;script&gt;
-    //先获取最外层的div
-    var search = document.getElementById(&quot;search&quot;);
-    //然后获取里面的第一个div
-    var hd = search.getElementsByTagName(&quot;div&quot;)[0];
-    //获取里面的第二个div
-    var bd = search.getElementsByTagName(&quot;div&quot;)[1];
-    //获取第一个div中所有的span标签
-    var spans = hd.getElementsByTagName(&quot;span&quot;);
-    //获取下方搜索框中的input标签
-    var inputs = bd.getElementsByTagName(&quot;input&quot;);
-
-    //循环遍历所有的span标签，并注册点击事件
-    for (var i = 0; i &lt; spans.length; i++) {
-        //首先将span中的索引值存起来
-        spans[i].setAttribute(&quot;index&quot;,i);
-        //为每一个span注册点击事件
-        spans[i].onclick = function () {
-            //清除所有的span的类样式
-            for (var j = 0; j &lt; spans.length; j++) {
-                spans[j].removeAttribute(&quot;class&quot;);
-            }
-
-            //给当前的span对象设置类样式
-            this.className=&quot;current&quot;;
-            //获取当前span对象的索引值
-            var num = this.getAttribute(&quot;index&quot;);
-            //清除所有的input的类样式
-            for (var k = 0; k &lt; inputs.length; k++) {
-                inputs[k].removeAttribute(&quot;class&quot;);
-            }
-            //当前span对应的input标签设置类样式
-            inputs[num].className = &quot;current&quot;;
-        };
-    }
-
-
-
-    for (var i = 0; i &lt; inputs.length; i++) {
-        //注册获取焦点的点击事件
-        inputs[i].onfocus = function () {
-            //判断当前对象的value值
-            if (this.value == &quot;请输入你要查询的单词&quot; || &quot;请输入你要查询的短语或句子&quot;){
-                this.value = &quot;&quot;;
-                this.style.color=&quot;black&quot;;
-            }
-        };
-        //鼠标离开后的事件
-        inputs[i].onblur = function () {
-            //判断id值，设置value值
-            if (this.id == &quot;search_btn&quot;){
-                this.value = &quot;请输入你要查询的单词&quot;;
-                this.style.color=&quot;gray&quot;;
-
-            }else {
-                this.value = &quot;请输入你要查询的短语或句子&quot;;
-                this.style.color=&quot;gray&quot;;
-            }
-        };
-    }
-
-
-&lt;/script&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre><p>哎，整了一晚上，一开始就被布局给拦住了，css很多竟然又忘了。。爱词霸中查词和翻译那块是梯形，我也找到了一些做梯形的方法，可是在设置样式的时候总是出现问题，最后也放弃了继续深究，，只用普通的矩形来替代，先这样吧，整了一晚上才怎出个这么个玩意儿。。</p>
-<p>但是不管怎么说也算是大概整明白排他功能。刚开始内容比较基础，但是觉得也可能比较重要，就先记录下来吧。</p>
+                <h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><p>作用域就是使用范围。</p>
+<ul>
+<li>全局变量：声明变量是使用var且不在函数体内的变量，或者使用let/const在大括号外面声明的变量叫做全局变量。这个变量能在页面的任何位置使用</li>
+<li>局部变量：在函数内部定义的变量，或者使用let/cons在大括号内声明的变量是局部变量。这个变量只能在大括号或者函数体内使用</li>
+<li>隐式全局变量：声明变量没有加关键字</li>
+</ul>
+<blockquote>
+<p>全局变量，如果页面不关闭，那么就不会被释放，就会占用空间消耗内存</p>
+</blockquote>
+<p>块级作用域：一对大括号就可以看做是一块，在这块区域中使用let/const定义的变量,只能在这一区域中使用。</p>
+<blockquote>
+<p>使用var在块级作用域定义的变量，外部也能使用</p>
+</blockquote>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//全局变量是不能被删除的，隐式全局变量可以被删除。</span>
+<span class="token keyword">function</span> <span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   number<span class="token operator">=</span><span class="token number">1000</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//是隐式全局变量</span>
+ <span class="token punctuation">}</span>
+ <span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token keyword">var</span> num1<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">;</span>
+ num2<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">;</span>
+ <span class="token keyword">delete</span> num1<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//把num1删除了</span>
+ <span class="token keyword">delete</span> num2<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//把num2删除了</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> num1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num1<span class="token operator">+</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> num2<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h3><p>一个函数就形成一个作用域，如果这个函数中还有函数，那么这个函数就构成另一个作用域…</p>
+<p>将多有的作用域列出来，可以有一个结构，函数内指向函数外的链式结构，就称作作用域链。</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> num<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">function</span> <span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> num<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">;</span>
+      <span class="token keyword">function</span> <span class="token function">f2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> num<span class="token operator">=</span><span class="token number">30</span><span class="token punctuation">;</span>
+        <span class="token keyword">function</span> <span class="token function">f3</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">var</span> num<span class="token operator">=</span><span class="token number">50</span><span class="token punctuation">;</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">f3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token function">f2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">f1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>如果当前作用域没有这个变量，就向上一级作用域查找，直到查到这个变量。如果在全局作用域仍然没有找到这个变量，那就是undefined。</p>
+<h3 id="预解析"><a href="#预解析" class="headerlink" title="预解析"></a>预解析</h3><blockquote>
+<p>注意：ES6不存在预解析，也就是说let和const不会有变量的提升</p>
+</blockquote>
+<p>预解析的过程：</p>
+<ol>
+<li>把变量的声明提升到作用域的最前面，只会<strong>提升声明</strong>，不会提升赋值</li>
+<li>把函数的声明提升到当前作用域的最前面，只会提升声明，<strong>不会提升调用</strong></li>
+<li>先提升var，在提升function</li>
+</ol>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">25</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> abc <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token function">alert</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//undefined</span>
+  <span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">abc</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 如果变量和函数同名的话，函数先打印</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'aaaaa'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr/>
@@ -663,7 +591,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://aurorablog.top" rel="external nofollow noreferrer">Aurora</a>
+                    <a href="https://aurorablog.top" rel="external nofollow noreferrer">aurora</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -673,7 +601,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://aurorablog.top/archives/163a2d57.html">https://aurorablog.top/archives/163a2d57.html</a>
+                    <a href="https://aurorablog.top/archives/c7272050.html">https://aurorablog.top/archives/c7272050.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -686,7 +614,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="https://aurorablog.top" target="_blank">Aurora</a>
+                    <a href="https://aurorablog.top" target="_blank">aurora</a>
                     !
                 </span>
             </div>
@@ -710,7 +638,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F/">
+                                    <span class="chip bg-color">作用域</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%A2%84%E8%A7%A3%E6%9E%90/">
+                                    <span class="chip bg-color">预解析</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -771,28 +707,89 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/archives/d2914a2.html">
+                <a href="/archives/c7272050.html">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="DOM学习笔记">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="作用域和预解析">
                         
-                        <span class="card-title">DOM学习笔记</span>
+                        <span class="card-title">作用域和预解析</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            DOM学习笔记API的概念API（Application Programming Interface，应用程序编程接口）是一些预先定义好的函数，目的是提供应用程序与开发人员基于某软件或硬件得以访问一组例程的能力，而又无需访问源码，或理解内部
+                            作用域作用域就是使用范围。
+
+全局变量：声明变量是使用var且不在函数体内的变量，或者使用let/const在大括号外面声明的变量叫做全局变量。这个变量能在页面的任何位置使用
+局部变量：在函数内部定义的变量，或者使用let/cons在大括号
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-11
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-13
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JavaScript/" class="post-category">
+                                    JavaScript
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F/">
+                        <span class="chip bg-color">作用域</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%A2%84%E8%A7%A3%E6%9E%90/">
+                        <span class="chip bg-color">预解析</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/archives/bfe8a210.html">
+                    <div class="card-image">
+                        
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="数组、函数和对象">
+                        
+                        <span class="card-title">数组、函数和对象</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            数组数组：数组就是一组有序的数据
+数组的作用：可以一次性存储多个数据
+数组的索引（下标）：从0开始，到arr.length-1结束
+数组元素：数组中存储的每个数据，都是数组的元素
+数组长度：就是数组元素的个数（使用arr.length获取）
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -806,50 +803,20 @@
                     </div>
                 </div>
                 
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/archives/66d1dd7.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="博客首页文章截断">
-                        
-                        <span class="card-title">博客首页文章截断</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            在文章中加入 &lt;!-- more --&gt; 就会自动截断文章内容，后面的文章内容不再自动显示。
-
-
-也有需要配置config.yml文件的
-# Automatically Excerpt. Not recommend.
-# Ple
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-06
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/hexo/" class="post-category">
-                                    hexo
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%B0%E7%BB%84/">
+                        <span class="chip bg-color">数组</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%87%BD%E6%95%B0/">
+                        <span class="chip bg-color">函数</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AF%B9%E8%B1%A1/">
+                        <span class="chip bg-color">对象</span>
+                    </a>
+                    
                 </div>
                 
             </div>
