@@ -43,7 +43,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="./images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">AuroraBlog</span>
                 </a>
@@ -141,7 +141,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="./images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">AuroraBlog</div>
         <div class="logo-desc">
@@ -613,7 +613,7 @@ user-scale：用户是否可以缩放，yes或no(1或0)<span aria-hidden="true" 
 <li>默认主轴方向就是x轴方向，水平向右</li>
 <li>默认侧轴方向就是y轴方向，水平向下</li>
 </ul>
-<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/flex-direction.png" alt></p>
+<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/flex-direction.png" alt></p>
 <p><strong>注意</strong>：主轴和侧轴是会改变的，就看flex-direction设置谁为主轴，剩下的就是侧轴。</p>
 <table>
 <thead>
@@ -804,7 +804,7 @@ user-scale：用户是否可以缩放，yes或no(1或0)<span aria-hidden="true" 
 </tbody></table>
 <p>​    4. 媒体查询书写规则</p>
 <p><strong>注意：</strong>为了防止混乱，媒体查询我们要按照从小到大或者从大到小的顺序来写，推荐从小到大写，这样代码更简洁。</p>
-<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/media.png" alt></p>
+<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/media.png" alt></p>
 <h4 id="less-基础"><a href="#less-基础" class="headerlink" title="less 基础"></a>less 基础</h4><h5 id="维护css的弊端"><a href="#维护css的弊端" class="headerlink" title="维护css的弊端"></a>维护css的弊端</h5><p>css是一门非程序式语言，没有变量、函数、SCOPE(作用域)等概念。</p>
 <ul>
 <li>css需要书写大量看似没有逻辑的代码，css冗余是比较高。</li>
@@ -898,8 +898,8 @@ user-scale：用户是否可以缩放，yes或no(1或0)<span aria-hidden="true" 
 <p>并且要把权重提到最高</p>
 <p>VSCode  px 转换rem 插件 cssrem </p>
 <p>因为cssrem中css自动转化为rem是参照默认插件的16转换的所以需要自己配置</p>
-<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/rem.jpg" alt></p>
-<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/rem2.jpg" alt></p>
+<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/rem.jpg" alt></p>
+<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/rem2.jpg" alt></p>
 <h3 id="响应式布局"><a href="#响应式布局" class="headerlink" title="响应式布局"></a>响应式布局</h3><h4 id="响应式开发原理"><a href="#响应式开发原理" class="headerlink" title="响应式开发原理"></a>响应式开发原理</h4><p>就是使用媒体查询针对不同宽度的设备进行布局和样式的设置，从而适配不同设备的目的。可以把响应式布局看作是流式布局和自适应布局设计理念的融合。</p>
 <p>设备的划分情况：</p>
 <ul>
@@ -1197,7 +1197,7 @@ user-scale：用户是否可以缩放，yes或no(1或0)<span aria-hidden="true" 
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="移动端基础知识">
+                        <img src="./images/loading.gif" data-original="/medias/featureimages/23.jpg" class="responsive-img" alt="移动端基础知识">
                         
                         <span class="card-title">移动端基础知识</span>
                     </div>
@@ -1240,7 +1240,7 @@ user-scale：用户是否可以缩放，yes或no(1或0)<span aria-hidden="true" 
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="2019的最后一次日暮">
+                        <img src="./images/loading.gif" data-original="/medias/featureimages/22.jpg" class="responsive-img" alt="2019的最后一次日暮">
                         
                         <span class="card-title">2019的最后一次日暮</span>
                     </div>
@@ -1622,6 +1622,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-</body>
+<script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
 
 </html>

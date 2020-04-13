@@ -43,7 +43,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="./images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">AuroraBlog</span>
                 </a>
@@ -141,7 +141,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="./images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">AuroraBlog</div>
         <div class="logo-desc">
@@ -510,7 +510,7 @@
                 <p>在博客中插入图片是一个不可或缺的功能，下面是我搭建博客过程中实现插入图片的方法。</p>
 <a id="more"></a>
 
-<h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>首先修改根目录下的config.yml文件中的post_asset_folder将false为true。<br>如下图所示：<br><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/pasted-0.png" alt></p>
+<h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>首先修改根目录下的config.yml文件中的post_asset_folder将false为true。<br>如下图所示：<br><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/pasted-0.png" alt></p>
 <h4 id="插件安装与配置"><a href="#插件安装与配置" class="headerlink" title="插件安装与配置"></a>插件安装与配置</h4><p>先安装一个图片转换的插件,打开本地博客根目录，在git bash here 中输入</p>
 <pre><code>npm install hexo-admin-image --save</code></pre><p><strong>注意</strong></p>
 <p>这个插件的内容需要修改，不然可能导致图片显示不出来，最开始没有注意到，因此图片一直都显示不出来，后面才找到这个解决办法。</p>
@@ -716,7 +716,7 @@ hexo.extend.filter.register(&#39;after_post_render&#39;, function(data){
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="博客首页文章截断">
+                        <img src="./images/loading.gif" data-original="/medias/featureimages/5.jpg" class="responsive-img" alt="博客首页文章截断">
                         
                         <span class="card-title">博客首页文章截断</span>
                     </div>
@@ -762,7 +762,7 @@ hexo.extend.filter.register(&#39;after_post_render&#39;, function(data){
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="hexo博客之插入图片">
+                        <img src="./images/loading.gif" data-original="/medias/featureimages/21.jpg" class="responsive-img" alt="hexo博客之插入图片">
                         
                         <span class="card-title">hexo博客之插入图片</span>
                     </div>
@@ -1157,6 +1157,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-</body>
+<script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
 
 </html>

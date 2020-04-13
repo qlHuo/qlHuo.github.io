@@ -43,7 +43,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="./images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">AuroraBlog</span>
                 </a>
@@ -141,7 +141,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="./images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">AuroraBlog</div>
         <div class="logo-desc">
@@ -513,7 +513,7 @@
 </ul>
 <h3 id="Web-API的概念"><a href="#Web-API的概念" class="headerlink" title="Web API的概念"></a>Web API的概念</h3><p>浏览器提供的一套操作浏览器功能和页面元素的API(BOM和DOM)：此处的Web API特指浏览器提供的API(一组方法)</p>
 <p>掌握常见的浏览器提供的API的调用方式：    <a href="https://developer.mozilla.org/zh-CN/docs/Web/API" target="_blank" rel="noopener">MDN-Web API</a></p>
-<h3 id="JavaScript的组成"><a href="#JavaScript的组成" class="headerlink" title="JavaScript的组成"></a>JavaScript的组成</h3><p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/jscontent.png" alt></p>
+<h3 id="JavaScript的组成"><a href="#JavaScript的组成" class="headerlink" title="JavaScript的组成"></a>JavaScript的组成</h3><p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/jscontent.png" alt></p>
 <h4 id="ECMAScript-JavaScript的核心"><a href="#ECMAScript-JavaScript的核心" class="headerlink" title="ECMAScript - JavaScript的核心"></a>ECMAScript - JavaScript的核心</h4><p>定义了javascript的语法规范</p>
 <p>JavaScript的核心，描述了语言的基本语法和数据类型，ECMAScript是一套标准，定义了一种语言的标准与具体实现无关</p>
 <h4 id="BOM-浏览器对象模型"><a href="#BOM-浏览器对象模型" class="headerlink" title="BOM - 浏览器对象模型"></a>BOM - 浏览器对象模型</h4><p>一套操作浏览器功能的API</p>
@@ -522,7 +522,7 @@
 <p>DOM可以把HTML看做是文档树，通过DOM提供的API可以对树上的节点进行操作</p>
 <h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><h4 id="DOM的概念："><a href="#DOM的概念：" class="headerlink" title="DOM的概念："></a>DOM的概念：</h4><p>文档对象模型（Document Object Model,简称DOM），是W3C组织推荐 的处理可扩充标志语言的标准编程接口。在网页上，组织页面或文档的对象被组织在一个树形结构中，用来表示文档中对象的标准模型就称为DOM。</p>
 <p>DOM又称文档树结构</p>
-<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/DOMtree.png" alt></p>
+<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/DOMtree.png" alt></p>
 <ul>
 <li>文档：一个网页可以看做是一个文档</li>
 <li>节点：文档中所有的内容都是节点（标签、属性、文本）</li>
@@ -1182,7 +1182,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="IE浏览器测试html代码的问题">
+                        <img src="./images/loading.gif" data-original="/medias/featureimages/0.jpg" class="responsive-img" alt="IE浏览器测试html代码的问题">
                         
                         <span class="card-title">IE浏览器测试html代码的问题</span>
                     </div>
@@ -1235,7 +1235,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="js-学习案例：栏目切换">
+                        <img src="./images/loading.gif" data-original="/medias/featureimages/11.jpg" class="responsive-img" alt="js-学习案例：栏目切换">
                         
                         <span class="card-title">js-学习案例：栏目切换</span>
                     </div>
@@ -1622,6 +1622,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-</body>
+<script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
 
 </html>

@@ -43,7 +43,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="./images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">AuroraBlog</span>
                 </a>
@@ -141,7 +141,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="./images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">AuroraBlog</div>
         <div class="logo-desc">
@@ -607,9 +607,9 @@ gulp<span class="token punctuation">.</span><span class="token function">task</s
 <span class="token comment" spellcheck="true">// gulp4的语法</span>
 gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'default'</span><span class="token punctuation">,</span> gulp<span class="token punctuation">.</span><span class="token function">series</span><span class="token punctuation">(</span><span class="token string">'htmlmin'</span><span class="token punctuation">,</span> <span class="token string">'cssmin'</span><span class="token punctuation">,</span> <span class="token string">'jsmin'</span><span class="token punctuation">,</span> <span class="token string">'copy'</span><span class="token punctuation">,</span> done <span class="token operator">=</span><span class="token operator">></span> <span class="token function">done</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>gulp执行某个任务时，在当前项目下打开dos窗口直接输入gulp + 任务名称即可执行</p>
-<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/gulp-first.png" alt></p>
+<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/gulp-first.png" alt></p>
 <p>gulp执行默认任务，即执行全部的任务，默认名为default，也可以不写。直接输入gulp回车即可。</p>
-<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/gulp-task.png" alt></p>
+<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/gulp-task.png" alt></p>
 <h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><p>通过观察，我们发现存放第三方包的文件夹node_modules里面有非常多的琐碎目录和文件（随着项目业务越来越复杂，里面的文件结构越多），我们在把项目发送给别人时传输速度会很慢。因此复杂的模块依赖关系需要被记录，确保模块的版本和当前版本保持一致，否则会导致当前项目运行报错。</p>
 <p>package.json文件就是项目的描述文件，记录了当前文件的项目信息，如项目名称、版本、作者、github地址、当前项目依赖了那些第三方模块。因此不需要传输node_modules,只需要保证package.json文件的完整和正确，在项目中使用 <code>npm install</code> 就会直接安装原文件所依赖第三方模块。</p>
 <p>1.我们可以通过npm init -y 来生成默认的package.json文件</p>
@@ -762,7 +762,7 @@ gulp<span class="token punctuation">.</span><span class="token function">task</s
                 <a href="/archives/9e385e6b.html">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="字体图标的使用">
+                        <img src="./images/loading.gif" data-original="/medias/featureimages/16.jpg" class="responsive-img" alt="字体图标的使用">
                         
                         <span class="card-title">字体图标的使用</span>
                     </div>
@@ -803,7 +803,7 @@ gulp<span class="token punctuation">.</span><span class="token function">task</s
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="前端相关知识点的思考">
+                        <img src="./images/loading.gif" data-original="/medias/featureimages/1.jpg" class="responsive-img" alt="前端相关知识点的思考">
                         
                         <span class="card-title">前端相关知识点的思考</span>
                     </div>
@@ -1191,6 +1191,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-</body>
+<script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
 
 </html>

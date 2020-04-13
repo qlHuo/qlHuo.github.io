@@ -43,7 +43,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="./images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">AuroraBlog</span>
                 </a>
@@ -141,7 +141,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="./images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">AuroraBlog</div>
         <div class="logo-desc">
@@ -510,11 +510,11 @@
                 <p>测试节点的兼容代码，在谷歌和火狐上面都能正常显示，然而使用IE浏览器测试的时候，IE提示说无法访问此页面，确保web地址的正确：</p>
 <a id="more"></a>
 
-<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/ie01.png" alt></p>
+<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/ie01.png" alt></p>
 <p>上网查了一下，才知道可能是因为挂了代理导致本地的服务器无法启动，需要在IE浏览器中找到设置选项—-Internet选项—-局域网设置–在对于本地地址不使用代理服务器前面勾选，点击确定即可。</p>
-<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/ie02.png" alt></p>
+<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/ie02.png" alt></p>
 <p>但是，设置完成之后好像还是不行，提示未找到文件。</p>
-<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/ie03.png" alt></p>
+<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/ie03.png" alt></p>
 <p>这就很挠头了，同样的代码在谷歌和火狐里面运行的好好的，在ie里面就是各种问题，然后找了各种方案。一开始以为是webStrom的原因，网上也有通过配置webstrom内置服务器和端口的方式解决问题，但是搁我这就不行。</p>
 <p>后来发现，将文件名设置成英文可以正常在IE中打开。。。但中文就是乱码，提示找不到文件。</p>
 <p>最后我把在谷歌上面能正常访问的地址复制到IE上面，能够正常显示。这就应该是IE浏览器的问题了，真是很想吐槽IE。。</p>
@@ -663,7 +663,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="hexo评论功能的实现">
+                        <img src="./images/loading.gif" data-original="/medias/featureimages/6.jpg" class="responsive-img" alt="hexo评论功能的实现">
                         
                         <span class="card-title">hexo评论功能的实现</span>
                     </div>
@@ -706,7 +706,7 @@
                 <a href="/archives/d2914a2.html">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="DOM学习笔记">
+                        <img src="./images/loading.gif" data-original="/medias/featureimages/2.jpg" class="responsive-img" alt="DOM学习笔记">
                         
                         <span class="card-title">DOM学习笔记</span>
                     </div>
@@ -1088,6 +1088,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-</body>
+<script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
 
 </html>

@@ -43,7 +43,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="./images/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">AuroraBlog</span>
                 </a>
@@ -141,7 +141,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="./images/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">AuroraBlog</div>
         <div class="logo-desc">
@@ -357,19 +357,10 @@
                 </a>
                 
                 
-                <a href="/tags/gulp/" title="gulp: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="gulp" style="background-color: #F5EEF8;">gulp
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/hexo/" title="hexo: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="hexo" style="background-color: #D5F5E3;">hexo
+                            data-tagname="hexo" style="background-color: #F5EEF8;">hexo
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -378,16 +369,16 @@
                 <a href="/tags/%E5%8D%9A%E5%AE%A2%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/" title="博客插入图片: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="博客插入图片" style="background-color: #E8F8F5;">博客插入图片
+                            data-tagname="博客插入图片" style="background-color: #D5F5E3;">博客插入图片
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/JavaScript/" title="JavaScript: 1">
+                <a href="/tags/gulp/" title="gulp: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="JavaScript" style="background-color: #FEF9E7;">JavaScript
+                            data-tagname="gulp" style="background-color: #E8F8F5;">gulp
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -396,7 +387,16 @@
                 <a href="/tags/mysql/" title="mysql: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
-                            data-tagname="mysql" style="background-color: #F8F9F9;">mysql
+                            data-tagname="mysql" style="background-color: #FEF9E7;">mysql
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/JavaScript/" title="JavaScript: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="JavaScript" style="background-color: #F8F9F9;">JavaScript
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -462,7 +462,7 @@
                     <a href="/archives/4ab1a8de.html">
                         <div class="card-image tag-image">
                             
-                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="mysql常用命令">
+                            <img src="./images/loading.gif" data-original="/medias/featureimages/23.jpg" class="responsive-img" alt="mysql常用命令">
                             
                             <span class="card-title">mysql常用命令</span>
                         </div>
@@ -713,6 +713,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-</body>
+<script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body>
 
 </html>
