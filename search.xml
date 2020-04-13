@@ -369,9 +369,9 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p><strong>值类型在栈上存储</strong></p>
 </li>
 </ul>
-<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/20200412154426.png" alt="值类型在栈上存储"></p>
+<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/20200412154426.png" alt="值类型在栈上存储"></p>
 <p><strong>引用类型在堆上存储</strong></p>
-<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/20200412160234.png" alt="引用类型在堆上存储"></p>
+<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/20200412160234.png" alt="引用类型在堆上存储"></p>
 <blockquote>
 <p>new的执行过程—-new的时候系统做了什么？</p>
 <p>1.开辟空间，存储创建的新的对象</p>
@@ -788,7 +788,7 @@ ps：<span class="token keyword">default</span>后面的<span class="token keywo
 <li><p>搜索所需要的图标并添加至项目</p>
 </li>
 <li><p>在图标管理中查看我的项目</p>
-<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/icon1.png" alt></p>
+<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/icon1.png" alt></p>
 </li>
 </ol>
 <p>前端开发的三种引用方式（可进入使用帮助查看）：</p>
@@ -1070,9 +1070,9 @@ gulp<span class="token punctuation">.</span><span class="token function">task</s
 <span class="token comment" spellcheck="true">// gulp4的语法</span>
 gulp<span class="token punctuation">.</span><span class="token function">task</span><span class="token punctuation">(</span><span class="token string">'default'</span><span class="token punctuation">,</span> gulp<span class="token punctuation">.</span><span class="token function">series</span><span class="token punctuation">(</span><span class="token string">'htmlmin'</span><span class="token punctuation">,</span> <span class="token string">'cssmin'</span><span class="token punctuation">,</span> <span class="token string">'jsmin'</span><span class="token punctuation">,</span> <span class="token string">'copy'</span><span class="token punctuation">,</span> done <span class="token operator">=</span><span class="token operator">></span> <span class="token function">done</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>gulp执行某个任务时，在当前项目下打开dos窗口直接输入gulp + 任务名称即可执行</p>
-<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/gulp-first.png" alt></p>
+<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/gulp-first.png" alt></p>
 <p>gulp执行默认任务，即执行全部的任务，默认名为default，也可以不写。直接输入gulp回车即可。</p>
-<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/gulp-task.png" alt></p>
+<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/gulp-task.png" alt></p>
 <h3 id="package-json"><a href="#package-json" class="headerlink" title="package.json"></a>package.json</h3><p>通过观察，我们发现存放第三方包的文件夹node_modules里面有非常多的琐碎目录和文件（随着项目业务越来越复杂，里面的文件结构越多），我们在把项目发送给别人时传输速度会很慢。因此复杂的模块依赖关系需要被记录，确保模块的版本和当前版本保持一致，否则会导致当前项目运行报错。</p>
 <p>package.json文件就是项目的描述文件，记录了当前文件的项目信息，如项目名称、版本、作者、github地址、当前项目依赖了那些第三方模块。因此不需要传输node_modules,只需要保证package.json文件的完整和正确，在项目中使用 <code>npm install</code> 就会直接安装原文件所依赖第三方模块。</p>
 <p>1.我们可以通过npm init -y 来生成默认的package.json文件</p>
@@ -1535,7 +1535,7 @@ user-scale：用户是否可以缩放，yes或no(1或0)<span aria-hidden="true" 
 <li>默认主轴方向就是x轴方向，水平向右</li>
 <li>默认侧轴方向就是y轴方向，水平向下</li>
 </ul>
-<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/flex-direction.png" alt></p>
+<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/flex-direction.png" alt></p>
 <p><strong>注意</strong>：主轴和侧轴是会改变的，就看flex-direction设置谁为主轴，剩下的就是侧轴。</p>
 <table>
 <thead>
@@ -1726,7 +1726,7 @@ user-scale：用户是否可以缩放，yes或no(1或0)<span aria-hidden="true" 
 </tbody></table>
 <p>​    4. 媒体查询书写规则</p>
 <p><strong>注意：</strong>为了防止混乱，媒体查询我们要按照从小到大或者从大到小的顺序来写，推荐从小到大写，这样代码更简洁。</p>
-<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/media.png" alt></p>
+<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/media.png" alt></p>
 <h4 id="less-基础"><a href="#less-基础" class="headerlink" title="less 基础"></a>less 基础</h4><h5 id="维护css的弊端"><a href="#维护css的弊端" class="headerlink" title="维护css的弊端"></a>维护css的弊端</h5><p>css是一门非程序式语言，没有变量、函数、SCOPE(作用域)等概念。</p>
 <ul>
 <li>css需要书写大量看似没有逻辑的代码，css冗余是比较高。</li>
@@ -1820,8 +1820,8 @@ user-scale：用户是否可以缩放，yes或no(1或0)<span aria-hidden="true" 
 <p>并且要把权重提到最高</p>
 <p>VSCode  px 转换rem 插件 cssrem </p>
 <p>因为cssrem中css自动转化为rem是参照默认插件的16转换的所以需要自己配置</p>
-<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/rem.jpg" alt></p>
-<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/rem2.jpg" alt></p>
+<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/rem.jpg" alt></p>
+<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/rem2.jpg" alt></p>
 <h3 id="响应式布局"><a href="#响应式布局" class="headerlink" title="响应式布局"></a>响应式布局</h3><h4 id="响应式开发原理"><a href="#响应式开发原理" class="headerlink" title="响应式开发原理"></a>响应式开发原理</h4><p>就是使用媒体查询针对不同宽度的设备进行布局和样式的设置，从而适配不同设备的目的。可以把响应式布局看作是流式布局和自适应布局设计理念的融合。</p>
 <p>设备的划分情况：</p>
 <ul>
@@ -1998,7 +1998,7 @@ user-scale：用户是否可以缩放，yes或no(1或0)<span aria-hidden="true" 
     <url>/archives/e096b541.html</url>
     <content><![CDATA[<p>哈尔滨的气温一如往常–零下20多度的气温让人不敢在外面停留，就连去食堂吃个饭都小步慢跑，同时还得注意脚下光滑的地面，可能一不留神就滑倒了。气温虽然很低，还是太阳公公还是勇敢的挂在了哈尔滨的蓝天上，从屋里面透过窗户往外看外面的天空依然那么美。</p>
 <p>冬天的哈尔滨太阳太阳很快就落下了，今天下午4点在图书馆复习的时候，一抬头，发现了这2019年的最后一次日暮，从发现一直到它完全消失……<a id="more"></a></p>
-<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/rimu.jpg" alt></p>
+<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/rimu.jpg" alt></p>
 <p>很多人都说21世纪的十年代就结束了。确实是的，我是一个时空观念很敏感的人，每每到一年结束的时候都会莫名有很多感慨，很多时候这种感叹都是庸人自扰。昨天在知乎上看到一句话：时间是人类发明出来记录世界变化的工具，可是也给人类增加了许多感叹的理由。或许，时间本身就没有什么意义，只是人们赋予了它太多所谓的内涵。</p>
 <p>看到这最后的日暮，我突然来了“灵感”，2019最后一次日暮，听着轻音乐，短短几个字再配上这个图，仿佛也有很多的意境，想提笔写点什么，却只有那几个字，最后憋出了，百十字的“诗”。</p>
 <p>​                        2019的最后一个日暮<br>​                        没来得及向它挥一挥手<br>​                        就要匆匆溜走了<br>​                        所有的故事<br>​                        都将随着它的离去而离去<br>​                        不必为此而感到难过<br>​                        因为我们正书写着关于它的记忆<br>​                        </p>
@@ -2598,7 +2598,7 @@ document<span class="token punctuation">.</span>documentElement<span class="toke
 <p>大概是最近一年慢慢喝起了白酒，自从这个学期更甚——几乎每个星期都要和朋友喝上一点，感觉也还不错。隐约记得是因为啤酒不好喝，还有白酒喝着可能更有感觉。起初喝的是江小白，主要是因为他的情怀——总是有很多让人或许叫产生共鸣的话，哦，对了还有他的瓶装设计，一瓶二两，我和朋友一人一两就着周黑鸭慢慢的啜（chuo）。我总是对他讲，以后退休了，每天啜二两白酒的生活也着实让人羡慕呐。然鹅，现在才20岁却在想几十年以后的事情，未免显得太过幼稚或者叫想的太多。其实，想一想也还不错，当做是越过现实幻想吧。</p>
 <p>喝酒的时候我学着去品，慢慢的喝，确实有一股清醇，当下肚的时候确有一股暖意，特别是在寒冷的哈尔滨，喝上一口，暖和。</p>
 <p>今天买了一瓶一斤的红星二锅头，我俩尽然喝了大半瓶，其实觉得也没有多少，他喝两杯半我喝了两杯（记得当初是我邀他一起喝的，现在居然这么能喝，一口下去半杯没了，我只是啜了很少一部分）。不过这个酒可能确实不一样，刚入口的时候是没有酒味的，入口之后渐渐显现酒味，朋友说真不愧是绵柔啊。我能喝出不同却不能很好理解其中的韵味，虽说每次是在“品”，总是觉得太过肤浅，可能是人生阅历还不太够又或许不想去理解其中的味道吧。</p>
-<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/20200402112233.png" alt></p>
+<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/20200402112233.png" alt></p>
 <p>然而，酒就是酒，不是水，少喝为上，达到微醺的效果最好。其实每次只要喝一点我就会有点晕乎乎的感觉，我渐渐的喜欢上了这种感觉。不愿当个酒鬼，也不会当个酒鬼，当经历什么事情之后自然会醉。</p>
 ]]></content>
       <categories>
@@ -2884,16 +2884,16 @@ document<span class="token punctuation">.</span>documentElement<span class="toke
 <li><p>打开<a href="https://www.livere.com/" target="_blank" rel="noopener">来必力</a>官网，注册账号（只需要邮箱验证，不需要身份证。。）</p>
 </li>
 <li><p>点击安装</p>
-<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/livere1.png" alt></p>
+<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/livere1.png" alt></p>
 </li>
 <li><p>选择city免费版</p>
-<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/livere2.png" alt></p>
+<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/livere2.png" alt></p>
 </li>
 <li><p>复制data-uid里面的代码（双引号里面的代码），将其粘贴到主题配置文件的<code>livere_uid</code> 下面：</p>
-<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/livere03.jpg" alt></p>
+<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/livere03.jpg" alt></p>
 </li>
 <li><p>然后测试，部署就可以了。就这么简单。。。</p>
-<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/livere4.png" alt></p>
+<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/livere4.png" alt></p>
 </li>
 <li><p>这个来必力评论系统的后台管理也非常方便，能够进行评论管理，评论提醒等。</p>
 </li>
@@ -2912,11 +2912,11 @@ document<span class="token punctuation">.</span>documentElement<span class="toke
     <content><![CDATA[<p>测试节点的兼容代码，在谷歌和火狐上面都能正常显示，然而使用IE浏览器测试的时候，IE提示说无法访问此页面，确保web地址的正确：</p>
 <a id="more"></a>
 
-<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/ie01.png" alt></p>
+<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/ie01.png" alt></p>
 <p>上网查了一下，才知道可能是因为挂了代理导致本地的服务器无法启动，需要在IE浏览器中找到设置选项—-Internet选项—-局域网设置–在对于本地地址不使用代理服务器前面勾选，点击确定即可。</p>
-<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/ie02.png" alt></p>
+<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/ie02.png" alt></p>
 <p>但是，设置完成之后好像还是不行，提示未找到文件。</p>
-<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/ie03.png" alt></p>
+<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/ie03.png" alt></p>
 <p>这就很挠头了，同样的代码在谷歌和火狐里面运行的好好的，在ie里面就是各种问题，然后找了各种方案。一开始以为是webStrom的原因，网上也有通过配置webstrom内置服务器和端口的方式解决问题，但是搁我这就不行。</p>
 <p>后来发现，将文件名设置成英文可以正常在IE中打开。。。但中文就是乱码，提示找不到文件。</p>
 <p>最后我把在谷歌上面能正常访问的地址复制到IE上面，能够正常显示。这就应该是IE浏览器的问题了，真是很想吐槽IE。。</p>
@@ -2951,7 +2951,7 @@ document<span class="token punctuation">.</span>documentElement<span class="toke
 </ul>
 <h3 id="Web-API的概念"><a href="#Web-API的概念" class="headerlink" title="Web API的概念"></a>Web API的概念</h3><p>浏览器提供的一套操作浏览器功能和页面元素的API(BOM和DOM)：此处的Web API特指浏览器提供的API(一组方法)</p>
 <p>掌握常见的浏览器提供的API的调用方式：    <a href="https://developer.mozilla.org/zh-CN/docs/Web/API" target="_blank" rel="noopener">MDN-Web API</a></p>
-<h3 id="JavaScript的组成"><a href="#JavaScript的组成" class="headerlink" title="JavaScript的组成"></a>JavaScript的组成</h3><p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/jscontent.png" alt></p>
+<h3 id="JavaScript的组成"><a href="#JavaScript的组成" class="headerlink" title="JavaScript的组成"></a>JavaScript的组成</h3><p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/jscontent.png" alt></p>
 <h4 id="ECMAScript-JavaScript的核心"><a href="#ECMAScript-JavaScript的核心" class="headerlink" title="ECMAScript - JavaScript的核心"></a>ECMAScript - JavaScript的核心</h4><p>定义了javascript的语法规范</p>
 <p>JavaScript的核心，描述了语言的基本语法和数据类型，ECMAScript是一套标准，定义了一种语言的标准与具体实现无关</p>
 <h4 id="BOM-浏览器对象模型"><a href="#BOM-浏览器对象模型" class="headerlink" title="BOM - 浏览器对象模型"></a>BOM - 浏览器对象模型</h4><p>一套操作浏览器功能的API</p>
@@ -2960,7 +2960,7 @@ document<span class="token punctuation">.</span>documentElement<span class="toke
 <p>DOM可以把HTML看做是文档树，通过DOM提供的API可以对树上的节点进行操作</p>
 <h3 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h3><h4 id="DOM的概念："><a href="#DOM的概念：" class="headerlink" title="DOM的概念："></a>DOM的概念：</h4><p>文档对象模型（Document Object Model,简称DOM），是W3C组织推荐 的处理可扩充标志语言的标准编程接口。在网页上，组织页面或文档的对象被组织在一个树形结构中，用来表示文档中对象的标准模型就称为DOM。</p>
 <p>DOM又称文档树结构</p>
-<p><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/DOMtree.png" alt></p>
+<p><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/DOMtree.png" alt></p>
 <ul>
 <li>文档：一个网页可以看做是一个文档</li>
 <li>节点：文档中所有的内容都是节点（标签、属性、文本）</li>
@@ -3500,7 +3500,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <content><![CDATA[<h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p>开始记录学习的经过，今天做了一个tab栏目切换的小功能，整了很久才做出来，最后还想实现背景切换，但是没能做出来，今天先这样吧</p>
 <a id="more"></a>
 
-<p>仿照爱词霸的搜索，用js实现切换<br><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/tab1.png" alt></p>
+<p>仿照爱词霸的搜索，用js实现切换<br><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/tab1.png" alt></p>
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
@@ -3671,7 +3671,7 @@ auto_excerpt:
     <content><![CDATA[<p>在博客中插入图片是一个不可或缺的功能，下面是我搭建博客过程中实现插入图片的方法。</p>
 <a id="more"></a>
 
-<h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>首先修改根目录下的config.yml文件中的post_asset_folder将false为true。<br>如下图所示：<br><img src="./images/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/pasted-0.png" alt></p>
+<h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>首先修改根目录下的config.yml文件中的post_asset_folder将false为true。<br>如下图所示：<br><img src="https://gitee.com/aurorapic/BlogPic/raw/master/img/pasted-0.png" alt></p>
 <h4 id="插件安装与配置"><a href="#插件安装与配置" class="headerlink" title="插件安装与配置"></a>插件安装与配置</h4><p>先安装一个图片转换的插件,打开本地博客根目录，在git bash here 中输入</p>
 <pre><code>npm install hexo-admin-image --save</code></pre><p><strong>注意</strong></p>
 <p>这个插件的内容需要修改，不然可能导致图片显示不出来，最开始没有注意到，因此图片一直都显示不出来，后面才找到这个解决办法。</p>
