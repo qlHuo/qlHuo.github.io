@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-04-14T00:57:14.485Z</updated>
+  <updated>2020-04-14T01:14:49.246Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://aurorablog.top/archives/434c94a1.html"/>
     <id>https://aurorablog.top/archives/434c94a1.html</id>
     <published>2020-04-13T13:17:34.000Z</published>
-    <updated>2020-04-14T00:57:14.485Z</updated>
+    <updated>2020-04-14T01:14:49.246Z</updated>
     
     <summary type="html">
     
@@ -40,6 +40,10 @@
     </summary>
     
     
+      <category term="JavaScript" scheme="https://aurorablog.top/categories/JavaScript/"/>
+    
+    
+      <category term="ES6" scheme="https://aurorablog.top/tags/ES6/"/>
     
   </entry>
   

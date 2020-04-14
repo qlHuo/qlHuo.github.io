@@ -10,6 +10,9 @@
     .waves-effect .logo-img {
     	display: none;
     }
+    .circle {
+    	border-radius: none !important;
+    }
 }
 
 

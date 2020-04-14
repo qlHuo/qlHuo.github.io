@@ -239,6 +239,12 @@ str<span class="token punctuation">.</span><span class="token function">endsWith
 <p><a href="https://www.cnblogs.com/bokeyanghao/p/11147304.html" target="_blank" rel="noopener">暂时性死区的理解</a></p>
 <p><a href="https://blog.csdn.net/w390058785/article/details/82884032" target="_blank" rel="noopener">箭头函数的this指向</a></p>
 ]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>ES6</tag>
+      </tags>
   </entry>
   <entry>
     <title>js内置对象</title>
