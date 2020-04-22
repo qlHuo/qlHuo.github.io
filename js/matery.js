@@ -1,3 +1,8 @@
+ window.addEventListener("mousewheel", (e) => {
+     if (e.deltaY === 1) {
+         e.preventDefault();
+     }
+ })
 $(function () {
     /**
      * 添加文章卡片hover效果.
