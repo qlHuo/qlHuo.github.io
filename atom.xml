@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-04-14T01:14:49.246Z</updated>
+  <updated>2020-04-23T14:09:03.055Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>jQuery学习</title>
+    <link href="https://aurorablog.top/archives/7a95906a.html"/>
+    <id>https://aurorablog.top/archives/7a95906a.html</id>
+    <published>2020-04-23T01:10:05.000Z</published>
+    <updated>2020-04-23T14:09:03.055Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;jQuery介绍&quot;&gt;&lt;a href=&quot;#jQuery介绍&quot; class=&quot;headerlink&quot; title=&quot;jQuery介绍&quot;&gt;&lt;/a&gt;jQuery介绍&lt;/h2&gt;&lt;h3 id=&quot;jq和js的对比&quot;&gt;&lt;a href=&quot;#jq和js的对比&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="jQuery" scheme="https://aurorablog.top/categories/jQuery/"/>
+    
+    
+      <category term="jQuery" scheme="https://aurorablog.top/tags/jQuery/"/>
+    
+  </entry>
   
   <entry>
     <title>ES6新增语法学习</title>
@@ -477,26 +504,6 @@
     
     
       <category term="生活随笔" scheme="https://aurorablog.top/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>js-轮播图</title>
-    <link href="https://aurorablog.top/archives/7ac52404.html"/>
-    <id>https://aurorablog.top/archives/7ac52404.html</id>
-    <published>2019-11-18T10:44:19.000Z</published>
-    <updated>2020-04-01T08:07:56.907Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;javascript实现轮播图效果—&lt;/p&gt;
-&lt;p&gt;今天整了一下午，仍然是没有完全理解，先上传经常看看。。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://aurorablog.top/categories/JavaScript/"/>
     
     
   </entry>
