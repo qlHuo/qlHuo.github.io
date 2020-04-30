@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-04-27T14:41:39.469Z</updated>
+  <updated>2020-04-30T02:44:44.891Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue基础(一)</title>
+    <link href="https://aurorablog.top/archives/ce7946be.html"/>
+    <id>https://aurorablog.top/archives/ce7946be.html</id>
+    <published>2020-04-29T14:22:13.000Z</published>
+    <updated>2020-04-30T02:44:44.891Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;Vue是什么？&lt;/strong&gt; Vue (读音 /vjuː/，类似于 &lt;strong&gt;view&lt;/strong&gt;)
+        
+      
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="https://aurorablog.top/categories/vue/"/>
+    
+    
+      <category term="vue基础" scheme="https://aurorablog.top/tags/vue%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
   
   <entry>
     <title>jQuery学习</title>
@@ -482,28 +509,6 @@
     
     
       <category term="JavaScript" scheme="https://aurorablog.top/categories/JavaScript/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>酒</title>
-    <link href="https://aurorablog.top/archives/187ac5b.html"/>
-    <id>https://aurorablog.top/archives/187ac5b.html</id>
-    <published>2019-11-20T13:55:05.000Z</published>
-    <updated>2020-04-02T03:22:49.792Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;酒和欢乐总是联系在一起——无酒不欢&lt;/p&gt;
-&lt;p&gt;酒和苦恼也常联系在一起——借酒消愁&lt;/p&gt;
-&lt;p&gt;欢乐和苦恼必然联系在一起——每一个欢乐背后都隐藏着当这个快乐消失后的苦恼，每一个苦恼背后都隐藏着当这个苦恼失去后的快乐。&lt;/p&gt;
-&lt;p&gt;这话是许嵩说的但是我记不住，可能没那么快乐也没那么苦恼吧！&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="生活随笔" scheme="https://aurorablog.top/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
     
     
   </entry>
