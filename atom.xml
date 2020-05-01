@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-04-30T02:44:44.891Z</updated>
+  <updated>2020-05-01T16:00:32.494Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Vue基础(一)</title>
+    <title>Vue基础(二)-常用特性</title>
+    <link href="https://aurorablog.top/archives/78d4747a.html"/>
+    <id>https://aurorablog.top/archives/78d4747a.html</id>
+    <published>2020-05-01T13:49:50.000Z</published>
+    <updated>2020-05-01T16:00:32.494Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Vue常用特性&quot;&gt;&lt;a href=&quot;#Vue常用特性&quot; class=&quot;headerlink&quot; title=&quot;Vue常用特性&quot;&gt;&lt;/a&gt;Vue常用特性&lt;/h2&gt;&lt;h3 id=&quot;表单操作&quot;&gt;&lt;a href=&quot;#表单操作&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Vue基础(一)-模板语法</title>
     <link href="https://aurorablog.top/archives/ce7946be.html"/>
     <id>https://aurorablog.top/archives/ce7946be.html</id>
     <published>2020-04-29T14:22:13.000Z</published>
-    <updated>2020-04-30T02:44:44.891Z</updated>
+    <updated>2020-05-01T13:55:27.660Z</updated>
     
     <summary type="html">
     
@@ -484,26 +507,6 @@
           &lt;h3 id=&quot;匀速动画函数&quot;&gt;&lt;a href=&quot;#匀速动画函数&quot; class=&quot;headerlink&quot; title=&quot;匀速动画函数&quot;&gt;&lt;/a&gt;匀速动画函数&lt;/h3&gt;&lt;pre class=&quot;line-numbers language-javascript&quot;&gt;&lt;code
         
       
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://aurorablog.top/categories/JavaScript/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>javascript三大系列</title>
-    <link href="https://aurorablog.top/archives/45822f79.html"/>
-    <id>https://aurorablog.top/archives/45822f79.html</id>
-    <published>2019-11-28T09:26:19.000Z</published>
-    <updated>2020-04-01T08:07:56.902Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;offset系列&quot;&gt;&lt;a href=&quot;#offset系列&quot; class=&quot;headerlink&quot; title=&quot;offset系列&quot;&gt;&lt;/a&gt;offset系列&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;获取标签的样式属性值，如果标签的属性是在style标签中设置的，无法通过标签.style.属性，来获取宽高等属性值。如果在标签自身中设置style属性则可以获取。&lt;/p&gt;
     
     </summary>
     
