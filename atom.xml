@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-05-01T16:00:32.494Z</updated>
+  <updated>2020-05-01T16:09:29.579Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://aurorablog.top/archives/78d4747a.html"/>
     <id>https://aurorablog.top/archives/78d4747a.html</id>
     <published>2020-05-01T13:49:50.000Z</published>
-    <updated>2020-05-01T16:00:32.494Z</updated>
+    <updated>2020-05-01T16:09:29.579Z</updated>
     
     <summary type="html">
     
@@ -35,6 +35,8 @@
     
     </summary>
     
+    
+      <category term="vue" scheme="https://aurorablog.top/categories/vue/"/>
     
     
   </entry>
