@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-05-02T03:31:24.231Z</updated>
+  <updated>2020-05-03T14:48:33.464Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue基础(三)-组件</title>
+    <link href="https://aurorablog.top/archives/46c3f843.html"/>
+    <id>https://aurorablog.top/archives/46c3f843.html</id>
+    <published>2020-05-03T13:03:01.000Z</published>
+    <updated>2020-05-03T14:48:33.464Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;组件-Component&quot;&gt;&lt;a href=&quot;#组件-Component&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="https://aurorablog.top/categories/vue/"/>
+    
+    
+      <category term="组件" scheme="https://aurorablog.top/tags/%E7%BB%84%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>js数组some()方法</title>
@@ -500,25 +527,6 @@
     
     
       <category term="生活随笔" scheme="https://aurorablog.top/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>正则表达式</title>
-    <link href="https://aurorablog.top/archives/2f57a694.html"/>
-    <id>https://aurorablog.top/archives/2f57a694.html</id>
-    <published>2019-12-22T08:04:25.000Z</published>
-    <updated>2020-04-01T08:07:56.910Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;正则表达式&quot;&gt;&lt;a href=&quot;#正则表达式&quot; class=&quot;headerlink&quot; title=&quot;正则表达式&quot;&gt;&lt;/a&gt;正则表达式&lt;/h3&gt;&lt;p&gt;今天简单学习了正则表达式，现在把基础知识点做一些记录。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="前端相关知识" scheme="https://aurorablog.top/categories/%E5%89%8D%E7%AB%AF%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/"/>
     
     
   </entry>
