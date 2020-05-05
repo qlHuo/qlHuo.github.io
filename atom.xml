@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-05-03T14:52:53.678Z</updated>
+  <updated>2020-05-05T02:14:02.243Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -15,6 +15,41 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue基础(四)-前后端交互接口调用</title>
+    <link href="https://aurorablog.top/archives/6dd1968.html"/>
+    <id>https://aurorablog.top/archives/6dd1968.html</id>
+    <published>2020-05-04T14:59:40.000Z</published>
+    <updated>2020-05-05T02:14:02.243Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;接口调用的方式&quot;&gt;&lt;a href=&quot;#接口调用的方式&quot; class=&quot;headerlink&quot; title=&quot;接口调用的方式&quot;&gt;&lt;/a&gt;接口调用的方式&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;原生ajax&lt;/li&gt;
+&lt;li&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="https://aurorablog.top/categories/vue/"/>
+    
+      <category term="vue前后端交互" scheme="https://aurorablog.top/categories/vue/vue%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/"/>
+    
+    
+      <category term="promise" scheme="https://aurorablog.top/tags/promise/"/>
+    
+      <category term="fetch" scheme="https://aurorablog.top/tags/fetch/"/>
+    
+      <category term="axios" scheme="https://aurorablog.top/tags/axios/"/>
+    
+  </entry>
   
   <entry>
     <title>vue基础(三)-组件</title>
@@ -130,7 +165,7 @@
     <link href="https://aurorablog.top/archives/7a95906a.html"/>
     <id>https://aurorablog.top/archives/7a95906a.html</id>
     <published>2020-04-23T01:10:05.000Z</published>
-    <updated>2020-05-04T09:20:22.280Z</updated>
+    <updated>2020-05-04T12:16:45.562Z</updated>
     
     <summary type="html">
     
@@ -404,7 +439,7 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;gulp概述&quot;&gt;&lt;a href=&quot;#gulp概述&quot; class=&quot;headerlink&quot; title=&quot;gulp概述&quot;&gt;&lt;/a&gt;gulp概述&lt;/h3&gt;&lt;p&gt;gulp是基于node平台开发的前端构建工具，它能够将机械化操作编写成任务，想要执行机械化操作时执行一个命令行任务就能自动执行了。gulp能够轻松实现HTML、css、JS文件的压缩合并，语法的转换（es6，less…）公共文件的抽离以及修改文件浏览器自动刷新等任务。&lt;/p&gt;
+      &lt;h3 id=&quot;gulp概述&quot;&gt;&lt;a href=&quot;#gulp概述&quot; class=&quot;headerlink&quot; title=&quot;gulp概述&quot;&gt;&lt;/a&gt;gulp概述&lt;/h3&gt;&lt;p&gt;gulp是基于node平台开发的前端构建工具，它能够将机械化操作编写成任务，想要执行机械化操作时执行一个命令行任务就能自动执行了。gulp能够轻松实现HTML、css、JS文件的压缩合并，语法的转换（es6，less…）公共文件的抽离以及修改文件浏览器自动刷新等任务。
     
     </summary>
     
@@ -425,7 +460,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;本文记录前端相关的知识点，复习使用和面试准备。&lt;/p&gt;
+      &lt;p&gt;本文记录前端相关的知识点，复习使用和面试准备。
     
     </summary>
     
@@ -444,7 +479,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;今天是这个假期的最后一天，疫情还在继续，明天就要开始上网课了。简单的回顾一下这个假期吧。&lt;/p&gt;
+      &lt;p&gt;今天是这个假期的最后一天，疫情还在继续，明天就要开始上网课了。简单的回顾一下这个假期吧。
     
     </summary>
     
@@ -463,7 +498,7 @@
     
     <summary type="html">
     
-      &lt;h3 id=&quot;wxml里的格式化日期&quot;&gt;&lt;a href=&quot;#wxml里的格式化日期&quot; class=&quot;headerlink&quot; title=&quot;wxml里的格式化日期&quot;&gt;&lt;/a&gt;wxml里的格式化日期&lt;/h3&gt;&lt;p&gt;新建一个filter.wxs 文件，放到utils文件夹下。&lt;/p&gt;
+      &lt;h3 id=&quot;wxml里的格式化日期&quot;&gt;&lt;a href=&quot;#wxml里的格式化日期&quot; class=&quot;headerlink&quot; title=&quot;wxml里的格式化日期&quot;&gt;&lt;/a&gt;wxml里的格式化日期&lt;/h3&gt;&lt;p&gt;新建一个filter.wxs 文件，放到utils文件夹下。
     
     </summary>
     
@@ -482,7 +517,7 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;移动端基础知识&quot;&gt;&lt;a href=&quot;#移动端基础知识&quot; class=&quot;headerlink&quot; title=&quot;移动端基础知识&quot;&gt;&lt;/a&gt;移动端基础知识&lt;/h2&gt;&lt;p&gt;当前，国内常见的移动端浏览器都是根据webkit修改过来的内核，因此在兼容移动端主流浏览时，处理webkit内核浏览器即可。&lt;/p&gt;
+      &lt;h2 id=&quot;移动端基础知识&quot;&gt;&lt;a href=&quot;#移动端基础知识&quot; class=&quot;headerlink&quot; title=&quot;移动端基础知识&quot;&gt;&lt;/a&gt;移动端基础知识&lt;/h2&gt;&lt;p&gt;当前，国内常见的移动端浏览器都是根据webkit修改过来的内核，因此在兼容移动端主流浏览时，处理webkit内核浏览器即可。
     
     </summary>
     
@@ -497,36 +532,16 @@
     <link href="https://aurorablog.top/archives/fc8d666d.html"/>
     <id>https://aurorablog.top/archives/fc8d666d.html</id>
     <published>2020-02-05T08:17:53.000Z</published>
-    <updated>2020-05-04T09:22:02.102Z</updated>
+    <updated>2020-05-04T12:54:40.300Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;移动web开发布局&quot;&gt;&lt;a href=&quot;#移动web开发布局&quot; class=&quot;headerlink&quot; title=&quot;移动web开发布局&quot;&gt;&lt;/a&gt;移动web开发布局&lt;/h2&gt;&lt;p&gt;移动端布局主要分为四类：流式布局（百分比布局），flex布局（伸缩布局），rem适配布局，响应式布局。&lt;/p&gt;
+      &lt;h2 id=&quot;移动web开发布局&quot;&gt;&lt;a href=&quot;#移动web开发布局&quot; class=&quot;headerlink&quot; title=&quot;移动web开发布局&quot;&gt;&lt;/a&gt;移动web开发布局&lt;/h2&gt;&lt;p&gt;移动端布局主要分为四类：流式布局（百分比布局），flex布局（伸缩布局），rem适配布局，响应式布局。
     
     </summary>
     
     
       <category term="移动web" scheme="https://aurorablog.top/categories/%E7%A7%BB%E5%8A%A8web/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>2019的最后一次日暮</title>
-    <link href="https://aurorablog.top/archives/e096b541.html"/>
-    <id>https://aurorablog.top/archives/e096b541.html</id>
-    <published>2019-12-31T12:00:15.000Z</published>
-    <updated>2020-04-02T02:29:15.044Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;哈尔滨的气温一如往常–零下20多度的气温让人不敢在外面停留，就连去食堂吃个饭都小步慢跑，同时还得注意脚下光滑的地面，可能一不留神就滑倒了。气温虽然很低，还是太阳公公还是勇敢的挂在了哈尔滨的蓝天上，从屋里面透过窗户往外看外面的天空依然那么美。&lt;/p&gt;
-&lt;p&gt;冬天的哈尔滨太阳太阳很快就落下了，今天下午4点在图书馆复习的时候，一抬头，发现了这2019年的最后一次日暮，从发现一直到它完全消失……&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="生活随笔" scheme="https://aurorablog.top/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
     
     
   </entry>
