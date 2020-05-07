@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-05-07T07:23:49.530Z</updated>
+  <updated>2020-05-07T14:29:48.642Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>vue脚手架创建项目</title>
+    <link href="https://aurorablog.top/archives/50cd12cb.html"/>
+    <id>https://aurorablog.top/archives/50cd12cb.html</id>
+    <published>2020-05-07T13:09:26.000Z</published>
+    <updated>2020-05-07T14:29:48.642Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;什么是vue/cli？它是vue官方提供的脚手架工具，它可以自动将项目所需要的环境、依赖等信息都配置好。&lt;/p&gt;
+&lt;h3 id=&quot;1-使用命令行工具创建&quot;&gt;&lt;a href=&quot;#1-使用命令行工具创建&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="vue/cli" scheme="https://aurorablog.top/categories/vue-cli/"/>
+    
+    
+      <category term="项目搭建" scheme="https://aurorablog.top/tags/%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>前端工程化-webpack基本使用</title>
     <link href="https://aurorablog.top/archives/1865a78e.html"/>
     <id>https://aurorablog.top/archives/1865a78e.html</id>
     <published>2020-05-06T10:42:29.000Z</published>
-    <updated>2020-05-07T07:23:49.530Z</updated>
+    <updated>2020-05-07T07:25:19.896Z</updated>
     
     <summary type="html">
     
@@ -541,25 +569,6 @@
     
     
       <category term="生活随笔" scheme="https://aurorablog.top/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>微信小程序格式化日期</title>
-    <link href="https://aurorablog.top/archives/f2a86d85.html"/>
-    <id>https://aurorablog.top/archives/f2a86d85.html</id>
-    <published>2020-02-29T14:46:01.000Z</published>
-    <updated>2020-04-01T08:07:56.938Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;wxml里的格式化日期&quot;&gt;&lt;a href=&quot;#wxml里的格式化日期&quot; class=&quot;headerlink&quot; title=&quot;wxml里的格式化日期&quot;&gt;&lt;/a&gt;wxml里的格式化日期&lt;/h3&gt;&lt;p&gt;新建一个filter.wxs 文件，放到utils文件夹下。
-    
-    </summary>
-    
-    
-      <category term="小程序" scheme="https://aurorablog.top/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
     
   </entry>
