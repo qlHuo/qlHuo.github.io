@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-05-05T15:06:08.787Z</updated>
+  <updated>2020-05-07T07:23:49.530Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端工程化-webpack基本使用</title>
+    <link href="https://aurorablog.top/archives/1865a78e.html"/>
+    <id>https://aurorablog.top/archives/1865a78e.html</id>
+    <published>2020-05-06T10:42:29.000Z</published>
+    <updated>2020-05-07T07:23:49.530Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-模块化的分类&quot;&gt;&lt;a href=&quot;#1-模块化的分类&quot; class=&quot;headerlink&quot; title=&quot;1.模块化的分类&quot;&gt;&lt;/a&gt;1.模块化的分类&lt;/h2&gt;&lt;h3 id=&quot;1-1-浏览器端的模块化&quot;&gt;&lt;a href=&quot;#1-1-浏览器端的模块化&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="webpack" scheme="https://aurorablog.top/categories/webpack/"/>
+    
+    
+      <category term="webpack" scheme="https://aurorablog.top/tags/webpack/"/>
+    
+      <category term="es6模块化" scheme="https://aurorablog.top/tags/es6%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>vue基础(五)-vue-router路由</title>
@@ -531,25 +560,6 @@
     
     
       <category term="小程序" scheme="https://aurorablog.top/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>移动端基础知识</title>
-    <link href="https://aurorablog.top/archives/48740f33.html"/>
-    <id>https://aurorablog.top/archives/48740f33.html</id>
-    <published>2020-02-06T02:56:10.000Z</published>
-    <updated>2020-04-01T08:07:56.940Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;移动端基础知识&quot;&gt;&lt;a href=&quot;#移动端基础知识&quot; class=&quot;headerlink&quot; title=&quot;移动端基础知识&quot;&gt;&lt;/a&gt;移动端基础知识&lt;/h2&gt;&lt;p&gt;当前，国内常见的移动端浏览器都是根据webkit修改过来的内核，因此在兼容移动端主流浏览时，处理webkit内核浏览器即可。
-    
-    </summary>
-    
-    
-      <category term="移动web" scheme="https://aurorablog.top/categories/%E7%A7%BB%E5%8A%A8web/"/>
     
     
   </entry>
