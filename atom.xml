@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-05-14T03:20:31.813Z</updated>
+  <updated>2020-05-14T16:00:35.172Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>该睡觉了吧</title>
+    <link href="https://aurorablog.top/archives/dfeddf45.html"/>
+    <id>https://aurorablog.top/archives/dfeddf45.html</id>
+    <published>2020-05-14T15:46:34.000Z</published>
+    <updated>2020-05-14T16:00:35.172Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;现在是2020年的5月14日，嗯，今天是许嵩生日。祝他生日快乐。然后，现在都五月份了，这一年就这么过去一半了，真的好快啊。最近在学习vue，学的迷迷糊糊的，简单的跟着视频敲还行，自己却实现不了一个简单的功能，虽然那些语法啥的也会，并不是很难，可是为什么写不出来呢。这马上就要
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>解决vue-cli中Failed to compile问题</title>
@@ -555,25 +578,6 @@
     
     
       <category term="gulp" scheme="https://aurorablog.top/tags/gulp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端相关知识点的思考</title>
-    <link href="https://aurorablog.top/archives/bfb26056.html"/>
-    <id>https://aurorablog.top/archives/bfb26056.html</id>
-    <published>2020-03-06T12:56:28.000Z</published>
-    <updated>2020-04-06T12:37:33.722Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文记录前端相关的知识点，复习使用和面试准备。
-    
-    </summary>
-    
-    
-      <category term="知识点" scheme="https://aurorablog.top/categories/%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
-    
     
   </entry>
   
