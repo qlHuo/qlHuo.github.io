@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-05-14T16:01:07.302Z</updated>
+  <updated>2020-05-15T10:22:11.928Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试是否能够推送到github</title>
+    <link href="https://aurorablog.top/archives/1775a43e.html"/>
+    <id>https://aurorablog.top/archives/1775a43e.html</id>
+    <published>2020-05-15T10:21:16.000Z</published>
+    <updated>2020-05-15T10:22:11.928Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;头发快没啦头发快没啦头发快没啦头发快没啦头发快没啦头发快没啦头发快没啦头发快没啦头发快没啦头发快没啦头发快没啦头发快没啦头发快没啦头发快没啦头发快没啦头发快没啦头发快没啦头发快没啦头发快没啦头发快没啦头发快没啦头发快没啦头发快没啦头发快没啦头发快没啦头发快没啦头发快没啦头发
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>该睡觉了吧</title>
@@ -557,27 +580,6 @@
     
       <category term="前端相关知识" scheme="https://aurorablog.top/categories/%E5%89%8D%E7%AB%AF%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>gulp学习</title>
-    <link href="https://aurorablog.top/archives/eaadcd90.html"/>
-    <id>https://aurorablog.top/archives/eaadcd90.html</id>
-    <published>2020-03-21T07:09:42.000Z</published>
-    <updated>2020-04-02T02:35:49.393Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;gulp概述&quot;&gt;&lt;a href=&quot;#gulp概述&quot; class=&quot;headerlink&quot; title=&quot;gulp概述&quot;&gt;&lt;/a&gt;gulp概述&lt;/h3&gt;&lt;p&gt;gulp是基于node平台开发的前端构建工具，它能够将机械化操作编写成任务，想要执行机械化操作时执行一个命令行任务就能自动执行了。gulp能够轻松实现HTML、css、JS文件的压缩合并，语法的转换（es6，less…）公共文件的抽离以及修改文件浏览器自动刷新等任务。
-    
-    </summary>
-    
-    
-      <category term="前端相关知识" scheme="https://aurorablog.top/categories/%E5%89%8D%E7%AB%AF%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/"/>
-    
-    
-      <category term="gulp" scheme="https://aurorablog.top/tags/gulp/"/>
     
   </entry>
   
