@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-05-22T15:48:01.390Z</updated>
+  <updated>2020-05-30T04:00:30.166Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ref和$refs的用法</title>
+    <link href="https://aurorablog.top/archives/7f9d6afa.html"/>
+    <id>https://aurorablog.top/archives/7f9d6afa.html</id>
+    <published>2020-05-30T03:28:46.000Z</published>
+    <updated>2020-05-30T04:00:30.166Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;ref的作用&quot;&gt;&lt;a href=&quot;#ref的作用&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="https://aurorablog.top/categories/vue/"/>
+    
+    
+      <category term="ref" scheme="https://aurorablog.top/tags/ref/"/>
+    
+      <category term="$refs" scheme="https://aurorablog.top/tags/refs/"/>
+    
+  </entry>
+  
+  <entry>
     <title>瘦肉丸</title>
     <link href="https://aurorablog.top/archives/866d5542.html"/>
     <id>https://aurorablog.top/archives/866d5542.html</id>
     <published>2020-05-22T14:31:23.000Z</published>
-    <updated>2020-05-22T15:48:01.390Z</updated>
+    <updated>2020-05-22T15:49:01.519Z</updated>
     
     <summary type="html">
     
@@ -297,7 +326,7 @@
     <link href="https://aurorablog.top/archives/78d4747a.html"/>
     <id>https://aurorablog.top/archives/78d4747a.html</id>
     <published>2020-05-01T13:49:50.000Z</published>
-    <updated>2020-05-05T06:44:13.075Z</updated>
+    <updated>2020-05-28T03:36:19.323Z</updated>
     
     <summary type="html">
     
@@ -322,7 +351,7 @@
     <link href="https://aurorablog.top/archives/ce7946be.html"/>
     <id>https://aurorablog.top/archives/ce7946be.html</id>
     <published>2020-04-29T14:22:13.000Z</published>
-    <updated>2020-05-05T06:44:27.590Z</updated>
+    <updated>2020-05-29T12:49:13.024Z</updated>
     
     <summary type="html">
     
@@ -558,33 +587,6 @@
     
     
       <category term="mysql" scheme="https://aurorablog.top/tags/mysql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo主题更换（matery）</title>
-    <link href="https://aurorablog.top/archives/9fe51d8f.html"/>
-    <id>https://aurorablog.top/archives/9fe51d8f.html</id>
-    <published>2020-04-05T02:15:34.000Z</published>
-    <updated>2020-05-05T06:49:58.440Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;博客搭建有一段时间了，之前也选择了好几个主题进行测试，最后选定了&lt;code&gt;next&lt;/code&gt; 但总觉得不那么好看（主要还是因为自己不会修改吧…）。最近偶然看到了 &lt;a href=&quot;https://blinkfox.github.io/&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="hexo" scheme="https://aurorablog.top/categories/hexo/"/>
-    
-    
-      <category term="hexo" scheme="https://aurorablog.top/tags/hexo/"/>
     
   </entry>
   
