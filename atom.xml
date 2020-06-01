@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-05-30T04:00:30.166Z</updated>
+  <updated>2020-06-01T09:31:27.962Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -17,11 +17,44 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Vue过渡和动画</title>
+    <link href="https://aurorablog.top/archives/c8a837b6.html"/>
+    <id>https://aurorablog.top/archives/c8a837b6.html</id>
+    <published>2020-06-01T07:20:20.000Z</published>
+    <updated>2020-06-01T09:31:27.962Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Vue" scheme="https://aurorablog.top/categories/Vue/"/>
+    
+    
+      <category term="动画" scheme="https://aurorablog.top/tags/%E5%8A%A8%E7%94%BB/"/>
+    
+      <category term="过渡" scheme="https://aurorablog.top/tags/%E8%BF%87%E6%B8%A1/"/>
+    
+      <category term="Animate.css" scheme="https://aurorablog.top/tags/Animate-css/"/>
+    
+      <category term="velocity.js" scheme="https://aurorablog.top/tags/velocity-js/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ref和$refs的用法</title>
     <link href="https://aurorablog.top/archives/7f9d6afa.html"/>
     <id>https://aurorablog.top/archives/7f9d6afa.html</id>
     <published>2020-05-30T03:28:46.000Z</published>
-    <updated>2020-05-30T04:00:30.166Z</updated>
+    <updated>2020-05-30T04:02:00.040Z</updated>
     
     <summary type="html">
     
@@ -554,39 +587,6 @@
     
     
       <category term="JavaScript" scheme="https://aurorablog.top/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mysql常用命令</title>
-    <link href="https://aurorablog.top/archives/4ab1a8de.html"/>
-    <id>https://aurorablog.top/archives/4ab1a8de.html</id>
-    <published>2020-04-07T01:32:01.000Z</published>
-    <updated>2020-05-05T06:44:03.733Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;显示所有数据库 &lt;/p&gt;
-&lt;p&gt; &lt;code&gt;show databases;&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;显示数据库中的数据表&lt;/p&gt;
-&lt;p&gt; &lt;code&gt;use 数据库名;&lt;/code&gt; &lt;/p&gt;
-&lt;p&gt; &lt;code&gt;show
-        
-      
-    
-    </summary>
-    
-    
-      <category term="数据库" scheme="https://aurorablog.top/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-      <category term="mysql" scheme="https://aurorablog.top/tags/mysql/"/>
     
   </entry>
   
