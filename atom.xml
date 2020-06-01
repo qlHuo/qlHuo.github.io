@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-06-01T09:31:27.962Z</updated>
+  <updated>2020-06-01T09:40:56.806Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://aurorablog.top/archives/c8a837b6.html"/>
     <id>https://aurorablog.top/archives/c8a837b6.html</id>
     <published>2020-06-01T07:20:20.000Z</published>
-    <updated>2020-06-01T09:31:27.962Z</updated>
+    <updated>2020-06-01T09:40:56.806Z</updated>
     
     <summary type="html">
     
@@ -39,13 +39,7 @@
       <category term="Vue" scheme="https://aurorablog.top/categories/Vue/"/>
     
     
-      <category term="动画" scheme="https://aurorablog.top/tags/%E5%8A%A8%E7%94%BB/"/>
-    
-      <category term="过渡" scheme="https://aurorablog.top/tags/%E8%BF%87%E6%B8%A1/"/>
-    
-      <category term="Animate.css" scheme="https://aurorablog.top/tags/Animate-css/"/>
-    
-      <category term="velocity.js" scheme="https://aurorablog.top/tags/velocity-js/"/>
+      <category term="过渡和动画" scheme="https://aurorablog.top/tags/%E8%BF%87%E6%B8%A1%E5%92%8C%E5%8A%A8%E7%94%BB/"/>
     
   </entry>
   
