@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo: command not found解决方案</title>
+    <url>/archives/b2773bee.html</url>
+    <content><![CDATA[<p><strong>出现问题的原因是：</strong></p>
+<p>我在做慕课网vue实战去哪儿网的时候，把npm的下载地址修改了，新修改的npm文件夹里面没有<code>hexo-cli</code> ,所以，找不到hexo命令。</p>
+<p><strong>解决方案：</strong></p>
+<p><code>npm install hexo-cli -g</code> 重新安装一下解决。</p>
+<p>既然找不到了，那就重新安装呗。</p>
+<p><strong>答案地址：</strong></p>
+<p><a href="https://blog.csdn.net/whjkm/article/details/42675579" target="_blank" rel="noopener">这篇文章</a> <strong>的评论区里面</strong></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>(一)项目预热笔记</title>
+    <url>/archives/99c15171.html</url>
+    <content><![CDATA[<h2 id="基本流程"><a href="#基本流程" class="headerlink" title="基本流程"></a>基本流程</h2><h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><h3 id="下载安装nodejs"><a href="#下载安装nodejs" class="headerlink" title="下载安装nodejs"></a>下载安装nodejs</h3><p><a href="https://www.cnblogs.com/zhouyu2017/p/6485265.html" target="_blank" rel="noopener">nodejs的配置相关参考</a></p>
+<h3 id="注册远程仓库账号"><a href="#注册远程仓库账号" class="headerlink" title="注册远程仓库账号"></a>注册远程仓库账号</h3><p>课程里面老师要求注册码云账号，但一直都在使用github（虽然有时有点慢），就没有另外使用码云了。</p>
+<h3 id="下载git并与远程仓库"><a href="#下载git并与远程仓库" class="headerlink" title="下载git并与远程仓库"></a>下载git并与远程仓库</h3><p>这部分之前也做过了，就直接过了。</p>
+<h3 id="初始化项目时遇到的问题"><a href="#初始化项目时遇到的问题" class="headerlink" title="初始化项目时遇到的问题"></a>初始化项目时遇到的问题</h3><h4 id="脚手架安装问题"><a href="#脚手架安装问题" class="headerlink" title="脚手架安装问题"></a>脚手架安装问题</h4><p><strong>问题描述：</strong></p>
+<p>在此项目之前我已经之前安装过了脚手架，但是是@vue/cli4.x版本的，而老师的项目用的是vue-cli2.x。为了避免学习过程中的兼容性等问题，我就准备使用与老师同样版本的vue-cli2.9.6。然后问题就来了：虽然可以安装vue-cli2.9.6，但是使用不了，并且之前的@vue/cli4.2.3也无法完全卸载，然后就很挠头了。。</p>
+<p><strong>解决方案：</strong></p>
+<p><a href="https://www.jianshu.com/p/ba7c078837f3" target="_blank" rel="noopener">参考文章</a></p>
+<p><strong>原因:</strong></p>
+<p>之前进行过node环境的配置，但是中间有些路径没有填写正确，导致后面卸载不掉新版的@vue/cli脚手架。实际上，其他工具包估计也会出现这个问题，但是，我没有注意过呀。。</p>
+<p>原因: npm install -g @vue/cli 后， 我发现在 <code>C:\Users\Administrator\AppData\Roaming\npm\node_modules</code> 目录下多了一个@vue的文件夹。也就是说全局安装的文件都在这里！ 同时，npm uninstall vue-cli -g 也是删除的这里面的文件。</p>
+<p><strong>解决：</strong></p>
+<p>1.打开环境变量&gt;在用户变量中找到path,这里的的路径必须和你电脑 npm 的全局安装路径对应，原来我的之前路径写错了，所以就默认帮我装在C:\Users\Administrator\AppData\Roaming\npm中！ 现在我决定指定这个路径在D:\nodejs\node_global中（这里的node_global文件夹是我自己新建的）</p>
+<p>2.接下来还有一点！系统变量中的NODE_PATH的路径必须和你是 npm 全局安装路径下的 node_modules,所以我这里填写的是D:\nodejs\node_global\node_modules</p>
+<p>3.设置 npm 的默认安装路:</p>
+<p> <code>$npm config set prefix &quot;D:\nodejs\node_global&quot;</code> //这里的路径必须是上面path对应！</p>
+<p> <code>$npm config set cache &quot;D:\nodejs\node_cache&quot;</code>  //—这里是我自定义的缓存路径，也配置一下吧。</p>
+<blockquote>
+<p>注意：C:\Users\Administrator\AppData\Roaming\npm，，一般安装时，没修改 node 安装路径，默认的 npm 全局安装路径就在这里</p>
+</blockquote>
+<h4 id="npm-run-dev-报错"><a href="#npm-run-dev-报错" class="headerlink" title="npm run dev 报错"></a><code>npm run dev</code> 报错</h4><p><strong>webpack-dev-server错误法则：</strong></p>
+<p>前往项目根目录删除node_modules文件夹，然后在项目根目录路径下的终端运行”npm install”等待安装完之后，再次运行“npm run dev”，有些人的是马上就可以了，然而往往还会有人（譬如我）仍然报类似的错误，这个时候你只需要再次重复相同的操作即可，“一次不成再删再安装”！！！</p>
+<p>嗯，也是绝了，一次不行就多整几次，这部分参考<a href="https://blog.csdn.net/Leadyang/article/details/82705738" target="_blank" rel="noopener">这篇文章</a></p>
+]]></content>
+      <categories>
+        <category>vue开发去哪儿网</category>
+      </categories>
+      <tags>
+        <tag>项目笔记</tag>
+        <tag>问题记录</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vue过渡和动画</title>
     <url>/archives/c8a837b6.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Vue在插入、更新或者移除DOM的时候，提供多种不同方式的应用<strong>过渡效果</strong>。包括以下几种工具：</p>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-06-01T09:40:56.806Z</updated>
+  <updated>2020-06-02T08:03:37.052Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -15,6 +15,61 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo: command not found解决方案</title>
+    <link href="https://aurorablog.top/archives/b2773bee.html"/>
+    <id>https://aurorablog.top/archives/b2773bee.html</id>
+    <published>2020-06-02T07:55:38.000Z</published>
+    <updated>2020-06-02T08:03:37.052Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;出现问题的原因是：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我在做慕课网vue实战去哪儿网的时候，把npm的下载地址修改了，新修改的npm文件夹里面没有&lt;code&gt;hexo-cli&lt;/code&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="https://aurorablog.top/categories/hexo/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>(一)项目预热笔记</title>
+    <link href="https://aurorablog.top/archives/99c15171.html"/>
+    <id>https://aurorablog.top/archives/99c15171.html</id>
+    <published>2020-06-02T07:54:04.000Z</published>
+    <updated>2020-06-02T10:28:51.447Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;基本流程&quot;&gt;&lt;a href=&quot;#基本流程&quot; class=&quot;headerlink&quot; title=&quot;基本流程&quot;&gt;&lt;/a&gt;基本流程&lt;/h2&gt;&lt;h2 id=&quot;环境配置&quot;&gt;&lt;a href=&quot;#环境配置&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="vue开发去哪儿网" scheme="https://aurorablog.top/categories/vue%E5%BC%80%E5%8F%91%E5%8E%BB%E5%93%AA%E5%84%BF%E7%BD%91/"/>
+    
+    
+      <category term="项目笔记" scheme="https://aurorablog.top/tags/%E9%A1%B9%E7%9B%AE%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="问题记录" scheme="https://aurorablog.top/tags/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue过渡和动画</title>
@@ -523,64 +578,6 @@
       <category term="作用域" scheme="https://aurorablog.top/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
     
       <category term="预解析" scheme="https://aurorablog.top/tags/%E9%A2%84%E8%A7%A3%E6%9E%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数组、函数和对象</title>
-    <link href="https://aurorablog.top/archives/bfe8a210.html"/>
-    <id>https://aurorablog.top/archives/bfe8a210.html</id>
-    <published>2020-04-12T06:20:09.000Z</published>
-    <updated>2020-05-05T06:44:52.113Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;数组&quot;&gt;&lt;a href=&quot;#数组&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://aurorablog.top/categories/JavaScript/"/>
-    
-    
-      <category term="数组" scheme="https://aurorablog.top/tags/%E6%95%B0%E7%BB%84/"/>
-    
-      <category term="函数" scheme="https://aurorablog.top/tags/%E5%87%BD%E6%95%B0/"/>
-    
-      <category term="对象" scheme="https://aurorablog.top/tags/%E5%AF%B9%E8%B1%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js基础语法</title>
-    <link href="https://aurorablog.top/archives/6e47d1b5.html"/>
-    <id>https://aurorablog.top/archives/6e47d1b5.html</id>
-    <published>2020-04-11T12:32:20.000Z</published>
-    <updated>2020-05-05T06:43:23.097Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;js数据类型&quot;&gt;&lt;a href=&quot;#js数据类型&quot; class=&quot;headerlink&quot; title=&quot;js数据类型&quot;&gt;&lt;/a&gt;js数据类型&lt;/h3&gt;&lt;pre class=&quot;line-numbers language-javascript&quot;&gt;&lt;code
-        
-      
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://aurorablog.top/categories/JavaScript/"/>
-    
-    
-      <category term="JavaScript" scheme="https://aurorablog.top/tags/JavaScript/"/>
     
   </entry>
   
