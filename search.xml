@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>vsCode中自动格式化stylus设置</title>
+      <link href="/archives/78ae444f.html"/>
+      <url>/archives/78ae444f.html</url>
+      
+        <content type="html"><![CDATA[<p><strong>问题描述：</strong></p><p>vsCode中编写stylus，保存之后stylus代码会自动加上大括号和分号等，看着很不习惯。</p><p><strong>解决方案：</strong></p><p>先在拓展商店里下载 language-stylus 插件，然后在setting.json文件中加上以下配置：</p><pre class="line-numbers language-json"><code class="language-json"><span class="token property">"stylusSupremacy.insertColons"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> // 是否插入冒号<span class="token property">"stylusSupremacy.insertSemicolons"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> // 是否插入分好<span class="token property">"stylusSupremacy.insertBraces"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> // 是否插入大括号<span class="token property">"stylusSupremacy.insertNewLineAroundImports"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> // import之后是否换行<span class="token property">"stylusSupremacy.insertNewLineAroundBlocks"</span><span class="token operator">:</span> <span class="token boolean">false</span> // 两个选择器中是否换行<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>完成上述操作保存之后，就不会在保存代码的时候自动加上分号和大括号了。</p><p>本文转自：<a href="https://www.jianshu.com/p/7c7a6da24f97" target="_blank" rel="noopener">https://www.jianshu.com/p/7c7a6da24f97</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> vsCode配置 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> stylus格式化配置 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo: command not found解决方案</title>
       <link href="/archives/b2773bee.html"/>
       <url>/archives/b2773bee.html</url>

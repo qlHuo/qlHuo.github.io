@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-06-02T14:46:41.330Z</updated>
+  <updated>2020-06-03T08:50:46.874Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vsCode中自动格式化stylus设置</title>
+    <link href="https://aurorablog.top/archives/78ae444f.html"/>
+    <id>https://aurorablog.top/archives/78ae444f.html</id>
+    <published>2020-06-03T08:43:14.000Z</published>
+    <updated>2020-06-03T08:50:46.874Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;问题描述：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;vsCode中编写stylus，保存之后stylus代码会自动加上大括号和分号等，看着很不习惯。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;先在拓展商店里下载
+        
+      
+    
+    </summary>
+    
+    
+      <category term="vsCode配置" scheme="https://aurorablog.top/categories/vsCode%E9%85%8D%E7%BD%AE/"/>
+    
+    
+      <category term="stylus格式化配置" scheme="https://aurorablog.top/tags/stylus%E6%A0%BC%E5%BC%8F%E5%8C%96%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo: command not found解决方案</title>
@@ -47,7 +77,7 @@
     <link href="https://aurorablog.top/archives/99c15171.html"/>
     <id>https://aurorablog.top/archives/99c15171.html</id>
     <published>2020-06-02T07:54:04.000Z</published>
-    <updated>2020-06-03T03:35:47.978Z</updated>
+    <updated>2020-06-03T03:40:11.660Z</updated>
     
     <summary type="html">
     
@@ -549,35 +579,6 @@
       <category term="String" scheme="https://aurorablog.top/tags/String/"/>
     
       <category term="Date" scheme="https://aurorablog.top/tags/Date/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>作用域和预解析</title>
-    <link href="https://aurorablog.top/archives/c7272050.html"/>
-    <id>https://aurorablog.top/archives/c7272050.html</id>
-    <published>2020-04-13T03:00:52.000Z</published>
-    <updated>2020-05-05T06:45:30.982Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;作用域&quot;&gt;&lt;a href=&quot;#作用域&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://aurorablog.top/categories/JavaScript/"/>
-    
-    
-      <category term="作用域" scheme="https://aurorablog.top/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
-    
-      <category term="预解析" scheme="https://aurorablog.top/tags/%E9%A2%84%E8%A7%A3%E6%9E%90/"/>
     
   </entry>
   
