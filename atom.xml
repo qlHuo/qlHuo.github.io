@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-06-09T06:52:17.244Z</updated>
+  <updated>2020-06-12T16:35:13.665Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>(四)详情页面开发</title>
-    <link href="https://aurorablog.top/archives/bd82df2a.html"/>
-    <id>https://aurorablog.top/archives/bd82df2a.html</id>
-    <published>2020-06-09T06:52:17.000Z</published>
-    <updated>2020-06-09T06:52:17.244Z</updated>
+    <title>面试经验教训（6.12）</title>
+    <link href="https://aurorablog.top/archives/105f7dfa.html"/>
+    <id>https://aurorablog.top/archives/105f7dfa.html</id>
+    <published>2020-06-12T15:47:59.000Z</published>
+    <updated>2020-06-12T16:35:13.665Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;今天进行了我人生中的第二次面试，说来这个面试真是一言难尽。。。昨天hr打电话说选个时间进行面试，我选择了今天下午。。。当时不觉得什么，后来想想，就隔一天的时间，时间是不是有点紧了。。关键是，我其实心里没有底，也根本没有准备好，然后只有一天的时间，只能硬着头皮上了，这两天就疯
+        
+      
+    
+    </summary>
+    
+    
+      <category term="面试" scheme="https://aurorablog.top/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>前端面试注意事项和面试题解析</title>
+    <link href="https://aurorablog.top/archives/d227b726.html"/>
+    <id>https://aurorablog.top/archives/d227b726.html</id>
+    <published>2020-06-10T15:57:24.000Z</published>
+    <updated>2020-06-10T15:57:24.034Z</updated>
     
     <summary type="html">
     
@@ -32,11 +57,36 @@
   </entry>
   
   <entry>
+    <title>(四)详情页面开发</title>
+    <link href="https://aurorablog.top/archives/bd82df2a.html"/>
+    <id>https://aurorablog.top/archives/bd82df2a.html</id>
+    <published>2020-06-09T06:52:17.000Z</published>
+    <updated>2020-06-10T10:38:00.226Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;动态路由和banner布局&quot;&gt;&lt;a href=&quot;#动态路由和banner布局&quot; class=&quot;headerlink&quot; title=&quot;动态路由和banner布局&quot;&gt;&lt;/a&gt;动态路由和banner布局&lt;/h3&gt;&lt;h4 id=&quot;router-link&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="vue开发去哪儿网" scheme="https://aurorablog.top/categories/vue%E5%BC%80%E5%8F%91%E5%8E%BB%E5%93%AA%E5%84%BF%E7%BD%91/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>(三)城市选择页面开发</title>
     <link href="https://aurorablog.top/archives/411b050c.html"/>
     <id>https://aurorablog.top/archives/411b050c.html</id>
     <published>2020-06-07T02:58:36.000Z</published>
-    <updated>2020-06-09T06:50:36.553Z</updated>
+    <updated>2020-06-09T07:00:17.209Z</updated>
     
     <summary type="html">
     
@@ -513,58 +563,6 @@
       <category term="数组" scheme="https://aurorablog.top/tags/%E6%95%B0%E7%BB%84/"/>
     
       <category term="some()" scheme="https://aurorablog.top/tags/some/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue基础(二)-常用特性</title>
-    <link href="https://aurorablog.top/archives/78d4747a.html"/>
-    <id>https://aurorablog.top/archives/78d4747a.html</id>
-    <published>2020-05-01T13:49:50.000Z</published>
-    <updated>2020-05-28T03:36:19.323Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Vue常用特性&quot;&gt;&lt;a href=&quot;#Vue常用特性&quot; class=&quot;headerlink&quot; title=&quot;Vue常用特性&quot;&gt;&lt;/a&gt;Vue常用特性&lt;/h2&gt;&lt;h3 id=&quot;表单操作&quot;&gt;&lt;a href=&quot;#表单操作&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="vue" scheme="https://aurorablog.top/categories/vue/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Vue基础(一)-模板语法</title>
-    <link href="https://aurorablog.top/archives/ce7946be.html"/>
-    <id>https://aurorablog.top/archives/ce7946be.html</id>
-    <published>2020-04-29T14:22:13.000Z</published>
-    <updated>2020-05-29T12:49:13.024Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;strong&gt;Vue是什么？&lt;/strong&gt; Vue (读音 /vjuː/，类似于 &lt;strong&gt;view&lt;/strong&gt;)
-        
-      
-    
-    </summary>
-    
-    
-      <category term="vue" scheme="https://aurorablog.top/categories/vue/"/>
-    
-    
-      <category term="vue基础" scheme="https://aurorablog.top/tags/vue%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
