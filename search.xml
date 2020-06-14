@@ -1,6 +1,233 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Vuex学习笔记</title>
+    <url>/archives/ddd07bd6.html</url>
+    <content><![CDATA[<h3 id="Vuex概述"><a href="#Vuex概述" class="headerlink" title="Vuex概述"></a>Vuex概述</h3><p>Vuex 是适用于在 Vue项目开发时使用的状态管理工具。如果在一个项目开发中频繁使用组件传参的方式来同步 data 中的值，一旦项目变得庞大，管理和维护这些值将是相当麻烦的。为此，Vue 为这些被多个组件频繁使用的值提供了一个统一的管理工具——Vuex。在具有 Vuex 的 Vue项目中，我们只需要这些值定义在 Vuex 中，即可在整个 Vue 项目的组建中使用这些值。</p>
+<p>使用 vuex 管理数据的好处：</p>
+<ul>
+<li>能够在 Vuex 中集中管理共享的数据，便于开发和后期进行维护</li>
+<li>能够高效的实现组件之间的数据共享，提高开发效率</li>
+<li>存储在 vuex 中的数据是响应式的，当数据发生改变时，页面中的数据也会同步更新</li>
+</ul>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>使用 VueCli构建项目时，可以直接勾选 Vuex ，这样 VueCli 就会直接将Vue创建。如果没有选中 Vuex 也可以手动安装</p>
+<pre class="line-numbers language-html"><code class="language-html">npm install vuex --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>然后在项目的根目录下新增一个 store 文件夹， 在该文件夹下创建 <code>index.js</code> 文件。此时的项目结构应该是：</p>
+<pre><code>│  App.vue
+│  main.js
+│
+├─assets
+│      logo.png
+│
+├─components
+│      HelloWorld.vue
+│
+├─router
+│      index.js
+│
+└─store
+       index.js</code></pre><h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><blockquote>
+<p>使用 vue/cli 初始化项目的时候会直接将 vuex 相关的挂载好</p>
+</blockquote>
+<ul>
+<li><p>初始化 store 下的 <code>index.js</code> 中的内容</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> Vuex <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+
+<span class="token comment" spellcheck="true">//挂载Vuex</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Vuex<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">//创建VueX对象</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    state<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//存放的键值对就是所要管理的状态</span>
+        name<span class="token punctuation">:</span><span class="token string">'helloVueX'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>将 store 挂载到当前项目的 Vue 实例中，打开 main.js</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App'</span>
+<span class="token keyword">import</span> router <span class="token keyword">from</span> <span class="token string">'./router'</span>
+<span class="token keyword">import</span> store <span class="token keyword">from</span> <span class="token string">'./store'</span>
+
+Vue<span class="token punctuation">.</span>config<span class="token punctuation">.</span>productionTip <span class="token operator">=</span> <span class="token boolean">false</span>
+
+<span class="token comment" spellcheck="true">/* eslint-disable no-new */</span>
+<span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  el<span class="token punctuation">:</span> <span class="token string">'#app'</span><span class="token punctuation">,</span>
+  router<span class="token punctuation">,</span>
+  store<span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//store:store 和router一样，将我们创建的Vuex实例挂载到这个vue实例中</span>
+  render<span class="token punctuation">:</span> h <span class="token operator">=</span><span class="token operator">></span> <span class="token function">h</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>在组件中使用 Vuex。</p>
+<pre class="line-numbers language-vue"><code class="language-vue"><template>
+    <div id='app'>
+        name:
+        <h1>{{ $store.state.name }}</h1>
+    </div>
+</template><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>或者要在组件方法中使用</p>
+<pre class="line-numbers language-vue"><code class="language-vue">methods:{
+    add(){
+      console.log(this.$store.state.name)
+    }
+},<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<blockquote>
+<p>注意：不能直接修改 state 中的值</p>
+</blockquote>
+<h3 id="Vuex-中的核心内容"><a href="#Vuex-中的核心内容" class="headerlink" title="Vuex 中的核心内容"></a>Vuex 中的核心内容</h3><p>在 Vuex 对象中，有以下核心属性：</p>
+<ul>
+<li><code>state</code>  存放状态</li>
+<li><code>mutations</code>  用来操作 state 成员</li>
+<li><code>getters</code>  加工 state 成员给外界</li>
+<li><code>actions</code>  异步操作</li>
+<li><code>modules</code>  模块化状态管理</li>
+</ul>
+<p><img src="/medias/loading.gif" data-original="https://gitee.com/aurorapic/BlogPic/raw/master/img/20200614221333.png" alt="Vuex流程图"></p>
+<p>首先， Vue 组件如果调用某个 Vuex 的方法过程中需要<strong>向后端请求</strong>时 或者 说出现<strong>异步操作</strong>时，需要 <code>dispatch</code> Vuex 中的 <code>actions</code> 的方法，以保证数据的同步。可以说，<code>actions</code> 的存在就是为了让 <code>mutations</code> 中的方法能在异步操作中起作用。</p>
+<p>如果<strong>没有异步操作</strong>，那么我们就可以直接在组件内提交状态中的 <code>mutations</code> 中，使用自己编写的方法来达成对 <code>state</code> 的操作。最后被修改的 <code>state</code> 中的成员会被渲染到组件的原位置当中去。</p>
+<blockquote>
+<p>不建议在组件中直接对 <code>state</code> 中的成员进行操作，这是因为如果直接修改的话不能被 VueDevtools 监控到。</p>
+</blockquote>
+<h4 id="State"><a href="#State" class="headerlink" title="State"></a>State</h4><p>state 提供唯一的公共数据源，所有共享的数据都要统一放到 store 中的 state 中存储。</p>
+<p><strong>在组件中访问State的方式：</strong></p>
+<ul>
+<li><code>this.$store.state</code> 全局数据名称  如：<code>this.$store.state.count</code></li>
+<li>先按需导入 <code>mapState</code> 函数： <code>import { mapState } from &#39;vuex&#39;</code> ；然后数据映射为计算属性： <code>computed:{ ...mapState([&#39;全局数据名称&#39;]) }</code></li>
+</ul>
+<h4 id="Mutations"><a href="#Mutations" class="headerlink" title="Mutations"></a>Mutations</h4><p><code>mutations</code>是操作<code>state</code>数据的方法的集合，比如对该数据的修改、增加、删除等等。</p>
+<p><strong>Mutations 使用方法</strong></p>
+<p><code>mutations</code>方法都有默认的形参：(<strong>[state]</strong> <strong>[,payload]</strong>)</p>
+<ul>
+<li><code>state</code>是当前<code>VueX</code>对象中的<code>state</code>。必填</li>
+<li><code>payload</code>是该方法在被调用时传递参数使用的。选填</li>
+</ul>
+<p>在 store 文件夹下的 index.js 中添加以下内容：</p>
+<pre class="line-numbers language-js"><code class="language-js">mutations<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token function">add</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span>step<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//第一个形参永远都是state也就是$state对象</span>
+        <span class="token comment" spellcheck="true">//第二个形参是调用add时传递的参数</span>
+        state<span class="token punctuation">.</span>count<span class="token operator">+</span><span class="token operator">=</span>step<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>然后在组件中，我们需要调用 commit 方法调用 mutations中的事件</p>
+<pre class="line-numbers language-vue"><code class="language-vue"><button @click="Add">+1</button>
+
+methods:{
+  Add(){
+    //使用commit函数调用mutations中的对应函数，
+    //第一个参数就是我们要调用的mutations中的函数名
+    //第二个参数就是传递给add函数的参数
+    this.$store.commit('add',10)
+  }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>按需导入 mutations</strong></p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> mapMutations <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+
+methods<span class="token punctuation">:</span><span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token function">mapMutations</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'add'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="Mutation-传值"><a href="#Mutation-传值" class="headerlink" title="Mutation 传值"></a>Mutation 传值</h4><p>在实际生产过程中，会遇到需要在提交某个 <code>mutations</code> 时携带一些参数给方法使用。</p>
+<p>提交单个值时： </p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">'edit'</span><span class="token punctuation">,</span><span class="token number">15</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>当需要提交多个参数的时候，推荐把他们放在一个对象中来提交。</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">'edit'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>age<span class="token punctuation">:</span><span class="token number">15</span><span class="token punctuation">,</span>sex<span class="token punctuation">:</span><span class="token string">'男'</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>接收挂载的参数：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token function">edit</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span>payload<span class="token punctuation">)</span><span class="token punctuation">{</span>
+      state<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'jack'</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>payload<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 15或{age:15,sex:'男'}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>另一种提交方式</strong></p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    type<span class="token punctuation">:</span><span class="token string">'edit'</span><span class="token punctuation">,</span>
+    payload<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        age<span class="token punctuation">:</span><span class="token number">15</span><span class="token punctuation">,</span>
+        sex<span class="token punctuation">:</span><span class="token string">'男'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>增删state中的成员</strong></p>
+<p>为了配合Vue的响应式数据，我们在 <code>Mutations</code>的方法中，应当使用 <code>Vue</code> 提供的方法来进行操作。</p>
+<ul>
+<li><p><code>Vue.set</code>为某个对象设置成员的值，如果不存在就新增</p>
+<p>例如对 <code>state</code> 对象中添加一个 age 成员</p>
+<pre class="line-numbers language-vue"><code class="language-vue">Vue.set(state,"age",15)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p><code>Vue.delete</code> 删除成员</p>
+<p>将刚刚添加的 age 成员删除</p>
+<pre class="line-numbers language-vue"><code class="language-vue">Vue.delete(state,'age')<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+<h4 id="Getters"><a href="#Getters" class="headerlink" title="Getters"></a>Getters</h4><p>可以对 state 中的成员加工后传递给外界，本身并不改变 state 中的数据</p>
+<p>Getters中的方法有两个默认参数：</p>
+<ul>
+<li>state 当前VueX对象中的状态对象</li>
+<li>getters 当前 getters 对象，用于将 getters 下的其他getter拿来用</li>
+</ul>
+<pre class="line-numbers language-js"><code class="language-js">getters<span class="token punctuation">:</span><span class="token punctuation">{</span>
+    <span class="token function">nameInfo</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">"姓名:"</span><span class="token operator">+</span>state<span class="token punctuation">.</span>name
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">fullInfo</span><span class="token punctuation">(</span>state<span class="token punctuation">,</span>getters<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> getters<span class="token punctuation">.</span>nameInfo<span class="token operator">+</span><span class="token string">'年龄:'</span><span class="token operator">+</span>state<span class="token punctuation">.</span>age
+    <span class="token punctuation">}</span>  
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>组件中调用,使用插值表达式直接调用</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span>getters<span class="token punctuation">.</span>fullInfo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>也可以按需导入 mapGetters 并映射为计算属性</strong></p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> mapGetters <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+computed<span class="token punctuation">:</span><span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token function">mapGetters</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'fullInfo'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="Actions"><a href="#Actions" class="headerlink" title="Actions"></a>Actions</h4><p>由于直接在 <code>mutations</code> 方法中进行异步操作，将会引起数据失效。所以提供了 <code>Actions</code> 来专门进行异步操作，然后提交 <code>mutations</code> 方法</p>
+<p><code>Actions</code>中的方法有两个默认参数:</p>
+<ul>
+<li><code>context</code> 上下文(相当于箭头函数中的this)对象</li>
+<li><code>payload</code> 挂载参数</li>
+</ul>
+<p>例如，两秒钟之后执行 edit 方法。</p>
+<p>由于 <code>setTimeout</code>是异步操作，所以需要使用 <code>actions</code> </p>
+<pre class="line-numbers language-js"><code class="language-js">actions<span class="token punctuation">:</span><span class="token punctuation">{</span>
+    <span class="token function">aEdit</span><span class="token punctuation">(</span>context<span class="token punctuation">,</span>payload<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+            context<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">'edit'</span><span class="token punctuation">,</span>payload<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">2000</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在组件中调用</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token string">'aEdit'</span><span class="token punctuation">,</span><span class="token punctuation">{</span>age<span class="token punctuation">:</span><span class="token number">15</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>按需导入 mapActions</strong></p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> mapActions <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+
+methods<span class="token punctuation">:</span><span class="token punctuation">{</span>
+  <span class="token operator">...</span><span class="token function">mapMutations</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'aEdit'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="Models"><a href="#Models" class="headerlink" title="Models"></a>Models</h4><p>当项目庞大，状态非常多时，可以采用模块化管理模式。Vuex 允许我们将 store 分割成<strong>模块（module）</strong>。每个模块拥有自己的 <code>state、mutation、action、getter</code>、甚至是嵌套子模块——从上至下进行同样方式的分割。</p>
+<pre class="line-numbers language-js"><code class="language-js">models<span class="token punctuation">:</span><span class="token punctuation">{</span>
+    a<span class="token punctuation">:</span><span class="token punctuation">{</span>
+        state<span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        getters<span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token operator">...</span><span class="token punctuation">.</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>组件内调用模块a的状态：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>而提交或者<code>dispatch</code>某个方法和以前一样,会自动执行所有模块内的对应<code>type</code>的方法：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">'editKey'</span><span class="token punctuation">)</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token string">'aEditKey'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vuex</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>面试经验教训（6.12）</title>
     <url>/archives/105f7dfa.html</url>
     <content><![CDATA[<p>今天进行了我人生中的第二次面试，说来这个面试真是一言难尽。。。昨天hr打电话说选个时间进行面试，我选择了今天下午。。。当时不觉得什么，后来想想，就隔一天的时间，时间是不是有点紧了。。关键是，我其实心里没有底，也根本没有准备好，然后只有一天的时间，只能硬着头皮上了，这两天就疯狂看面试题，看完之后脑子一片浆糊。。。这是这次面试前的失误：<strong>主要不是间隔的时间短，而是根本没有准备好就去面试。。</strong></p>

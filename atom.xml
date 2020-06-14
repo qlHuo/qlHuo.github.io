@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-06-12T16:35:13.665Z</updated>
+  <updated>2020-06-14T15:08:46.502Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Vuex学习笔记</title>
+    <link href="https://aurorablog.top/archives/ddd07bd6.html"/>
+    <id>https://aurorablog.top/archives/ddd07bd6.html</id>
+    <published>2020-06-14T12:57:23.000Z</published>
+    <updated>2020-06-14T15:08:46.502Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Vuex概述&quot;&gt;&lt;a href=&quot;#Vuex概述&quot; class=&quot;headerlink&quot; title=&quot;Vuex概述&quot;&gt;&lt;/a&gt;Vuex概述&lt;/h3&gt;&lt;p&gt;Vuex 是适用于在 Vue项目开发时使用的状态管理工具。如果在一个项目开发中频繁使用组件传参的方式来同步
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Vue" scheme="https://aurorablog.top/categories/Vue/"/>
+    
+    
+      <category term="Vuex" scheme="https://aurorablog.top/tags/Vuex/"/>
+    
+  </entry>
+  
+  <entry>
     <title>面试经验教训（6.12）</title>
     <link href="https://aurorablog.top/archives/105f7dfa.html"/>
     <id>https://aurorablog.top/archives/105f7dfa.html</id>
     <published>2020-06-12T15:47:59.000Z</published>
-    <updated>2020-06-12T16:35:13.665Z</updated>
+    <updated>2020-06-12T16:35:26.456Z</updated>
     
     <summary type="html">
     
@@ -46,7 +73,7 @@
     <link href="https://aurorablog.top/archives/d227b726.html"/>
     <id>https://aurorablog.top/archives/d227b726.html</id>
     <published>2020-06-10T15:57:24.000Z</published>
-    <updated>2020-06-10T15:57:24.034Z</updated>
+    <updated>2020-06-12T16:35:26.455Z</updated>
     
     <summary type="html">
     
@@ -533,36 +560,6 @@
     
     
       <category term="组件" scheme="https://aurorablog.top/tags/%E7%BB%84%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js数组some()方法</title>
-    <link href="https://aurorablog.top/archives/41806ff3.html"/>
-    <id>https://aurorablog.top/archives/41806ff3.html</id>
-    <published>2020-05-02T02:53:16.000Z</published>
-    <updated>2020-05-05T06:43:46.573Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;some-方法&quot;&gt;&lt;a href=&quot;#some-方法&quot; class=&quot;headerlink&quot; title=&quot;some()方法&quot;&gt;&lt;/a&gt;some()方法&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;some()&lt;/code&gt;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="JavaScript" scheme="https://aurorablog.top/categories/JavaScript/"/>
-    
-    
-      <category term="数组" scheme="https://aurorablog.top/tags/%E6%95%B0%E7%BB%84/"/>
-    
-      <category term="some()" scheme="https://aurorablog.top/tags/some/"/>
     
   </entry>
   
