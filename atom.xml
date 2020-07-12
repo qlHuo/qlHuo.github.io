@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://aurorablog.top/"/>
-  <updated>2020-06-14T15:08:46.502Z</updated>
+  <updated>2020-07-12T04:23:23.722Z</updated>
   <id>https://aurorablog.top/</id>
   
   <author>
@@ -17,11 +17,94 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>git安装并与远程仓库关联相关配置</title>
+    <link href="https://aurorablog.top/archives/a10ce796.html"/>
+    <id>https://aurorablog.top/archives/a10ce796.html</id>
+    <published>2020-07-12T04:22:35.000Z</published>
+    <updated>2020-07-12T04:23:23.722Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;git是当前最流行的版本控制系统，下面简单记录一下git的安装及其与远程仓库的关联。&lt;/p&gt;
+&lt;h4 id=&quot;git安装&quot;&gt;&lt;a href=&quot;#git安装&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="开发配置" scheme="https://aurorablog.top/categories/%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/"/>
+    
+    
+      <category term="git安装与配置" scheme="https://aurorablog.top/tags/git%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>切换npm源的几种方法</title>
+    <link href="https://aurorablog.top/archives/2ed0d9ea.html"/>
+    <id>https://aurorablog.top/archives/2ed0d9ea.html</id>
+    <published>2020-07-12T04:19:12.000Z</published>
+    <updated>2020-07-12T04:21:16.019Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;我们在使用官方提供的npm源安装各种依赖包的时候，下载速度会很慢，通常需要更换npm源。&lt;br&gt;我们可以在终端中输入命令 &lt;code&gt;npm config list&lt;/code&gt; 来查看 npm 源地址，默认地址为&lt;/p&gt;
+&lt;pre class=&quot;line-numbers
+        
+      
+    
+    </summary>
+    
+    
+      <category term="开发配置" scheme="https://aurorablog.top/categories/%E5%BC%80%E5%8F%91%E9%85%8D%E7%BD%AE/"/>
+    
+    
+      <category term="npm源切换" scheme="https://aurorablog.top/tags/npm%E6%BA%90%E5%88%87%E6%8D%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue使用elementUI form表单label样式修改</title>
+    <link href="https://aurorablog.top/archives/9ec12ab3.html"/>
+    <id>https://aurorablog.top/archives/9ec12ab3.html</id>
+    <published>2020-07-12T04:15:38.000Z</published>
+    <updated>2020-07-12T04:17:12.825Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;1-删除style标签中的-scoped-属性&quot;&gt;&lt;a href=&quot;#1-删除style标签中的-scoped-属性&quot; class=&quot;headerlink&quot; title=&quot;1.删除style标签中的 scoped 属性&quot;&gt;&lt;/a&gt;1.删除style标签中的
+        
+      
+    
+    </summary>
+    
+    
+      <category term="vue" scheme="https://aurorablog.top/categories/vue/"/>
+    
+    
+      <category term="elementUI样式修改" scheme="https://aurorablog.top/tags/elementUI%E6%A0%B7%E5%BC%8F%E4%BF%AE%E6%94%B9/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Vuex学习笔记</title>
     <link href="https://aurorablog.top/archives/ddd07bd6.html"/>
     <id>https://aurorablog.top/archives/ddd07bd6.html</id>
     <published>2020-06-14T12:57:23.000Z</published>
-    <updated>2020-06-14T15:08:46.502Z</updated>
+    <updated>2020-06-14T16:20:00.774Z</updated>
     
     <summary type="html">
     
@@ -471,95 +554,6 @@
       <category term="webpack" scheme="https://aurorablog.top/tags/webpack/"/>
     
       <category term="es6模块化" scheme="https://aurorablog.top/tags/es6%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue基础(五)-vue-router路由</title>
-    <link href="https://aurorablog.top/archives/5cc04f26.html"/>
-    <id>https://aurorablog.top/archives/5cc04f26.html</id>
-    <published>2020-05-05T13:47:10.000Z</published>
-    <updated>2020-05-05T15:06:08.787Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;路由的概念&quot;&gt;&lt;a href=&quot;#路由的概念&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="vue" scheme="https://aurorablog.top/categories/vue/"/>
-    
-    
-      <category term="vue-router" scheme="https://aurorablog.top/tags/vue-router/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue基础(四)-前后端交互接口调用</title>
-    <link href="https://aurorablog.top/archives/6dd1968.html"/>
-    <id>https://aurorablog.top/archives/6dd1968.html</id>
-    <published>2020-05-04T14:59:40.000Z</published>
-    <updated>2020-05-05T06:32:47.298Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;接口调用的方式&quot;&gt;&lt;a href=&quot;#接口调用的方式&quot; class=&quot;headerlink&quot; title=&quot;接口调用的方式&quot;&gt;&lt;/a&gt;接口调用的方式&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;原生ajax&lt;/li&gt;
-&lt;li&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="vue" scheme="https://aurorablog.top/categories/vue/"/>
-    
-      <category term="vue前后端交互" scheme="https://aurorablog.top/categories/vue/vue%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/"/>
-    
-    
-      <category term="promise" scheme="https://aurorablog.top/tags/promise/"/>
-    
-      <category term="fetch" scheme="https://aurorablog.top/tags/fetch/"/>
-    
-      <category term="axios" scheme="https://aurorablog.top/tags/axios/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue基础(三)-组件</title>
-    <link href="https://aurorablog.top/archives/46c3f843.html"/>
-    <id>https://aurorablog.top/archives/46c3f843.html</id>
-    <published>2020-05-03T13:03:01.000Z</published>
-    <updated>2020-05-05T06:37:17.070Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;组件-Component&quot;&gt;&lt;a href=&quot;#组件-Component&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="vue" scheme="https://aurorablog.top/categories/vue/"/>
-    
-    
-      <category term="组件" scheme="https://aurorablog.top/tags/%E7%BB%84%E4%BB%B6/"/>
     
   </entry>
   

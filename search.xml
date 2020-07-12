@@ -1,6 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>git安装并与远程仓库关联相关配置</title>
+    <url>/archives/a10ce796.html</url>
+    <content><![CDATA[<p>git是当前最流行的版本控制系统，下面简单记录一下git的安装及其与远程仓库的关联。</p>
+<h4 id="git安装"><a href="#git安装" class="headerlink" title="git安装"></a>git安装</h4><ol>
+<li>打开<a href="https://git-scm.com/" target="_blank" rel="noopener">git官网</a>，下载对应的安装包。</li>
+<li>双击运行安装包，安装过程中可以直接选择默认配置，一路next下去。<br>安装过程相对简单，在此不再赘述。可以参考<a href="https://blog.csdn.net/wyg1973017714/article/details/105217864" target="_blank" rel="noopener">这篇文章</a></li>
+</ol>
+<h4 id="git与远程仓库关联"><a href="#git与远程仓库关联" class="headerlink" title="git与远程仓库关联"></a>git与远程仓库关联</h4><p><strong>1.用户配置</strong><br>git安装完之后，初次运行git前需要进行用户设置。<br>首先要配置的是个人用户名和电子邮箱地址。每次git提交时都会引用这两条信息，说明是谁提交了更新，所以会随着更新内容一起被永久纳入历史记录。</p>
+<pre class="line-numbers language-bash"><code class="language-bash">   $ <span class="token function">git</span> config --global user.name <span class="token string">"John Doe"</span>
+   $ <span class="token function">git</span> config --global user.email johndoe@example.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>可以通过 <code>git config --list</code> 查看配置信息。</p>
+<p><strong>2.生成ssh公钥并添加到github或者码云仓库</strong><br>github或者码云都提供了基于ssh协议的git服务，在使用ssh协议访问远程仓库之前，需要先配置好账户/仓库的ssh公钥。<br>使用以下命令生成sshkey：</p>
+<pre class="line-numbers language-bash"><code class="language-bash">   ssh-keygen -t rsa -C <span class="token string">"xxxxx@xxxxx.com"</span>  <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>按照提示完成三次回车，即可生成ssh key。通过查看 <code>~/.ssh/id_rsa.pub</code> 文件内容，可以获取刚刚生成的公钥。<br><img src="/medias/loading.gif" data-original="https://img2020.cnblogs.com/blog/2091839/202007/2091839-20200710191729867-477207511.png" alt="生成公钥"></p>
+<p>复制生成后的ssh key，进入github或者码云，找到setting（设置）-&gt; ssh Key(ssh 公钥)，添加生成的公钥即可。</p>
+<p>添加完成后，在终端中输入</p>
+<pre class="line-numbers language-bash"><code class="language-bash">   <span class="token function">ssh</span> -T git@gitee.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>首次使用需要确认并添加主机到本机SSH可信列表。若返回 Hi XXX! You’ve successfully authenticated, but Gitee.com does not provide shell access. 内容，则证明添加成功。<br><img src="/medias/loading.gif" data-original="https://img2020.cnblogs.com/blog/2091839/202007/2091839-20200710192438928-30407008.png" alt="添加成功"></p>
+<p>添加成功之后就可以对远程仓库进行操作了。</p>
+]]></content>
+      <categories>
+        <category>开发配置</category>
+      </categories>
+      <tags>
+        <tag>git安装与配置</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>切换npm源的几种方法</title>
+    <url>/archives/2ed0d9ea.html</url>
+    <content><![CDATA[<p>我们在使用官方提供的npm源安装各种依赖包的时候，下载速度会很慢，通常需要更换npm源。<br>我们可以在终端中输入命令 <code>npm config list</code> 来查看 npm 源地址，默认地址为</p>
+<pre class="line-numbers language-bash"><code class="language-bash">metrics-registry <span class="token operator">=</span> <span class="token string">"https://registry.npmjs.org/"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>国内常用的npm源地址为淘宝镜像：<code>https://registry.npm.taobao.org/</code></p>
+<h4 id="方式一：使用命令直接更换"><a href="#方式一：使用命令直接更换" class="headerlink" title="方式一：使用命令直接更换"></a>方式一：使用命令直接更换</h4><p>在终端输入以下命令，即可设置npm源地址为淘宝镜像。</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token keyword">set</span> registry https://registry.npm.taobao.org/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这时使用 <code>npm config list</code> 查看 npm 源地址就变为</p>
+<p><img src="/medias/loading.gif" data-original="https://img2020.cnblogs.com/blog/2091839/202007/2091839-20200708210659983-431597029.png" alt="更改后的npm源"></p>
+<blockquote>
+<p>删除方式为：<code>npm config rm registry</code></p>
+</blockquote>
+<h4 id="方式二：使用nrm管理npm源"><a href="#方式二：使用nrm管理npm源" class="headerlink" title="方式二：使用nrm管理npm源"></a>方式二：使用nrm管理npm源</h4><p>nrm是用来专门管理npm源地址的工具，我们使用nrm可以很方便的切换npm源地址。</p>
+<ol>
+<li><p>全局安装nrm</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> nrm -g --save <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>nrm有默认配置，使用 <code>nrm ls</code> 查看，带 * 即为当前源地址<br><img src="/medias/loading.gif" data-original="https://img2020.cnblogs.com/blog/2091839/202007/2091839-20200708211747319-354816353.png" alt="nrm查看配置项"></p>
+</li>
+<li><p>nrm切换淘宝镜像</p>
+<pre class="line-numbers language-bash"><code class="language-bash">nrm use taobao<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>使用nrm添加镜像地址</p>
+<pre class="line-numbers language-bash"><code class="language-bash">nrm add r_name r_url <span class="token comment" spellcheck="true"># r_name 为镜像名字，r_url 为镜像地址</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>删除nrm镜像</p>
+<pre class="line-numbers language-bash"><code class="language-bash">nrm del r_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>测试镜像速度</p>
+<pre class="line-numbers language-bash"><code class="language-bash">nrm <span class="token function">test</span> r_name<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ol>
+<p>参考文章：<br><a href="https://www.cnblogs.com/Sky-Raining/p/10313600.html" target="_blank" rel="noopener">https://www.cnblogs.com/Sky-Raining/p/10313600.html</a><br><a href="https://www.cnblogs.com/wangmeijian/p/7072053.html" target="_blank" rel="noopener">https://www.cnblogs.com/wangmeijian/p/7072053.html</a></p>
+]]></content>
+      <categories>
+        <category>开发配置</category>
+      </categories>
+      <tags>
+        <tag>npm源切换</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vue使用elementUI form表单label样式修改</title>
+    <url>/archives/9ec12ab3.html</url>
+    <content><![CDATA[<h4 id="1-删除style标签中的-scoped-属性"><a href="#1-删除style标签中的-scoped-属性" class="headerlink" title="1.删除style标签中的 scoped 属性"></a>1.删除style标签中的 <code>scoped</code> 属性</h4><pre class="line-numbers language-html"><code class="language-html">   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>lang<span class="token punctuation">"</span></span> <span class="token attr-name">scoped</span><span class="token punctuation">></span></span><span class="token style language-css">
+      <span class="token number">...</span>
+   </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h4 id="2-在对应el-form-item的label属性中加入class样式"><a href="#2-在对应el-form-item的label属性中加入class样式" class="headerlink" title="2.在对应el-form-item的label属性中加入class样式"></a>2.在对应el-form-item的label属性中加入class样式</h4><pre class="line-numbers language-html"><code class="language-html">   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-form-item</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>用户名<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ruleForm.username<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>请输入用户名<span class="token punctuation">"</span></span> <span class="token attr-name">maxlength</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>10<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">></span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-form-item</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h4 id="3-审查元素，找到label对应的class"><a href="#3-审查元素，找到label对应的class" class="headerlink" title="3.审查元素，找到label对应的class"></a>3.审查元素，找到label对应的class</h4><p>如：<code>.el-form-item__label</code> 添加如下样式代码</p>
+<pre class="line-numbers language-css"><code class="language-css"><span class="token selector"><span class="token class">.item</span> <span class="token class">.el-form-item__label</span></span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> wheat<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>参考文章：<a href="https://blog.csdn.net/qq_40209717/article/details/103413486" target="_blank" rel="noopener">https://blog.csdn.net/qq_40209717/article/details/103413486</a></p>
+]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>elementUI样式修改</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vuex学习笔记</title>
     <url>/archives/ddd07bd6.html</url>
     <content><![CDATA[<h3 id="Vuex概述"><a href="#Vuex概述" class="headerlink" title="Vuex概述"></a>Vuex概述</h3><p>Vuex 是适用于在 Vue项目开发时使用的状态管理工具。如果在一个项目开发中频繁使用组件传参的方式来同步 data 中的值，一旦项目变得庞大，管理和维护这些值将是相当麻烦的。为此，Vue 为这些被多个组件频繁使用的值提供了一个统一的管理工具——Vuex。在具有 Vuex 的 Vue项目中，我们只需要这些值定义在 Vuex 中，即可在整个 Vue 项目的组建中使用这些值。</p>
